@@ -68,6 +68,12 @@
                 <h1 style="margin: 0" data-i18n="hero_title">
                   Vladyslav Stashevskyi <span class="muted">(Flarewich)</span>
                 </h1>
+
+                <!-- ✅ STEP 6: role -->
+                <div class="role" data-i18n="hero_role">
+                  FullStack Developer • UI Designer
+                </div>
+
                 <div class="subtitle" data-i18n="hero_subtitle">
                   Создаю сайты, 3D-модели, делаю монтаж и обработку фото
                 </div>
@@ -148,15 +154,14 @@
                   деталям.
                 </p>
               </div>
+
+              <!-- ✅ STEP 4: changed text (keys stay the same, update dict in JS) -->
               <div class="service">
-                <h3 data-i18n="about_card2_title">
-                  Сейчас я в поиске направления
-                </h3>
+                <h3 data-i18n="about_card2_title">Как я работаю</h3>
                 <p data-i18n="about_card2_text">
-                  Пока не решил, чем хочу заниматься на 100% — интересует “всё и
-                  сразу”, поэтому постоянно изучаю новое. Можешь задавать
-                  вопросы по разным темам: я попробую предложить решение и
-                  сделать результат.
+                  Понимаю задачу, предлагаю структуру и UI-решения, делаю
+                  аккуратную адаптивную верстку. Если нет ТЗ — помогу
+                  сформировать требования, чтобы быстрее прийти к результату.
                 </p>
               </div>
             </div>
@@ -234,11 +239,10 @@
               </div>
             </div>
 
-            <!-- Карусель (замени картинки на свои) -->
+            <!-- Карусель -->
             <div class="carousel">
               <div class="track" id="track">
                 <div class="marquee" id="marquee">
-                  <!-- ВСЕ твои article.slide остаются как есть -->
                   <article class="slide">
                     <img src="/img/screen suite 1.png" alt="Work 01" />
                     <div class="cap">
@@ -259,9 +263,7 @@
                     <img src="/img/Prewyu.jpg" alt="Work 03" />
                     <div class="cap">
                       <strong data-i18n="w3_title">YouTube / thumbnails</strong>
-                      <span data-i18n="w3_text"
-                        >Превью/визуал для контента.</span
-                      >
+                      <span data-i18n="w3_text">Превью/визуал для контента.</span>
                     </div>
                   </article>
 
@@ -269,9 +271,7 @@
                     <img src="./img/mini-blog.png" alt="Mini Blog website" />
                     <div class="cap">
                       <strong data-i18n="w6_title">Mini Blog — сайт</strong>
-                      <span data-i18n="w6_text"
-                        >Мини-блог на Node.js, адаптив + UI.</span
-                      >
+                      <span data-i18n="w6_text">Мини-блог на Node.js, адаптив + UI.</span>
                     </div>
                   </article>
 
@@ -279,9 +279,7 @@
                     <img src="/img/shapka.jpg" alt="Work 04" />
                     <div class="cap">
                       <strong data-i18n="w4_title">Channel design</strong>
-                      <span data-i18n="w4_text"
-                        >Оформление, баннеры, стиль.</span
-                      >
+                      <span data-i18n="w4_text">Оформление, баннеры, стиль.</span>
                     </div>
                   </article>
 
@@ -289,22 +287,34 @@
                     <img src="/img/Prewiu2.jpg" alt="Work 05" />
                     <div class="cap">
                       <strong data-i18n="w5_title">Coming soon</strong>
-                      <span data-i18n="w5_text"
-                        >Скоро добавлю новые кейсы.</span
-                      >
+                      <span data-i18n="w5_text">Скоро добавлю новые кейсы.</span>
                     </div>
                   </article>
                 </div>
               </div>
             </div>
 
-            <!-- Карточки проектов (как было) -->
+            <!-- Projects -->
             <div class="projects">
+              <!-- ✅ STEP 7: overlay on done projects -->
               <div class="project">
+                <div class="p-overlay">
+                  <a
+                    class="p-cta"
+                    href="https://vhpermanent.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >Open →</a>
+                </div>
+
                 <span class="badge ok" data-i18n="p1_badge">Готово</span>
                 <h3 data-i18n="p1_title">VH Permanent — сайт</h3>
                 <p data-i18n="p1_text">Пример работы: сайт/лендинг.</p>
-                <div class="stack">HTML • CSS • JavaScript • Vercel</div>
+                <div class="stack">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                </div>
                 <div class="links">
                   <a
                     href="https://vhpermanent.vercel.app/"
@@ -316,11 +326,26 @@
                 </div>
               </div>
 
-              <div class="project">
+              <div class="project featured">
+                <div class="p-overlay">
+                  <a
+                    class="p-cta"
+                    href="https://mini-blog-ten-rho.vercel.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >Open →</a>
+                </div>
+
                 <span class="badge ok" data-i18n="p5_badge">Готово</span>
                 <h3 data-i18n="p5_title">Mini Blog — сайт</h3>
-                <p data-i18n="p5_text">HTML • CSS • JavaScript • Vercel</p>
-                <div class="stack">HTML • CSS • NodeJs • SupaBase • Vercel</div>
+                <p data-i18n="p5_text">Мини-блог: адаптивная верстка + аккуратный интерфейс.</p>
+                <div class="stack">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>NodeJs</span>
+                  <span>Supabase</span>
+                </div>
+
                 <div class="links">
                   <a
                     href="https://mini-blog-ten-rho.vercel.app/"
@@ -361,6 +386,52 @@
                 <div class="links">
                   <a href="#contacts" data-i18n="p_coming">Идёт разработка</a>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ✅ STEP 5: WHY section (inserted before contacts) -->
+      <section id="why">
+        <div class="wrap">
+          <div class="card pad">
+            <h2 class="section-title" data-i18n="why_title">Почему со мной удобно</h2>
+            <p class="muted" data-i18n="why_sub">
+              Я стараюсь делать процесс понятным и быстрым — без лишней воды.
+            </p>
+
+            <div class="why-grid">
+              <div class="why-item">
+                <div class="why-top">
+                  <span class="why-ico">⚡</span>
+                  <strong data-i18n="why_1_title">Быстрая связь</strong>
+                </div>
+                <p data-i18n="why_1_text">Обычно отвечаю быстро, держу в курсе прогресса.</p>
+              </div>
+
+              <div class="why-item">
+                <div class="why-top">
+                  <span class="why-ico">🧩</span>
+                  <strong data-i18n="why_2_title">Помогаю с ТЗ</strong>
+                </div>
+                <p data-i18n="why_2_text">Если нет структуры — предложу варианты и соберу требования.</p>
+              </div>
+
+              <div class="why-item">
+                <div class="why-top">
+                  <span class="why-ico">📱</span>
+                  <strong data-i18n="why_3_title">Адаптив и UX</strong>
+                </div>
+                <p data-i18n="why_3_text">Делаю аккуратно под мобилки и думаю о удобстве пользователя.</p>
+              </div>
+
+              <div class="why-item">
+                <div class="why-top">
+                  <span class="why-ico">✅</span>
+                  <strong data-i18n="why_4_title">Чистая работа</strong>
+                </div>
+                <p data-i18n="why_4_text">Понятная структура, аккуратная верстка, внимание к деталям.</p>
               </div>
             </div>
           </div>

@@ -7,6 +7,7 @@ const dict = {
 
     hero_kicker: "Web · 3D · Video · Photoshop",
     hero_title: 'Vladyslav Stashevskyi <span class="muted">(Flarewich)</span>',
+    hero_role: "FullStack Developer • UI Designer",
     hero_subtitle: "Создаю сайты, 3D-модели, делаю монтаж и обработку фото",
     hero_lead:
       "Мне 20 лет. Прошёл курс по веб-разработке, 3D-моделированию, монтажу и Photoshop. Люблю играть и стримить — развиваю YouTube и Twitch.",
@@ -25,13 +26,13 @@ const dict = {
 
     about_title: "Обо мне",
     about_text:
-      "Я беру проекты под ключ или точечно: дизайн/верстка, 3D, графика, видео. Если нет ТЗ — помогу собрать требования и предложу структуру.",
+      "Я FullStack-разработчик, работаю с многостраничными сайтами, блогами и лендингами. Создаю проекты под ключ — от идеи и структуры до запуска и поддержки. Мне важно не просто сверстать сайт, а сделать его удобным, аккуратным и логичным для пользователя.",
     about_card1_title: "Сильные стороны",
     about_card1_text:
-      "Адаптивная верстка, аккуратный интерфейс, внимательность к деталям.",
-    about_card2_title: "Сейчас я в поиске направления",
+      "Адаптивная верстка, плавные анимации, аккуратный UI и внимание к деталям. Работаю быстро, ответственно и всегда довожу задачу до результата.",
+    about_card2_title: "Как я работаю",
     about_card2_text:
-      "Пока не решил, чем хочу заниматься на 100% — интересует “всё и сразу”, поэтому постоянно изучаю новое. Можешь задавать вопросы по разным темам: я попробую предложить решение и сделать результат.",
+      "Собираю требования, предлагаю варианты, делаю прототип и дизайн, затем верстаю и добавляю функционал. Тестирую на мобильных устройствах, вношу правки с заказчиком и делаю деплой. Срочные проекты «за 1 день» не беру — работаю по предоплате.",
 
     services_title: "Услуги",
     s1_title: "Сайты",
@@ -61,10 +62,18 @@ const dict = {
     w5_title: "Coming soon",
     w5_text: "Скоро добавлю новые кейсы.",
 
+    w6_title: "Mini Blog — сайт",
+    w6_text: "Мини-блог на Vercel, адаптив + UI.",
+
     p1_badge: "Готово",
     p1_title: "VH Permanent — сайт",
     p1_text: "Пример работы: сайт/лендинг.",
     p_open: "Открыть →",
+
+    p5_badge: "Готово",
+    p5_title: "Mini Blog — сайт",
+    p5_text: "Мини-блог: адаптивная верстка + аккуратный интерфейс.",
+
     p2_badge: "В разработке",
     p2_title: "Landing Page",
     p2_text: "Дизайн + адаптивная верстка. Скоро добавлю.",
@@ -76,11 +85,16 @@ const dict = {
     p4_text: "Монтаж ролика: титры, динамика, нарезка под формат.",
     p_coming: "Идёт разработка",
 
-    w6_title: "Mini Blog — сайт",
-    w6_text: "Мини-блог на Vercel, адаптив + UI.",
-    p5_badge: "Готово",
-    p5_title: "Mini Blog — сайт",
-    p5_text: "Мини-блог: адаптивная верстка + аккуратный интерфейс.",
+    why_title: "Почему со мной удобно",
+    why_sub: "Я стараюсь делать процесс понятным и быстрым — без лишней воды.",
+    why_1_title: "Быстрая связь",
+    why_1_text: "Обычно отвечаю быстро, держу в курсе прогресса.",
+    why_2_title: "Помогаю с ТЗ",
+    why_2_text: "Если нет структуры — предложу варианты и соберу требования.",
+    why_3_title: "Адаптив и UX",
+    why_3_text: "Делаю аккуратно под мобилки и думаю о удобстве пользователя.",
+    why_4_title: "Чистая работа",
+    why_4_text: "Понятная структура, аккуратная верстка, внимание к деталям.",
 
     contacts_title: "Контакты",
     contacts_text:
@@ -101,6 +115,7 @@ const dict = {
 
     hero_kicker: "Web · 3D · Video · Photoshop",
     hero_title: 'Vladyslav Stashevskyi <span class="muted">(Flarewich)</span>',
+    hero_role: "FullStack Developer • UI Designer",
     hero_subtitle: "I build websites, create 3D models, edit photos and videos",
     hero_lead:
       "I'm 20 years old. I completed courses in web development, 3D modeling, video editing, and Photoshop. I love gaming and streaming — growing my YouTube and Twitch.",
@@ -120,12 +135,13 @@ const dict = {
 
     about_title: "About me",
     about_text:
-      "I can deliver full projects or help with specific tasks: design/layout, 3D, graphics, and video. If you don't have a brief yet — I can help define requirements and structure.",
+      "I'm a FullStack developer working with multi-page websites, blogs, and landing pages. I build turnkey projects — from concept and structure to launch and support. It's important to me not just to code a website, but to make it user-friendly, neat, and logical.",
     about_card1_title: "Strengths",
-    about_card1_text: "Responsive layout, clean UI, attention to detail.",
-    about_card2_title: "Still exploring my direction",
+    about_card1_text:
+      "Responsive layout, smooth animations, clean UI, and attention to detail. I work responsibly and always deliver the result.",
+    about_card2_title: "How I work",
     about_card2_text:
-      "I haven't chosen one single path yet — I'm interested in many things, so I keep learning and experimenting. Feel free to ask about different topics: I can propose a solution and try to build it.",
+      "I gather requirements, propose options, create a prototype and design, then build the layout and add functionality. I test on mobile devices, iterate with the client, and deploy. I don’t do “1-day urgent” projects — I work with prepayment.",
 
     services_title: "Services",
     s1_title: "Websites",
@@ -154,10 +170,18 @@ const dict = {
     w5_title: "Coming soon",
     w5_text: "More cases soon.",
 
+    w6_title: "Mini Blog — Website",
+    w6_text: "Mini blog on Vercel, responsive + UI.",
+
     p1_badge: "Done",
     p1_title: "VH Permanent — Website",
     p1_text: "Work sample: website/landing page.",
     p_open: "Open →",
+
+    p5_badge: "Done",
+    p5_title: "Mini Blog — Website",
+    p5_text: "Mini blog: responsive layout + clean interface.",
+
     p2_badge: "In progress",
     p2_title: "Landing Page",
     p2_text: "Design + responsive layout. Coming soon.",
@@ -168,11 +192,18 @@ const dict = {
     p4_title: "YouTube Montage",
     p4_text: "Video edit: captions, pacing, format-friendly cut.",
     p_coming: "Work in progress",
-    w6_title: "Mini Blog — Website",
-    w6_text: "Mini blog on Vercel, responsive + UI.",
-    p5_badge: "Done",
-    p5_title: "Mini Blog — Website",
-    p5_text: "Mini blog: responsive layout + clean interface.",
+
+    why_title: "Why working with me is easy",
+    why_sub: "I keep the process clear and fast — without unnecessary fluff.",
+    why_1_title: "Fast communication",
+    why_1_text: "I usually reply quickly and keep you updated.",
+    why_2_title: "I help with the brief",
+    why_2_text:
+      "If there’s no structure — I’ll propose options and clarify requirements.",
+    why_3_title: "Responsive & UX",
+    why_3_text: "I build for mobile and focus on user-friendly UI.",
+    why_4_title: "Clean delivery",
+    why_4_text: "Clear structure, neat layout, attention to detail.",
 
     contacts_title: "Contacts",
     contacts_text:
@@ -185,7 +216,6 @@ const dict = {
       '© <span id="year"></span> Flarewich. Built with pure HTML/CSS/JS.',
   },
 
-  // ===== NEW: Ukrainian =====
   uk: {
     nav_about: "Про мене",
     nav_services: "Послуги",
@@ -194,6 +224,7 @@ const dict = {
 
     hero_kicker: "Web · 3D · Video · Photoshop",
     hero_title: 'Vladyslav Stashevskyi <span class="muted">(Flarewich)</span>',
+    hero_role: "FullStack Developer • UI Designer",
     hero_subtitle: "Створюю сайти, 3D-моделі, роблю монтаж і обробку фото",
     hero_lead:
       "Мені 20 років. Пройшов курс з веб-розробки, 3D-моделювання, монтажу та Photoshop. Люблю грати й стрімити — розвиваю YouTube і Twitch.",
@@ -212,13 +243,13 @@ const dict = {
 
     about_title: "Про мене",
     about_text:
-      "Беру проєкти під ключ або точково: дизайн/верстка, 3D, графіка, відео. Якщо немає ТЗ — допоможу зібрати вимоги та запропоную структуру.",
+      "Я FullStack-розробник, працюю з багатосторінковими сайтами, блогами та лендингами. Створюю проєкти під ключ — від ідеї та структури до запуску та підтримки. Мені важливо не просто зверстати сайт, а зробити його зручним, охайним і логічним для користувача.",
     about_card1_title: "Сильні сторони",
     about_card1_text:
-      "Адаптивна верстка, охайний інтерфейс, уважність до деталей.",
-    about_card2_title: "Зараз шукаю свій напрям",
+      "Адаптивна верстка, плавні анімації, охайний UI та увага до деталей. Працюю відповідально й доводжу задачу до результату.",
+    about_card2_title: "Як я працюю",
     about_card2_text:
-      "Поки не вирішив, чим хочу займатися на 100% — цікавить “усе й одразу”, тому постійно вивчаю нове. Можеш ставити питання з різних тем: я спробую запропонувати рішення й зробити результат.",
+      "Збираю вимоги, пропоную варіанти, роблю прототип і дизайн, далі верстаю та додаю функціонал. Тестую на мобільних пристроях, узгоджую правки з клієнтом і роблю деплой. Термінові проєкти «за 1 день» не беру — працюю по передоплаті.",
 
     services_title: "Послуги",
     s1_title: "Сайти",
@@ -248,10 +279,18 @@ const dict = {
     w5_title: "Coming soon",
     w5_text: "Скоро додам нові кейси.",
 
+    w6_title: "Mini Blog — сайт",
+    w6_text: "Міні-блог на Vercel, адаптив + UI.",
+
     p1_badge: "Готово",
     p1_title: "VH Permanent — сайт",
     p1_text: "Приклад роботи: сайт/лендинг.",
     p_open: "Відкрити →",
+
+    p5_badge: "Готово",
+    p5_title: "Mini Blog — сайт",
+    p5_text: "Міні-блог: адаптивна верстка + охайний інтерфейс.",
+
     p2_badge: "У розробці",
     p2_title: "Landing Page",
     p2_text: "Дизайн + адаптивна верстка. Скоро додам.",
@@ -262,11 +301,18 @@ const dict = {
     p4_title: "YouTube Montage",
     p4_text: "Монтаж ролика: титри, динаміка, нарізка під формат.",
     p_coming: "Триває розробка",
-    w6_title: "Mini Blog — сайт",
-    w6_text: "Міні-блог на Vercel, адаптив + UI.",
-    p5_badge: "Готово",
-    p5_title: "Mini Blog — сайт",
-    p5_text: "Міні-блог: адаптивна верстка + охайний інтерфейс.",
+
+    why_title: "Чому зі мною зручно",
+    why_sub: "Роблю процес зрозумілим і швидким — без зайвої «води».",
+    why_1_title: "Швидкий зв’язок",
+    why_1_text: "Зазвичай відповідаю швидко та тримаю в курсі прогресу.",
+    why_2_title: "Допоможу з ТЗ",
+    why_2_text: "Якщо немає структури — запропоную варіанти та уточню вимоги.",
+    why_3_title: "Адаптив і UX",
+    why_3_text:
+      "Роблю акуратно під мобільні та думаю про зручність користувача.",
+    why_4_title: "Охайний результат",
+    why_4_text: "Зрозуміла структура, акуратна верстка, увага до деталей.",
 
     contacts_title: "Контакти",
     contacts_text:
@@ -279,7 +325,6 @@ const dict = {
       '© <span id="year"></span> Flarewich. Зроблено на чистому HTML/CSS/JS.',
   },
 
-  // ===== NEW: German =====
   de: {
     nav_about: "Über mich",
     nav_services: "Leistungen",
@@ -288,6 +333,7 @@ const dict = {
 
     hero_kicker: "Web · 3D · Video · Photoshop",
     hero_title: 'Vladyslav Stashevskyi <span class="muted">(Flarewich)</span>',
+    hero_role: "FullStack Developer • UI Designer",
     hero_subtitle:
       "Ich erstelle Websites, 3D-Modelle und bearbeite Fotos & Videos",
     hero_lead:
@@ -307,12 +353,13 @@ const dict = {
 
     about_title: "Über mich",
     about_text:
-      "Ich kann komplette Projekte liefern oder gezielt helfen: Design/Layout, 3D, Grafik und Video. Wenn noch kein Briefing da ist — helfe ich beim Strukturieren der Anforderungen.",
+      "Ich bin Full-Stack-Entwickler und arbeite mit mehrseitigen Websites, Blogs und Landingpages. Ich erstelle schlüsselfertige Projekte – von der Konzeption und Struktur bis hin zu Launch und Support. Mir ist es wichtig, dass eine Website nicht nur ein ansprechendes Layout hat, sondern benutzerfreundlich, übersichtlich und logisch aufgebaut ist.",
     about_card1_title: "Stärken",
-    about_card1_text: "Responsive Layout, sauberes UI, Blick fürs Detail.",
-    about_card2_title: "Ich finde noch meinen Fokus",
+    about_card1_text:
+      "Responsives Layout, flüssige Animationen, sauberes UI und Liebe zum Detail. Ich arbeite zuverlässig und liefere Ergebnisse.",
+    about_card2_title: "So arbeite ich",
     about_card2_text:
-      "Ich habe mich noch nicht auf einen einzigen Bereich festgelegt — ich interessiere mich für vieles und lerne ständig Neues. Frag gern zu verschiedenen Themen: Ich schlage Lösungen vor und versuche, sie umzusetzen.",
+      "Ich sammle Anforderungen, schlage Optionen vor, erstelle Prototyp und Design, setze das Layout um und füge Funktionen hinzu. Ich teste auf mobilen Geräten, stimme Änderungen ab und deploye das Projekt. „In 1 Tag“-Eilaufträge mache ich nicht — ich arbeite mit Anzahlung.",
 
     services_title: "Leistungen",
     s1_title: "Websites",
@@ -341,10 +388,18 @@ const dict = {
     w5_title: "Coming soon",
     w5_text: "Mehr Cases bald.",
 
+    w6_title: "Mini Blog — Website",
+    w6_text: "Mini-Blog auf Vercel, responsive + UI.",
+
     p1_badge: "Fertig",
     p1_title: "VH Permanent — Website",
     p1_text: "Beispielarbeit: Website/Landingpage.",
     p_open: "Öffnen →",
+
+    p5_badge: "Fertig",
+    p5_title: "Mini Blog — Website",
+    p5_text: "Mini-Blog: Responsive Layout + sauberes Interface.",
+
     p2_badge: "In Arbeit",
     p2_title: "Landing Page",
     p2_text: "Design + Responsive Layout. Bald verfügbar.",
@@ -356,11 +411,18 @@ const dict = {
     p4_text: "Videoschnitt: Captions, Tempo, formatgerechter Cut.",
     p_coming: "In Arbeit",
 
-    w6_title: "Mini Blog — Website",
-    w6_text: "Mini-Blog auf Vercel, responsive + UI.",
-    p5_badge: "Fertig",
-    p5_title: "Mini Blog — Website",
-    p5_text: "Mini-Blog: Responsive Layout + sauberes Interface.",
+    why_title: "Warum die Zusammenarbeit easy ist",
+    why_sub: "Ich halte den Prozess klar und schnell — ohne unnötige Umwege.",
+    why_1_title: "Schnelle Kommunikation",
+    why_1_text: "Ich antworte meist schnell und halte dich auf dem Laufenden.",
+    why_2_title: "Hilfe beim Briefing",
+    why_2_text:
+      "Wenn es keine Struktur gibt — schlage ich Optionen vor und kläre Anforderungen.",
+    why_3_title: "Responsive & UX",
+    why_3_text:
+      "Ich baue mobile-first und achte auf ein nutzerfreundliches UI.",
+    why_4_title: "Saubere Umsetzung",
+    why_4_text: "Klare Struktur, sauberes Layout, Liebe zum Detail.",
 
     contacts_title: "Kontakt",
     contacts_text:
@@ -389,7 +451,6 @@ function setLang(lang) {
   document.documentElement.lang = lang;
   localStorage.setItem("lang", lang);
 
-  // aria-pressed for all buttons
   for (const [code, btn] of Object.entries(buttons)) {
     if (!btn) continue;
     btn.setAttribute("aria-pressed", String(code === lang));
@@ -479,7 +540,6 @@ document.addEventListener("click", (e) => {
   }
 
   function buildLoop() {
-    // удалить старые клоны
     Array.from(marquee.querySelectorAll("[data-clone='1']")).forEach((n) =>
       n.remove(),
     );
@@ -489,7 +549,6 @@ document.addEventListener("click", (e) => {
     );
     if (!originals.length) return;
 
-    // клонируем набор 1 раз
     const frag = document.createDocumentFragment();
     originals.forEach((s) => {
       const c = s.cloneNode(true);
@@ -510,8 +569,8 @@ document.addEventListener("click", (e) => {
     lastTs = ts;
 
     if (!paused && loopWidth > 0) {
-      x -= (SPEED * dt) / 1000; // едем влево
-      if (-x >= loopWidth) x += loopWidth; // бесконечный цикл
+      x -= (SPEED * dt) / 1000;
+      if (-x >= loopWidth) x += loopWidth;
       marquee.style.transform = `translate3d(${x}px,0,0)`;
     }
 
@@ -552,16 +611,26 @@ burger?.addEventListener("click", () => {
   nav.classList.toggle("open");
 });
 
-/* закрывать при клике на пункт */
 navMenu?.addEventListener("click", (e) => {
-  if (e.target.closest("a")) {
-    nav.classList.remove("open");
-  }
+  if (e.target.closest("a")) nav.classList.remove("open");
 });
 
-/* закрывать при клике вне меню */
 document.addEventListener("click", (e) => {
   if (!nav.classList.contains("open")) return;
   if (e.target.closest(".nav")) return;
   nav.classList.remove("open");
 });
+
+// ✅ Fade-in on scroll (НЕ трогаем .slide, чтобы не ломать карусель)
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) entry.target.classList.add("show");
+  });
+});
+
+document
+  .querySelectorAll(".project, .why-item, .service, .tile")
+  .forEach((el) => {
+    el.classList.add("fade");
+    observer.observe(el);
+  });
