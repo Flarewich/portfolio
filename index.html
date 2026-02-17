@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+    <title>Flarewich — Portfolio</title>
+    <meta
+      name="description"
+      content="Vladyslav Stashevskyi (Flarewich) — websites, 3D models, Photoshop, video editing. Contacts and portfolio."
+    />
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Flarewich — Portfolio" />
+    <meta
+      property="og:description"
+      content="Web • 3D • Video • Photoshop. Contacts and portfolio."
+    />
+    <meta property="og:image" content="./assets/og-flarewich.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="stylesheet" href="style/style.css" />
+    <link rel="shortcut icon" href="img/ava.jpg" type="image/x-icon" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="wrap topbar-inner">
+        <div class="brand">
+          <div class="logo" aria-hidden="true"></div>
+          <div>Flarewich</div>
+        </div>
+
+        <nav class="nav" aria-label="Primary">
+          <div class="nav-menu" id="navMenu">
+            <a href="#about" data-i18n="nav_about">Обо мне</a>
+            <a href="#services" data-i18n="nav_services">Услуги</a>
+            <a href="#portfolio" data-i18n="nav_portfolio">Портфолио</a>
+            <a href="#contacts" data-i18n="nav_contacts">Контакты</a>
+          </div>
+
+          <div class="lang" role="group" aria-label="Language switcher">
+            <button type="button" id="btn-uk" aria-pressed="false">UA</button>
+            <button type="button" id="btn-ru" aria-pressed="true">RU</button>
+            <button type="button" id="btn-en" aria-pressed="false">EN</button>
+            <button type="button" id="btn-de" aria-pressed="false">DE</button>
+          </div>
+
+          <button class="nav-burger" id="navBurger">☰</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section>
+        <div class="wrap grid">
+          <div class="card pad">
+            <div class="kicker">
+              <span class="dot" aria-hidden="true"></span>
+              <span data-i18n="hero_kicker">Web · 3D · Video · Photoshop</span>
+            </div>
+
+            <div class="hero-head">
+              <img class="avatar" src="./img/AVA2.jpg" alt="Flarewich avatar" />
+              <div>
+                <h1 style="margin: 0" data-i18n="hero_title">
+                  Vladyslav Stashevskyi <span class="muted">(Flarewich)</span>
+                </h1>
+                <div class="subtitle" data-i18n="hero_subtitle">
+                  Создаю сайты, 3D-модели, делаю монтаж и обработку фото
+                </div>
+              </div>
+            </div>
+
+            <p class="lead" data-i18n="hero_lead">
+              Мне 20 лет. Прошёл курс по веб-разработке, 3D-моделированию,
+              монтажу и Photoshop. Люблю играть и стримить — развиваю YouTube и
+              Twitch.
+            </p>
+
+            <div class="actions">
+              <a
+                class="btn primary"
+                href="https://t.me/flarew1ch"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="cta_tg"
+                >Написать в Telegram</a
+              >
+              <a class="btn" href="#portfolio" data-i18n="cta_portfolio"
+                >Смотреть портфолио</a
+              >
+            </div>
+          </div>
+
+          <aside class="card pad">
+            <h2 class="section-title" data-i18n="quick_title">
+              Быстро обо мне
+            </h2>
+            <div class="mini">
+              <div class="tile">
+                <div class="t-title" data-i18n="q1_title">Сайты</div>
+                <div class="t-sub" data-i18n="q1_sub">
+                  Визитки, лендинги, многостраничники, адаптив
+                </div>
+              </div>
+              <div class="tile">
+                <div class="t-title" data-i18n="q2_title">3D</div>
+                <div class="t-sub" data-i18n="q2_sub">
+                  Модели/пропсы/простые сцены + рендеры
+                </div>
+              </div>
+              <div class="tile">
+                <div class="t-title" data-i18n="q3_title">Photoshop</div>
+                <div class="t-sub" data-i18n="q3_sub">
+                  Ретушь, удаление объектов, баннеры/обложки
+                </div>
+              </div>
+              <div class="tile">
+                <div class="t-title" data-i18n="q4_title">Монтаж</div>
+                <div class="t-sub" data-i18n="q4_sub">
+                  YouTube / Shorts / Reels, титры, динамика
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about">
+        <div class="wrap">
+          <div class="card pad">
+            <h2 class="section-title" data-i18n="about_title">Обо мне</h2>
+            <p class="muted" data-i18n="about_text">
+              Я беру проекты под ключ или точечно: дизайн/верстка, 3D, графика,
+              видео. Если нет ТЗ — помогу собрать требования и предложу
+              структуру.
+            </p>
+
+            <div class="two" style="margin-top: 16px">
+              <div class="service">
+                <h3 data-i18n="about_card1_title">Сильные стороны</h3>
+                <p data-i18n="about_card1_text">
+                  Адаптивная верстка, аккуратный интерфейс, внимательность к
+                  деталям.
+                </p>
+              </div>
+              <div class="service">
+                <h3 data-i18n="about_card2_title">
+                  Сейчас я в поиске направления
+                </h3>
+                <p data-i18n="about_card2_text">
+                  Пока не решил, чем хочу заниматься на 100% — интересует “всё и
+                  сразу”, поэтому постоянно изучаю новое. Можешь задавать
+                  вопросы по разным темам: я попробую предложить решение и
+                  сделать результат.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services">
+        <div class="wrap">
+          <div class="card pad">
+            <h2 class="section-title" data-i18n="services_title">Услуги</h2>
+            <div class="two">
+              <div class="service">
+                <h3 data-i18n="s1_title">Сайты</h3>
+                <p data-i18n="s1_text">
+                  Лендинги, визитки, многостраничные сайты. Адаптив, базовое
+                  SEO, чистая верстка.
+                </p>
+              </div>
+              <div class="service">
+                <h3 data-i18n="s2_title">3D-модели</h3>
+                <p data-i18n="s2_text">
+                  Модели/объекты, превью-рендеры, подготовка под дальнейшее
+                  использование.
+                </p>
+              </div>
+              <div class="service">
+                <h3 data-i18n="s3_title">Photoshop / обработка фото</h3>
+                <p data-i18n="s3_text">
+                  Ретушь, цветокор, удаление объектов, улучшение качества,
+                  баннеры и обложки.
+                </p>
+              </div>
+              <div class="service">
+                <h3 data-i18n="s4_title">Монтаж видео</h3>
+                <p data-i18n="s4_text">
+                  Монтаж роликов, нарезки, титры, базовые эффекты под
+                  YouTube/Shorts/Reels.
+                </p>
+              </div>
+            </div>
+
+            <div class="actions" style="margin-top: 18px">
+              <a
+                class="btn primary"
+                href="https://t.me/flarew1ch"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="services_cta"
+              >
+                Обсудить задачу в Telegram
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PORTFOLIO -->
+      <section id="portfolio">
+        <div class="wrap">
+          <div class="card pad">
+            <div class="carousel-head">
+              <div>
+                <h2
+                  class="section-title"
+                  style="margin-bottom: 6px"
+                  data-i18n="portfolio_title"
+                >
+                  Портфолио
+                </h2>
+                <div class="muted" data-i18n="portfolio_sub">
+                  Скриншоты и примеры работ.
+                </div>
+              </div>
+            </div>
+
+            <!-- Карусель (замени картинки на свои) -->
+            <div class="carousel">
+              <div class="track" id="track">
+                <div class="marquee" id="marquee">
+                  <!-- ВСЕ твои article.slide остаются как есть -->
+                  <article class="slide">
+                    <img src="/img/screen suite 1.png" alt="Work 01" />
+                    <div class="cap">
+                      <strong data-i18n="w1_title">VH Permanent — сайт</strong>
+                      <span data-i18n="w1_text">Скрин проекта + UI.</span>
+                    </div>
+                  </article>
+
+                  <article class="slide">
+                    <img src="/img/3d.jpg" alt="Work 02" />
+                    <div class="cap">
+                      <strong data-i18n="w2_title">3D Render</strong>
+                      <span data-i18n="w2_text">Пример 3D-рендера/стиля.</span>
+                    </div>
+                  </article>
+
+                  <article class="slide">
+                    <img src="/img/Prewyu.jpg" alt="Work 03" />
+                    <div class="cap">
+                      <strong data-i18n="w3_title">YouTube / thumbnails</strong>
+                      <span data-i18n="w3_text"
+                        >Превью/визуал для контента.</span
+                      >
+                    </div>
+                  </article>
+
+                  <article class="slide">
+                    <img src="/img/shapka.jpg" alt="Work 04" />
+                    <div class="cap">
+                      <strong data-i18n="w4_title">Channel design</strong>
+                      <span data-i18n="w4_text"
+                        >Оформление, баннеры, стиль.</span
+                      >
+                    </div>
+                  </article>
+
+                  <article class="slide">
+                    <img src="/img/Prewiu2.jpg" alt="Work 05" />
+                    <div class="cap">
+                      <strong data-i18n="w5_title">Coming soon</strong>
+                      <span data-i18n="w5_text"
+                        >Скоро добавлю новые кейсы.</span
+                      >
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <!-- Карточки проектов (как было) -->
+            <div class="projects">
+              <div class="project">
+                <span class="badge ok" data-i18n="p1_badge">Готово</span>
+                <h3 data-i18n="p1_title">VH Permanent — сайт</h3>
+                <p data-i18n="p1_text">Пример работы: сайт/лендинг.</p>
+                <div class="links">
+                  <a
+                    href="https://vhpermanent.netlify.app/"
+                    target="_blank"
+                    rel="noreferrer"
+                    data-i18n="p_open"
+                    >Открыть →</a
+                  >
+                </div>
+              </div>
+
+              <div class="project">
+                <span class="badge dev" data-i18n="p2_badge">В разработке</span>
+                <h3 data-i18n="p2_title">Landing Page</h3>
+                <p data-i18n="p2_text">
+                  Дизайн + адаптивная верстка. Скоро добавлю.
+                </p>
+                <div class="links">
+                  <a href="#contacts" data-i18n="p_coming">Идёт разработка</a>
+                </div>
+              </div>
+
+              <div class="project">
+                <span class="badge dev" data-i18n="p3_badge">В разработке</span>
+                <h3 data-i18n="p3_title">3D Props Pack</h3>
+                <p data-i18n="p3_text">Набор 3D-объектов + превью-рендеры.</p>
+                <div class="links">
+                  <a href="#contacts" data-i18n="p_coming">Идёт разработка</a>
+                </div>
+              </div>
+
+              <div class="project">
+                <span class="badge dev" data-i18n="p4_badge">В разработке</span>
+                <h3 data-i18n="p4_title">YouTube Montage</h3>
+                <p data-i18n="p4_text">
+                  Монтаж ролика: титры, динамика, нарезка под формат.
+                </p>
+                <div class="links">
+                  <a href="#contacts" data-i18n="p_coming">Идёт разработка</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACTS -->
+      <section id="contacts">
+        <div class="wrap">
+          <div class="card pad">
+            <h2 class="section-title" data-i18n="contacts_title">Контакты</h2>
+            <p class="muted" data-i18n="contacts_text">
+              Быстрее всего отвечаю в Telegram. Можно писать в соцсети или
+              звонить.
+            </p>
+
+            <div class="contacts" style="margin-top: 16px">
+              <div class="contact-item">
+                <div>
+                  <div><strong>Telegram</strong></div>
+                  <span>@flarew1ch</span>
+                </div>
+                <a
+                  href="https://t.me/flarew1ch"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-i18n="c_open"
+                  >Открыть →</a
+                >
+              </div>
+
+              <div class="contact-item">
+                <div>
+                  <div><strong>Instagram</strong></div>
+                  <span>@vlad_flarewich</span>
+                </div>
+                <a
+                  href="https://www.instagram.com/vlad_flarewich/"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-i18n="c_open"
+                  >Открыть →</a
+                >
+              </div>
+
+              <div class="contact-item">
+                <div>
+                  <div><strong>YouTube</strong></div>
+                  <span>Фларевич</span>
+                </div>
+                <a
+                  href="https://www.youtube.com/@%D0%A4%D0%BB%D0%B0%D1%80%D0%B5%D0%B2%D0%B8%D1%87%D1%8C"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-i18n="c_open"
+                  >Открыть →</a
+                >
+              </div>
+
+              <div class="contact-item">
+                <div>
+                  <div><strong>Twitch</strong></div>
+                  <span>flarewich</span>
+                </div>
+                <a
+                  href="https://www.twitch.tv/flarewich"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-i18n="c_open"
+                  >Открыть →</a
+                >
+              </div>
+
+              <div class="contact-item">
+                <div>
+                  <div><strong>Facebook</strong></div>
+                  <span>profile</span>
+                </div>
+                <a
+                  href="https://www.facebook.com/profile.php?id=100040678399640&locale=ru_RU"
+                  target="_blank"
+                  rel="noreferrer"
+                  data-i18n="c_open"
+                  >Открыть →</a
+                >
+              </div>
+
+              <div class="contact-item">
+                <div>
+                  <div><strong data-i18n="phone_label">Телефон</strong></div>
+                  <span>+380 95 457 05 88</span>
+                </div>
+                <a href="tel:+380954570588" data-i18n="c_call">Позвонить →</a>
+              </div>
+            </div>
+
+            <div class="hr"></div>
+            <footer>
+              <div data-i18n="footer_text">
+                © <span id="year"></span> Flarewich. Built with pure
+                HTML/CSS/JS.
+              </div>
+            </footer>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/java/script.js"></script>
+  </body>
+</html>
