@@ -28,17 +28,15 @@
     <header class="topbar">
       <div class="wrap topbar-inner">
         <div class="brand">
-          <div class="logo" aria-hidden="true"></div>
+          <div class="logo" aria-hidden="true">F<span>↗</span></div>
           <div>Flarewich</div>
         </div>
 
         <nav class="nav" aria-label="Primary">
-          <div class="nav-menu" id="navMenu">
-            <a href="#about" data-i18n="nav_about">Обо мне</a>
-            <a href="#services" data-i18n="nav_services">Услуги</a>
-            <a href="#portfolio" data-i18n="nav_portfolio">Портфолио</a>
-            <a href="#contacts" data-i18n="nav_contacts">Контакты</a>
-          </div>
+          <div class="nav-menu" id="navMenu"><a href="#portfolio" data-i18n="nav_portfolio">Портфолио</a>
+<a href="#services" data-i18n="nav_services">Услуги</a>
+<a href="#about" data-i18n="nav_about">Обо мне</a>
+<a href="#contacts" data-i18n="nav_contacts">Контакты</a></div>
 
           <div class="lang" role="group" aria-label="Language switcher">
             <button type="button" id="btn-uk" aria-pressed="false">UA</button>
@@ -47,200 +45,146 @@
             <button type="button" id="btn-de" aria-pressed="false">DE</button>
           </div>
 
-          <button class="nav-burger" id="navBurger">☰</button>
+          <button class="nav-burger" id="navBurger" type="button" aria-label="Menu" aria-controls="navMenu" aria-expanded="false">☰</button>
         </nav>
       </div>
     </header>
 
     <main>
       <!-- HERO -->
-      <section>
-        <div class="wrap grid">
-          <div class="card pad">
-            <div class="kicker">
-              <span class="dot" aria-hidden="true"></span>
-              <span data-i18n="hero_kicker">Web · 3D · Video · Photoshop</span>
+      <section class="hero-v2" id="home" aria-labelledby="hero-heading">
+        <div class="wrap hero-layout">
+          <div class="hero-copy">
+            <div class="hero-eyebrow"><span></span><span data-i18n="hero_kicker">FULLSTACK DEVELOPER · UI DESIGN · DIGITAL PROJECTS</span></div>
+            <p class="hero-name">Vladyslav Stashevskyi <span>(Flarewich)</span></p>
+            <h1 id="hero-heading" data-i18n="hero_title">Создаю цифровые продукты, которые <span class="hero-accent">впечатляют.</span></h1>
+            <p class="hero-description" data-i18n="hero_subtitle">Сайты, лендинги, блоги и интерфейсы под ключ — с адаптивной версткой, аккуратным UI и современным визуалом.</p>
+            <div class="actions hero-actions">
+              <a class="btn primary" href="https://t.me/flarew1ch" target="_blank" rel="noopener noreferrer"><span data-i18n="cta_tg">Написать в Telegram</span><span aria-hidden="true">↗</span></a>
+              <a class="btn" href="#portfolio"><span data-i18n="cta_portfolio">Смотреть портфолио</span><span aria-hidden="true">↓</span></a>
             </div>
-
-            <div class="hero-head">
-              <img class="avatar" src="./img/AVA2.jpg" alt="Flarewich avatar" />
-              <div>
-                <h1 style="margin: 0" data-i18n="hero_title">
-                  Vladyslav Stashevskyi <span class="muted">(Flarewich)</span>
-                </h1>
-
-                <!-- ✅ STEP 6: role -->
-                <div class="role" data-i18n="hero_role">
-                  FullStack Developer • UI Designer
-                </div>
-
-                <div class="subtitle" data-i18n="hero_subtitle">
-                  Создаю сайты, 3D-модели, делаю монтаж и обработку фото
-                </div>
-              </div>
-            </div>
-
-            <p class="lead" data-i18n="hero_lead">
-              Мне 20 лет. Прошёл курс по веб-разработке, 3D-моделированию,
-              монтажу и Photoshop. Люблю играть и стримить — развиваю YouTube и
-              Twitch.
-            </p>
-
-            <div class="actions">
-              <a
-                class="btn primary"
-                href="https://t.me/flarew1ch"
-                target="_blank"
-                rel="noreferrer"
-                data-i18n="cta_tg"
-                >Написать в Telegram</a
-              >
-              <a class="btn" href="#portfolio" data-i18n="cta_portfolio"
-                >Смотреть портфолио</a
-              >
-            </div>
+            <div class="hero-process"><span class="hero-index" aria-hidden="true">01 — 05</span><p data-i18n="hero_lead">Работаю с идеей, структурой, дизайном, разработкой и запуском проекта.</p></div>
           </div>
-
-          <aside class="card pad">
-            <h2 class="section-title" data-i18n="quick_title">
-              Быстро обо мне
-            </h2>
-            <div class="mini">
-              <div class="tile">
-                <div class="t-title" data-i18n="q1_title">Сайты</div>
-                <div class="t-sub" data-i18n="q1_sub">
-                  Визитки, лендинги, многостраничники, адаптив
-                </div>
-              </div>
-              <div class="tile">
-                <div class="t-title" data-i18n="q2_title">3D</div>
-                <div class="t-sub" data-i18n="q2_sub">
-                  Модели/пропсы/простые сцены + рендеры
-                </div>
-              </div>
-              <div class="tile">
-                <div class="t-title" data-i18n="q3_title">Photoshop</div>
-                <div class="t-sub" data-i18n="q3_sub">
-                  Ретушь, удаление объектов, баннеры/обложки
-                </div>
-              </div>
-              <div class="tile">
-                <div class="t-title" data-i18n="q4_title">Монтаж</div>
-                <div class="t-sub" data-i18n="q4_sub">
-                  YouTube / Shorts / Reels, титры, динамика
-                </div>
+          <div class="hero-stage" aria-hidden="true">
+            <div class="stage-grid"></div><div class="stage-orbit"></div><div class="stage-mark">F / 02</div>
+            <div class="emblem-float">
+              <div class="emblem" id="hero-emblem">
+                <div class="emblem-depth"></div>
+                <i class="emblem-slice" style="--depth: -40px"></i>
+                <i class="emblem-slice" style="--depth: -36px"></i>
+                <i class="emblem-slice" style="--depth: -32px"></i>
+                <i class="emblem-slice" style="--depth: -28px"></i>
+                <i class="emblem-slice" style="--depth: -24px"></i>
+                <i class="emblem-slice" style="--depth: -20px"></i>
+                <i class="emblem-slice" style="--depth: -16px"></i>
+                <i class="emblem-slice" style="--depth: -12px"></i>
+                <i class="emblem-slice" style="--depth: -8px"></i>
+                <i class="emblem-slice" style="--depth: -4px"></i>
+                <div class="emblem-face"></div><div class="emblem-edge"></div>
               </div>
             </div>
-          </aside>
-        </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section id="about">
-        <div class="wrap">
-          <div class="card pad">
-            <h2 class="section-title" data-i18n="about_title">Обо мне</h2>
-            <p class="muted" data-i18n="about_text">
-              Я беру проекты под ключ или точечно: дизайн/верстка, 3D, графика,
-              видео. Если нет ТЗ — помогу собрать требования и предложу
-              структуру.
-            </p>
-
-            <div class="two" style="margin-top: 16px">
-              <div class="service">
-                <h3 data-i18n="about_card1_title">Сильные стороны</h3>
-                <p data-i18n="about_card1_text">
-                  Адаптивная верстка, аккуратный интерфейс, внимательность к
-                  деталям.
-                </p>
-              </div>
-
-              <!-- ✅ STEP 4: changed text (keys stay the same, update dict in JS) -->
-              <div class="service">
-                <h3 data-i18n="about_card2_title">Как я работаю</h3>
-                <p data-i18n="about_card2_text">
-                  Понимаю задачу, предлагаю структуру и UI-решения, делаю
-                  аккуратную адаптивную верстку. Если нет ТЗ — помогу
-                  сформировать требования, чтобы быстрее прийти к результату.
-                </p>
-              </div>
-            </div>
+            <span class="stage-label label-top"><i></i> UI / UX</span><span class="stage-label label-bottom"><i></i> CLEAN CODE</span>
+            <div class="stage-footer"><span>FLAREWICH</span><span>DIGITAL CRAFT / 2.0</span></div>
           </div>
         </div>
+        <div class="wrap hero-bottom"><span>DESIGN + DEVELOPMENT</span><a href="#portfolio"><span data-i18n="nav_portfolio">Портфолио</span> ↘</a></div>
       </section>
 
-      <!-- SERVICES -->
-      <section id="services">
+      <!-- SELECTED WORK -->
+      <section id="portfolio" class="studio-section">
         <div class="wrap">
           <div class="card pad">
-            <h2 class="section-title" data-i18n="services_title">Услуги</h2>
-            <div class="two">
-              <div class="service">
-                <h3 data-i18n="s1_title">Сайты</h3>
-                <p data-i18n="s1_text">
-                  Лендинги, визитки, многостраничные сайты. Адаптив, базовое
-                  SEO, чистая верстка.
-                </p>
-              </div>
-              <div class="service">
-                <h3 data-i18n="s2_title">3D-модели</h3>
-                <p data-i18n="s2_text">
-                  Модели/объекты, превью-рендеры, подготовка под дальнейшее
-                  использование.
-                </p>
-              </div>
-              <div class="service">
-                <h3 data-i18n="s3_title">Photoshop / обработка фото</h3>
-                <p data-i18n="s3_text">
-                  Ретушь, цветокор, удаление объектов, улучшение качества,
-                  баннеры и обложки.
-                </p>
-              </div>
-              <div class="service">
-                <h3 data-i18n="s4_title">Монтаж видео</h3>
-                <p data-i18n="s4_text">
-                  Монтаж роликов, нарезки, титры, базовые эффекты под
-                  YouTube/Shorts/Reels.
-                </p>
-              </div>
-            </div>
-
-            <div class="actions" style="margin-top: 18px">
-              <a
-                class="btn primary"
-                href="https://t.me/flarew1ch"
-                target="_blank"
-                rel="noreferrer"
-                data-i18n="services_cta"
-              >
-                Обсудить задачу в Telegram
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- PORTFOLIO -->
-      <section id="portfolio">
-        <div class="wrap">
-          <div class="card pad">
+            <div class="section-eyebrow"><span>01 /</span> <span data-i18n="nav_portfolio">Портфолио</span></div>
             <div class="carousel-head">
               <div>
                 <h2
                   class="section-title"
                   style="margin-bottom: 6px"
-                  data-i18n="portfolio_title"
-                >
-                  Портфолио
-                </h2>
-                <div class="muted" data-i18n="portfolio_sub">
-                  Скриншоты и примеры работ.
-                </div>
+                  data-i18n="selected_title"
+                >Избранные проекты</h2>
+                <div class="muted" data-i18n="selected_intro">Реальные продукты. Продуманные интерфейсы. Внимание к каждой детали.</div>
               </div>
             </div>
 
-            <!-- Карусель -->
-            <div class="carousel">
+            <!-- Projects -->
+            <div class="projects">
+<article class="project showcase featured showcase-1">
+  <div class="showcase-info">
+    <span class="project-index" aria-hidden="true">01</span>
+    <span class="badge ok" data-i18n="deutschly_badge">Доступно</span>
+    <span class="project-category" data-i18n="category_app">Веб-приложение</span>
+    <h3>Deutschly</h3>
+    <p data-i18n="deutschly_text">Deutschly — платформа для изучения немецкого языка с уроками, словарём и практикой.</p>
+    <div class="stack">
+                  <span>React</span>
+                  <span>Vite</span>
+                  <span>PWA</span>
+                  <span>Vercel</span>
+                </div>
+    <div class="links"><a href="https://deutschly-beta-phi.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="view_project">Смотреть проект</span><span class="project-link-arrow" aria-hidden="true">↗</span></a></div>
+  </div>
+  <div class="project-media browser-mockup">
+    <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>deutschly-beta-phi.vercel.app</span></div>
+    <img src="./img/Deutchly.png" alt="Deutschly" width="1853" height="954" loading="lazy" decoding="async" />
+  </div>
+</article>
+
+<article class="project showcase showcase-2">
+  <div class="showcase-info">
+    <span class="project-index" aria-hidden="true">02</span>
+    <span class="badge ok" data-i18n="p5_badge">Готово</span>
+    <span class="project-category" data-i18n="category_blog">Блог</span>
+    <h3>Mini Blog</h3>
+    <p data-i18n="p5_text">Мини-блог: адаптивная верстка + аккуратный интерфейс.</p>
+    <div class="stack">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>NodeJs</span>
+                  <span>Supabase</span>
+                </div>
+    <div class="links"><a href="https://mini-blog-ten-rho.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="view_project">Смотреть проект</span><span class="project-link-arrow" aria-hidden="true">↗</span></a></div>
+  </div>
+  <div class="project-media browser-mockup">
+    <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>mini-blog-ten-rho.vercel.app</span></div>
+    <img src="./img/mini-blog.png" alt="Mini Blog" width="1895" height="955" loading="lazy" decoding="async" />
+  </div>
+</article>
+
+<article class="project showcase showcase-3">
+  <div class="showcase-info">
+    <span class="project-index" aria-hidden="true">03</span>
+    <span class="badge ok" data-i18n="p1_badge">Готово</span>
+    <span class="project-category" data-i18n="category_site">Веб-сайт</span>
+    <h3>VH Permanent</h3>
+    <p data-i18n="p1_text">Пример работы: сайт/лендинг.</p>
+    <div class="stack">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                </div>
+    <div class="links"><a href="https://vhpermanent.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="view_project">Смотреть проект</span><span class="project-link-arrow" aria-hidden="true">↗</span></a></div>
+  </div>
+  <div class="project-media browser-mockup">
+    <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>vhpermanent.vercel.app</span></div>
+    <img src="/img/screen suite 1.png" alt="VH Permanent" width="1902" height="954" loading="lazy" decoding="async" />
+  </div>
+</article>
+
+<article class="project video-project">
+<div class="project-media video-art" aria-hidden="true"><span class="video-art-code">REC / 01</span><span class="video-play"></span><span class="video-art-label" data-i18n="category_video">Видеомонтаж</span></div>
+<span class="badge ok" data-i18n="p4_badge">Готово</span><span class="project-category" data-i18n="category_video">Видеомонтаж</span><h3 data-i18n="p4_title">Монтаж YouTube</h3><p data-i18n="p4_text">Готовая работа по видеомонтажу для YouTube.</p>
+<div class="stack">
+                  <span>CapCut — видеомонтаж</span>
+                  <span>Adobe Photoshop — графика</span>
+                  <span>OBS Studio — запись видео</span>
+                </div>
+<div class="links"><a href="https://www.youtube.com/watch?v=kMBmOW1_8vI" target="_blank" rel="noopener noreferrer" data-i18n="p_open">Открыть →</a></div></article>
+
+<article class="project"><span class="badge dev" data-i18n="p2_badge">В разработке</span><h3 data-i18n="p2_title">Landing Page</h3><p data-i18n="p2_text">Дизайн + адаптивная верстка. Скоро добавлю.</p><div class="links"><a href="#contacts" data-i18n="p_coming">Идёт разработка</a></div></article>
+
+<article class="project"><span class="badge dev" data-i18n="p3_badge">В разработке</span><h3 data-i18n="p3_title">3D Props Pack</h3><p data-i18n="p3_text">Набор 3D-объектов + превью-рендеры.</p><div class="links"><a href="#contacts" data-i18n="p_coming">Идёт разработка</a></div></article>
+</div>
+<div class="visual-gallery"><div class="gallery-heading"><h3 data-i18n="gallery_title">Визуальные эксперименты</h3><p data-i18n="gallery_intro">3D, графика, интерфейсы и видео — другие грани моей работы.</p></div><div class="carousel">
               <div class="track" id="track">
                 <div class="marquee" id="marquee">
                   <article class="slide">
@@ -292,7 +236,11 @@
                   </article>
 
                   <article class="slide">
-                    <img src="https://i.ytimg.com/vi/kMBmOW1_8vI/hqdefault.jpg" alt="YouTube — kMBmOW1_8vI" />
+                    <div class="video-art video-art-slide" aria-hidden="true">
+                      <span class="video-art-code">REC / 01</span>
+                      <span class="video-play"></span>
+                      <span class="video-art-label" data-i18n="category_video">Видеомонтаж</span>
+                    </div>
                     <div class="cap">
                       <strong data-i18n="w5_title">Монтаж YouTube</strong>
                       <span data-i18n="w5_text">Готовая работа по видеомонтажу для YouTube.</span>
@@ -300,145 +248,125 @@
                   </article>
                 </div>
               </div>
+            </div></div></div>
+        </div>
+      </section>
+
+      <!-- EXPERTISE -->
+      <section id="services" class="studio-section">
+        <div class="wrap">
+          <div class="card pad">
+            <div class="section-eyebrow"><span>02 /</span> <span data-i18n="nav_services">Услуги</span></div>
+            <h2 class="section-title" data-i18n="expertise_title">Разные инструменты. Один подход.</h2>
+            <div class="two service-bento expertise-grid">
+              <div class="service service-primary"><span class="service-number" aria-hidden="true">01</span><span class="service-symbol" aria-hidden="true">&lt;/&gt;</span>
+                <h3 data-i18n="studio_web">Full-Stack Web Development</h3>
+                <p data-i18n="s1_text">
+                  Лендинги, визитки, многостраничные сайты. Адаптив, базовое
+                  SEO, чистая верстка.
+                </p>
+              </div>
+              <div class="service"><span class="service-number" aria-hidden="true">02</span><span class="service-symbol" aria-hidden="true">◇</span>
+                <h3 data-i18n="s2_title">3D-модели</h3>
+                <p data-i18n="s2_text">
+                  Модели/объекты, превью-рендеры, подготовка под дальнейшее
+                  использование.
+                </p>
+              </div>
+              <div class="service"><span class="service-number" aria-hidden="true">03</span><span class="service-symbol" aria-hidden="true">✳</span>
+                <h3 data-i18n="s3_title">Photoshop / обработка фото</h3>
+                <p data-i18n="s3_text">
+                  Ретушь, цветокор, удаление объектов, улучшение качества,
+                  баннеры и обложки.
+                </p>
+              </div>
+              <div class="service"><span class="service-number" aria-hidden="true">04</span><span class="service-symbol" aria-hidden="true">▷</span>
+                <h3 data-i18n="s4_title">Монтаж видео</h3>
+                <p data-i18n="s4_text">
+                  Монтаж роликов, нарезки, титры, базовые эффекты под
+                  YouTube/Shorts/Reels.
+                </p>
+              </div>
+              <div class="service service-ui"><span class="service-number" aria-hidden="true">05</span><span class="service-symbol" aria-hidden="true">↗</span><h3 data-i18n="studio_ui">UI / адаптивный дизайн</h3><p data-i18n="studio_ui_text">Продуманные интерфейсы и адаптивная верстка для любого экрана.</p><div class="ui-wireframe" aria-hidden="true"><i></i><i></i><i></i></div></div>
             </div>
 
-            <!-- Projects -->
-            <div class="projects">
-              <div class="project featured">
-                <div class="p-overlay">
-                  <a class="p-cta" href="https://deutschly-beta-phi.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="p_open">Открыть →</a>
-                </div>
-                <span class="badge ok" data-i18n="deutschly_badge">Доступно</span>
-                <h3 data-i18n="deutschly_title">Deutschly — веб-приложение</h3>
-                <p data-i18n="deutschly_text">Deutschly — платформа для изучения немецкого языка с уроками, словарём и практикой.</p>
-                <div class="stack">
-                  <span>React</span>
-                  <span>Vite</span>
-                  <span>PWA</span>
-                  <span>Vercel</span>
-                </div>
-                <div class="links">
-                  <a href="https://deutschly-beta-phi.vercel.app/" target="_blank" rel="noopener noreferrer" data-i18n="p_open">Открыть →</a>
-                </div>
-              </div>
-
-              <!-- ✅ STEP 7: overlay on done projects -->
-              <div class="project">
-                <div class="p-overlay">
-                  <a
-                    class="p-cta"
-                    href="https://vhpermanent.vercel.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >Open →</a>
-                </div>
-
-                <span class="badge ok" data-i18n="p1_badge">Готово</span>
-                <h3 data-i18n="p1_title">VH Permanent — сайт</h3>
-                <p data-i18n="p1_text">Пример работы: сайт/лендинг.</p>
-                <div class="stack">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
-                </div>
-                <div class="links">
-                  <a
-                    href="https://vhpermanent.vercel.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                    data-i18n="p_open"
-                    >Открыть →</a
-                  >
-                </div>
-              </div>
-
-              <div class="project">
-                <div class="p-overlay">
-                  <a
-                    class="p-cta"
-                    href="https://mini-blog-ten-rho.vercel.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >Open →</a>
-                </div>
-
-                <span class="badge ok" data-i18n="p5_badge">Готово</span>
-                <h3 data-i18n="p5_title">Mini Blog — сайт</h3>
-                <p data-i18n="p5_text">Мини-блог: адаптивная верстка + аккуратный интерфейс.</p>
-                <div class="stack">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>NodeJs</span>
-                  <span>Supabase</span>
-                </div>
-
-                <div class="links">
-                  <a
-                    href="https://mini-blog-ten-rho.vercel.app/"
-                    target="_blank"
-                    rel="noreferrer"
-                    data-i18n="p_open"
-                    >Открыть →</a
-                  >
-                </div>
-              </div>
-
-              <div class="project">
-                <span class="badge dev" data-i18n="p2_badge">В разработке</span>
-                <h3 data-i18n="p2_title">Landing Page</h3>
-                <p data-i18n="p2_text">
-                  Дизайн + адаптивная верстка. Скоро добавлю.
-                </p>
-                <div class="links">
-                  <a href="#contacts" data-i18n="p_coming">Идёт разработка</a>
-                </div>
-              </div>
-
-              <div class="project">
-                <span class="badge dev" data-i18n="p3_badge">В разработке</span>
-                <h3 data-i18n="p3_title">3D Props Pack</h3>
-                <p data-i18n="p3_text">Набор 3D-объектов + превью-рендеры.</p>
-                <div class="links">
-                  <a href="#contacts" data-i18n="p_coming">Идёт разработка</a>
-                </div>
-              </div>
-
-              <div class="project">
-                <div class="p-overlay">
-                  <a class="p-cta" href="https://www.youtube.com/watch?v=kMBmOW1_8vI" target="_blank" rel="noopener noreferrer" data-i18n="p_open">Открыть →</a>
-                </div>
-                <span class="badge ok" data-i18n="p4_badge">Готово</span>
-                <h3 data-i18n="p4_title">Монтаж YouTube</h3>
-                <p data-i18n="p4_text">
-                  Готовая работа по видеомонтажу для YouTube.
-                </p>
-                <div class="stack">
-                  <span>CapCut — видеомонтаж</span>
-                  <span>Adobe Photoshop — графика</span>
-                  <span>OBS Studio — запись видео</span>
-                </div>
-                <div class="links">
-                  <a href="https://www.youtube.com/watch?v=kMBmOW1_8vI" target="_blank" rel="noopener noreferrer" data-i18n="p_open">Открыть →</a>
-                </div>
-              </div>
+            <div class="actions" style="margin-top: 18px">
+              <a
+                class="btn primary"
+                href="https://t.me/flarew1ch"
+                target="_blank"
+                rel="noreferrer"
+                data-i18n="services_cta"
+              >
+                Обсудить задачу в Telegram
+              </a>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ✅ STEP 5: WHY section (inserted before contacts) -->
-      <section id="why">
+      <!-- ABOUT -->
+      <section id="about" class="studio-section">
         <div class="wrap">
           <div class="card pad">
-            <h2 class="section-title" data-i18n="why_title">Почему со мной удобно</h2>
-            <p class="muted" data-i18n="why_sub">
-              Я стараюсь делать процесс понятным и быстрым — без лишней воды.
+            <div class="section-eyebrow"><span>03 /</span> <span data-i18n="nav_about">Обо мне</span></div>
+            <div class="about-headline"><h2 class="section-title" data-i18n="about_statement">От идеи — к <span>работающему продукту.</span></h2><div class="about-signature">Flarewich<span data-i18n="hero_role">FullStack Developer • UI Designer</span></div></div>
+            <p class="muted" data-i18n="about_text">
+              Я беру проекты под ключ или точечно: дизайн/верстка, 3D, графика,
+              видео. Если нет ТЗ — помогу собрать требования и предложу
+              структуру.
             </p>
+            <div class="about-capabilities">
+              <div class="skill-line"><span data-i18n="studio_skills">Направления</span><div><span>FullStack</span><span>UI / UX</span><span>3D</span><span>Photoshop</span><span data-i18n="q4_title">Монтаж</span></div></div>
 
-            <div class="why-grid">
+            </div>
+
+            <div class="two" style="margin-top: 16px">
+              <div class="service">
+                <h3 data-i18n="about_card1_title">Сильные стороны</h3>
+                <p data-i18n="about_card1_text">
+                  Адаптивная верстка, аккуратный интерфейс, внимательность к
+                  деталям.
+                </p>
+              </div>
+
+              <!-- ✅ STEP 4: changed text (keys stay the same, update dict in JS) -->
+
+            </div>
+            <article class="education" aria-labelledby="education-school">
+              <div class="education-header">
+                <div class="education-eyebrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span data-i18n="edu_label">Образование</span></div>
+                <span class="education-status" data-i18n="edu_status">Обучение завершено</span>
+              </div>
+              <div class="education-main">
+                <div class="education-info">
+                  <h3 id="education-school">IT Career Hub</h3>
+                  <p class="education-school-type" data-i18n="edu_school_type">Онлайн-школа</p>
+                  <p class="education-program">Full-Stack Web Development</p>
+                  <p class="education-description" data-i18n="edu_description">Завершённая программа подготовки по full-stack веб-разработке: от интерфейсов и серверной части до инженерных практик и развёртывания приложений.</p>
+                </div>
+                <div class="education-volume"><strong>580 <span>UE</span></strong><p data-i18n="edu_units">Учебных единиц по программе</p></div>
+              </div>
+              <ul class="education-topics" data-i18n="edu_topics"><li>HTML · CSS · JavaScript</li><li>React</li><li>Node.js · TypeScript</li><li>Веб-инженерия</li><li>DevOps</li><li>Docker · облачные технологии</li><li>Алгоритмы и структуры данных</li></ul>
+              <!-- Add a real document link here only after approval to publish its contents. -->
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section id="why" class="studio-section">
+        <div class="wrap">
+          <div class="card pad">
+            <div class="section-eyebrow"><span>04 /</span> <span data-i18n="why_label">Подход</span></div>
+            <h2 class="section-title" data-i18n="process_title">От первого разговора до запуска.</h2>
+            <p class="muted" data-i18n="process_intro">Понятные этапы, внимание к задаче и совместная работа над результатом.</p>
+
+            <ol class="process-timeline"><li class="process-row"><span class="process-number" aria-hidden="true">01</span><div><h3 data-i18n="process_brief_title">Обсуждение и анализ задачи</h3><p data-i18n="process_brief_text">Разбираемся в целях, собираем требования и определяем структуру проекта.</p></div><span class="process-arrow" aria-hidden="true">↗</span></li><li class="process-row"><span class="process-number" aria-hidden="true">02</span><div><h3 data-i18n="process_design_title">Структура и дизайн</h3><p data-i18n="process_design_text">Продумываю пользовательский путь, создаю прототип и визуальное решение.</p></div><span class="process-arrow" aria-hidden="true">↗</span></li><li class="process-row"><span class="process-number" aria-hidden="true">03</span><div><h3 data-i18n="process_build_title">Разработка и тестирование</h3><p data-i18n="process_build_text">Разрабатываю интерфейс и функциональность, проверяю работу на мобильных устройствах.</p></div><span class="process-arrow" aria-hidden="true">↗</span></li><li class="process-row"><span class="process-number" aria-hidden="true">04</span><div><h3 data-i18n="process_launch_title">Запуск и доработка</h3><p data-i18n="process_launch_text">Согласуем правки, запускаем проект и обсуждаем дальнейшую поддержку.</p></div><span class="process-arrow" aria-hidden="true">↗</span></li></ol><h3 class="approach-caption" data-i18n="why_title">Почему со мной удобно</h3><div class="why-grid">
               <div class="why-item">
                 <div class="why-top">
-                  <span class="why-ico">⚡</span>
+                  <span class="why-ico" aria-hidden="true">01</span>
                   <strong data-i18n="why_1_title">Быстрая связь</strong>
                 </div>
                 <p data-i18n="why_1_text">Обычно отвечаю быстро, держу в курсе прогресса.</p>
@@ -446,7 +374,7 @@
 
               <div class="why-item">
                 <div class="why-top">
-                  <span class="why-ico">🧩</span>
+                  <span class="why-ico" aria-hidden="true">02</span>
                   <strong data-i18n="why_2_title">Помогаю с ТЗ</strong>
                 </div>
                 <p data-i18n="why_2_text">Если нет структуры — предложу варианты и соберу требования.</p>
@@ -454,7 +382,7 @@
 
               <div class="why-item">
                 <div class="why-top">
-                  <span class="why-ico">📱</span>
+                  <span class="why-ico" aria-hidden="true">03</span>
                   <strong data-i18n="why_3_title">Адаптив и UX</strong>
                 </div>
                 <p data-i18n="why_3_text">Делаю аккуратно под мобилки и думаю о удобстве пользователя.</p>
@@ -462,7 +390,7 @@
 
               <div class="why-item">
                 <div class="why-top">
-                  <span class="why-ico">✅</span>
+                  <span class="why-ico" aria-hidden="true">04</span>
                   <strong data-i18n="why_4_title">Чистая работа</strong>
                 </div>
                 <p data-i18n="why_4_text">Понятная структура, аккуратная верстка, внимание к деталям.</p>
@@ -470,18 +398,17 @@
             </div>
           </div>
         </div>
-      </section>
+      <div class="process-note"><p data-i18n="about_card2_text">Собираю требования, предлагаю варианты, делаю прототип и дизайн, затем верстаю и добавляю функционал. Тестирую на мобильных устройствах, вношу правки с заказчиком и делаю деплой. Срочные проекты «за 1 день» не беру — работаю по предоплате.</p></div></section>
 
-      <!-- CONTACTS -->
-      <section id="contacts">
+      <!-- CONTACT -->
+      <section id="contacts" class="studio-section">
         <div class="wrap">
           <div class="card pad">
-            <h2 class="section-title" data-i18n="contacts_title">Контакты</h2>
-            <p class="muted" data-i18n="contacts_text">
-              Быстрее всего отвечаю в Telegram. Можно писать в соцсети или
-              звонить.
-            </p>
+            <div class="section-eyebrow"><span>05 /</span> <span data-i18n="nav_contacts">Контакты</span></div>
+            <h2 class="section-title contact-heading" data-i18n="contact_final_title">Есть идея?<br><span>Давайте воплотим её в жизнь.</span></h2>
+            <p class="muted" data-i18n="contact_invite">Расскажите о вашем проекте. Обсудим задачу, структуру и путь от идеи до запуска.</p>
 
+            <a class="btn primary contact-cta" href="https://t.me/flarew1ch" target="_blank" rel="noopener noreferrer"><span data-i18n="services_cta">Обсудить задачу в Telegram</span><span aria-hidden="true">↗</span></a>
             <div class="contacts" style="margin-top: 16px">
               <div class="contact-item">
                 <div>
@@ -562,8 +489,8 @@
               </div>
             </div>
 
-            <div class="hr"></div>
-            <footer>
+            <div class="footer-wordmark" aria-hidden="true">FLAREWICH</div><div class="hr"></div>
+            <footer><span class="footer-brand">Flarewich<span>®</span></span>
               <div data-i18n="footer_text">
                 © <span id="year"></span> Flarewich. Built with pure
                 HTML/CSS/JS.
@@ -572,7 +499,7 @@
           </div>
         </div>
       </section>
-    </main>
+</main>
 
     <script src="/java/script.js"></script>
   </body>

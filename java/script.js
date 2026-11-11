@@ -1,5 +1,47 @@
 const dict = {
   ru: {
+    edu_label: "Образование",
+    edu_status: "Обучение завершено",
+    edu_school_type: "Онлайн-школа",
+    edu_description: "Завершённая программа подготовки по full-stack веб-разработке: от интерфейсов и серверной части до инженерных практик и развёртывания приложений.",
+    edu_units: "Учебных единиц по программе",
+    edu_topics: "<li>HTML · CSS · JavaScript</li><li>React</li><li>Node.js · TypeScript</li><li>Веб-инженерия</li><li>DevOps</li><li>Docker · облачные технологии</li><li>Алгоритмы и структуры данных</li>",
+    edu_document: "Посмотреть документ ↗",
+    selected_title: "Избранные проекты",
+    selected_intro: "Реальные продукты. Продуманные интерфейсы. Внимание к каждой детали.",
+    view_project: "Смотреть проект",
+    category_app: "Веб-приложение",
+    category_blog: "Блог",
+    category_site: "Веб-сайт",
+    gallery_title: "Визуальные эксперименты",
+    gallery_intro: "3D, графика, интерфейсы и видео — другие грани моей работы.",
+    expertise_title: "Разные инструменты. Один подход.",
+    about_statement: "От идеи — к <span>работающему продукту.</span>",
+    process_title: "От первого разговора до запуска.",
+    process_intro: "Понятные этапы, внимание к задаче и совместная работа над результатом.",
+    process_brief_title: "Обсуждение и анализ задачи",
+    process_brief_text: "Разбираемся в целях, собираем требования и определяем структуру проекта.",
+    process_design_title: "Структура и дизайн",
+    process_design_text: "Продумываю пользовательский путь, создаю прототип и визуальное решение.",
+    process_build_title: "Разработка и тестирование",
+    process_build_text: "Разрабатываю интерфейс и функциональность, проверяю работу на мобильных устройствах.",
+    process_launch_title: "Запуск и доработка",
+    process_launch_text: "Согласуем правки, запускаем проект и обсуждаем дальнейшую поддержку.",
+    contact_final_title: "Есть идея?<br><span>Давайте воплотим её в жизнь.</span>",
+    contact_invite: "Расскажите о вашем проекте. Обсудим задачу, структуру и путь от идеи до запуска.",
+    why_label: "Подход",
+    studio_skills: "Направления",
+    studio_languages: "языка интерфейса этого сайта",
+    step_brief: "Задача",
+    step_design: "Дизайн",
+    step_build: "Разработка",
+    step_launch: "Запуск",
+    studio_web: "Full-Stack Web Development",
+    studio_ui: "UI / адаптивный дизайн",
+    studio_ui_text: "Продуманные интерфейсы и адаптивная верстка для любого экрана.",
+    category_web: "Веб-разработка",
+    category_video: "Видеомонтаж",
+    studio_contact_title: "Давайте создадим <span>что-то крутое.</span>",
     deutschly_title: "Deutschly — веб-приложение",
     deutschly_preview: "Изучение немецкого языка: уроки, словарь и практика.",
     deutschly_text: "Deutschly — платформа для изучения немецкого языка с уроками, словарём и практикой.",
@@ -10,12 +52,11 @@ const dict = {
     nav_portfolio: "Портфолио",
     nav_contacts: "Контакты",
 
-    hero_kicker: "Web · 3D · Video · Photoshop",
-    hero_title: 'Vladyslav Stashevskyi <span class="muted">(Flarewich)</span>',
+    hero_kicker: "FULLSTACK DEVELOPER · UI DESIGN · DIGITAL PROJECTS",
+    hero_title: 'Создаю цифровые продукты, которые <span class="hero-accent">впечатляют.</span>',
     hero_role: "FullStack Developer • UI Designer",
-    hero_subtitle: "Создаю сайты, 3D-модели, делаю монтаж и обработку фото",
-    hero_lead:
-      "Мне 20 лет. Прошёл курс по веб-разработке, 3D-моделированию, монтажу и Photoshop. Люблю играть и стримить — развиваю YouTube и Twitch.",
+    hero_subtitle: "Сайты, лендинги, блоги и интерфейсы под ключ — с адаптивной версткой, аккуратным UI и современным визуалом.",
+    hero_lead: "Работаю с идеей, структурой, дизайном, разработкой и запуском проекта.",
     cta_tg: "Написать в Telegram",
     cta_portfolio: "Смотреть портфолио",
 
@@ -113,6 +154,48 @@ const dict = {
   },
 
   en: {
+    edu_label: "Education",
+    edu_status: "Program completed",
+    edu_school_type: "Online school",
+    edu_description: "Completed full-stack web development program covering interfaces, back-end development, engineering practices and application deployment.",
+    edu_units: "Teaching units in the program",
+    edu_topics: "<li>HTML · CSS · JavaScript</li><li>React</li><li>Node.js · TypeScript</li><li>Web Engineering</li><li>DevOps</li><li>Docker · Cloud Technologies</li><li>Algorithms and Data Structures</li>",
+    edu_document: "View document ↗",
+    selected_title: "Selected work",
+    selected_intro: "Real products. Thoughtful interfaces. Every detail considered.",
+    view_project: "View project",
+    category_app: "Web application",
+    category_blog: "Blog",
+    category_site: "Website",
+    gallery_title: "Visual explorations",
+    gallery_intro: "3D, graphics, interfaces and video — other sides of my work.",
+    expertise_title: "Different tools. One mindset.",
+    about_statement: "From an idea to <span>a working product.</span>",
+    process_title: "From our first conversation to launch.",
+    process_intro: "Clear stages, a shared understanding and thoughtful execution.",
+    process_brief_title: "Discovery and project brief",
+    process_brief_text: "We discuss goals, gather requirements and define the project structure.",
+    process_design_title: "Structure and design",
+    process_design_text: "I map the user journey, build a prototype and shape the visual direction.",
+    process_build_title: "Development and testing",
+    process_build_text: "I build the interface and functionality, then test the experience on mobile devices.",
+    process_launch_title: "Launch and refinement",
+    process_launch_text: "We agree on refinements, launch the project and discuss ongoing support.",
+    contact_final_title: "Have an idea?<br><span>Let’s bring it to life.</span>",
+    contact_invite: "Tell me about your project. Let’s discuss the brief, structure and path from concept to launch.",
+    why_label: "The approach",
+    studio_skills: "Capabilities",
+    studio_languages: "interface languages on this website",
+    step_brief: "Brief",
+    step_design: "Design",
+    step_build: "Development",
+    step_launch: "Launch",
+    studio_web: "Full-Stack Web Development",
+    studio_ui: "UI / Responsive Design",
+    studio_ui_text: "Thoughtful interfaces and responsive layouts for every screen.",
+    category_web: "Web development",
+    category_video: "Video editing",
+    studio_contact_title: "Let’s create <span>something great.</span>",
     deutschly_title: "Deutschly — Web app",
     deutschly_preview: "Learn German with lessons, a dictionary and practice.",
     deutschly_text: "Deutschly is a platform for learning German with lessons, a dictionary and practice.",
@@ -123,12 +206,11 @@ const dict = {
     nav_portfolio: "Portfolio",
     nav_contacts: "Contacts",
 
-    hero_kicker: "Web · 3D · Video · Photoshop",
-    hero_title: 'Vladyslav Stashevskyi <span class="muted">(Flarewich)</span>',
+    hero_kicker: "FULLSTACK DEVELOPER · UI DESIGN · DIGITAL PROJECTS",
+    hero_title: 'I build digital products that <span class="hero-accent">make an impact.</span>',
     hero_role: "FullStack Developer • UI Designer",
-    hero_subtitle: "I build websites, create 3D models, edit photos and videos",
-    hero_lead:
-      "I'm 20 years old. I completed courses in web development, 3D modeling, video editing, and Photoshop. I love gaming and streaming — growing my YouTube and Twitch.",
+    hero_subtitle: "Websites, landing pages, blogs and interfaces — from concept to launch, with responsive layouts, thoughtful UI and a modern visual identity.",
+    hero_lead: "From idea and structure to design, development and launch.",
     cta_tg: "Message me on Telegram",
     cta_portfolio: "View portfolio",
 
@@ -227,6 +309,48 @@ const dict = {
   },
 
   uk: {
+    edu_label: "Освіта",
+    edu_status: "Навчання завершено",
+    edu_school_type: "Онлайн-школа",
+    edu_description: "Завершена програма підготовки з full-stack веброзробки: від інтерфейсів і серверної частини до інженерних практик та розгортання застосунків.",
+    edu_units: "Навчальних одиниць за програмою",
+    edu_topics: "<li>HTML · CSS · JavaScript</li><li>React</li><li>Node.js · TypeScript</li><li>Вебінженерія</li><li>DevOps</li><li>Docker · хмарні технології</li><li>Алгоритми та структури даних</li>",
+    edu_document: "Переглянути документ ↗",
+    selected_title: "Вибрані проєкти",
+    selected_intro: "Реальні продукти. Продумані інтерфейси. Увага до кожної деталі.",
+    view_project: "Переглянути проєкт",
+    category_app: "Вебзастосунок",
+    category_blog: "Блог",
+    category_site: "Вебсайт",
+    gallery_title: "Візуальні експерименти",
+    gallery_intro: "3D, графіка, інтерфейси та відео — інші грані моєї роботи.",
+    expertise_title: "Різні інструменти. Єдиний підхід.",
+    about_statement: "Від ідеї — до <span>продукту, що працює.</span>",
+    process_title: "Від першої розмови до запуску.",
+    process_intro: "Зрозумілі етапи, увага до завдання та спільна робота над результатом.",
+    process_brief_title: "Обговорення та аналіз завдання",
+    process_brief_text: "Зʼясовуємо цілі, збираємо вимоги й визначаємо структуру проєкту.",
+    process_design_title: "Структура та дизайн",
+    process_design_text: "Продумую шлях користувача, створюю прототип і візуальне рішення.",
+    process_build_title: "Розробка та тестування",
+    process_build_text: "Розробляю інтерфейс і функціональність, перевіряю роботу на мобільних пристроях.",
+    process_launch_title: "Запуск і доопрацювання",
+    process_launch_text: "Узгоджуємо зміни, запускаємо проєкт та обговорюємо подальшу підтримку.",
+    contact_final_title: "Є ідея?<br><span>Втілимо її в життя.</span>",
+    contact_invite: "Розкажіть про ваш проєкт. Обговоримо завдання, структуру та шлях від ідеї до запуску.",
+    why_label: "Підхід",
+    studio_skills: "Напрями",
+    studio_languages: "мови інтерфейсу цього сайту",
+    step_brief: "Завдання",
+    step_design: "Дизайн",
+    step_build: "Розробка",
+    step_launch: "Запуск",
+    studio_web: "Full-Stack Web Development",
+    studio_ui: "UI / адаптивний дизайн",
+    studio_ui_text: "Продумані інтерфейси та адаптивна верстка для будь-якого екрана.",
+    category_web: "Веброзробка",
+    category_video: "Відеомонтаж",
+    studio_contact_title: "Створімо разом <span>щось круте.</span>",
     deutschly_title: "Deutschly — вебзастосунок",
     deutschly_preview: "Вивчення німецької мови: уроки, словник і практика.",
     deutschly_text: "Deutschly — платформа для вивчення німецької мови з уроками, словником і практикою.",
@@ -237,12 +361,11 @@ const dict = {
     nav_portfolio: "Портфоліо",
     nav_contacts: "Контакти",
 
-    hero_kicker: "Web · 3D · Video · Photoshop",
-    hero_title: 'Vladyslav Stashevskyi <span class="muted">(Flarewich)</span>',
+    hero_kicker: "FULLSTACK DEVELOPER · UI DESIGN · DIGITAL PROJECTS",
+    hero_title: 'Створюю цифрові продукти, що <span class="hero-accent">вражають.</span>',
     hero_role: "FullStack Developer • UI Designer",
-    hero_subtitle: "Створюю сайти, 3D-моделі, роблю монтаж і обробку фото",
-    hero_lead:
-      "Мені 20 років. Пройшов курс з веб-розробки, 3D-моделювання, монтажу та Photoshop. Люблю грати й стрімити — розвиваю YouTube і Twitch.",
+    hero_subtitle: "Сайти, лендинги, блоги та інтерфейси під ключ — з адаптивною версткою, охайним UI та сучасним візуалом.",
+    hero_lead: "Працюю над ідеєю, структурою, дизайном, розробкою та запуском проєкту.",
     cta_tg: "Написати в Telegram",
     cta_portfolio: "Дивитися портфоліо",
 
@@ -341,6 +464,48 @@ const dict = {
   },
 
   de: {
+    edu_label: "Ausbildung",
+    edu_status: "Programm abgeschlossen",
+    edu_school_type: "Online-Schule",
+    edu_description: "Abgeschlossenes Programm in Full-Stack-Webentwicklung: von Benutzeroberflächen und Backend-Entwicklung bis zu Engineering-Praktiken und der Bereitstellung von Anwendungen.",
+    edu_units: "Unterrichtseinheiten im Programm",
+    edu_topics: "<li>HTML · CSS · JavaScript</li><li>React</li><li>Node.js · TypeScript</li><li>Web Engineering</li><li>DevOps</li><li>Docker · Cloud-Technologien</li><li>Algorithmen und Datenstrukturen</li>",
+    edu_document: "Dokument ansehen ↗",
+    selected_title: "Ausgewählte Projekte",
+    selected_intro: "Echte Produkte. Durchdachte Interfaces. Jedes Detail zählt.",
+    view_project: "Projekt ansehen",
+    category_app: "Webanwendung",
+    category_blog: "Blog",
+    category_site: "Website",
+    gallery_title: "Visuelle Experimente",
+    gallery_intro: "3D, Grafik, Interfaces und Video — weitere Facetten meiner Arbeit.",
+    expertise_title: "Viele Werkzeuge. Ein klarer Ansatz.",
+    about_statement: "Von der Idee zum <span>funktionierenden Produkt.</span>",
+    process_title: "Vom ersten Gespräch bis zum Launch.",
+    process_intro: "Klare Schritte, ein gemeinsames Verständnis und sorgfältige Umsetzung.",
+    process_brief_title: "Gespräch und Anforderungsanalyse",
+    process_brief_text: "Wir besprechen Ziele, sammeln Anforderungen und definieren die Projektstruktur.",
+    process_design_title: "Struktur und Design",
+    process_design_text: "Ich plane die Nutzerführung, erstelle einen Prototyp und entwickle die Gestaltung.",
+    process_build_title: "Entwicklung und Tests",
+    process_build_text: "Ich entwickle Interface und Funktionen und teste die Anwendung auf mobilen Geräten.",
+    process_launch_title: "Launch und Feinschliff",
+    process_launch_text: "Wir stimmen Anpassungen ab, veröffentlichen das Projekt und besprechen die weitere Betreuung.",
+    contact_final_title: "Eine Idee?<br><span>Erwecken wir sie zum Leben.</span>",
+    contact_invite: "Erzähl mir von deinem Projekt. Wir besprechen Anforderungen, Struktur und den Weg von der Idee bis zum Launch.",
+    why_label: "Arbeitsweise",
+    studio_skills: "Kompetenzen",
+    studio_languages: "Sprachen für diese Website",
+    step_brief: "Briefing",
+    step_design: "Design",
+    step_build: "Entwicklung",
+    step_launch: "Launch",
+    studio_web: "Full-Stack Web Development",
+    studio_ui: "UI / Responsives Design",
+    studio_ui_text: "Durchdachte Interfaces und responsive Layouts für jeden Bildschirm.",
+    category_web: "Webentwicklung",
+    category_video: "Videoschnitt",
+    studio_contact_title: "Lass uns <span>etwas Großartiges schaffen.</span>",
     deutschly_title: "Deutschly — Web-App",
     deutschly_preview: "Deutsch lernen mit Lektionen, Wörterbuch und Übungen.",
     deutschly_text: "Deutschly ist eine Plattform zum Deutschlernen mit Lektionen, Wörterbuch und Übungen.",
@@ -351,13 +516,11 @@ const dict = {
     nav_portfolio: "Portfolio",
     nav_contacts: "Kontakt",
 
-    hero_kicker: "Web · 3D · Video · Photoshop",
-    hero_title: 'Vladyslav Stashevskyi <span class="muted">(Flarewich)</span>',
+    hero_kicker: "FULLSTACK DEVELOPER · UI DESIGN · DIGITAL PROJECTS",
+    hero_title: 'Ich entwickle digitale Produkte, die <span class="hero-accent">beeindrucken.</span>',
     hero_role: "FullStack Developer • UI Designer",
-    hero_subtitle:
-      "Ich erstelle Websites, 3D-Modelle und bearbeite Fotos & Videos",
-    hero_lead:
-      "Ich bin 20 Jahre alt. Ich habe Kurse in Webentwicklung, 3D-Modelling, Videoschnitt und Photoshop abgeschlossen. Ich spiele und streame gerne — ich baue YouTube und Twitch aus.",
+    hero_subtitle: "Websites, Landingpages, Blogs und Interfaces aus einer Hand — mit responsiven Layouts, durchdachtem UI und moderner Gestaltung.",
+    hero_lead: "Von der Idee und Struktur über Design und Entwicklung bis zum Launch.",
     cta_tg: "Auf Telegram schreiben",
     cta_portfolio: "Portfolio ansehen",
 
@@ -642,13 +805,64 @@ document.addEventListener("click", (e) => {
 // ✅ Fade-in on scroll (НЕ трогаем .slide, чтобы не ломать карусель)
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-    if (entry.isIntersecting) entry.target.classList.add("show");
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+      observer.unobserve(entry.target);
+    }
   });
 });
 
 document
-  .querySelectorAll(".project, .why-item, .service, .tile")
+  .querySelectorAll(".project, .why-item, .service, .tile, .studio-section .section-title, .about-capabilities, .process-row")
   .forEach((el) => {
     el.classList.add("fade");
     observer.observe(el);
   });
+
+// Pointer tilt is limited to the hero and disabled for touch and reduced motion.
+(() => {
+  const stage = document.querySelector('.hero-stage');
+  const emblem = document.getElementById('hero-emblem');
+  const motion = window.matchMedia('(min-width: 921px) and (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)');
+  if (!stage || !emblem) return;
+  const reset = () => { emblem.style.removeProperty('--tilt-x'); emblem.style.removeProperty('--tilt-y'); };
+  stage.addEventListener('pointermove', (event) => {
+    if (!motion.matches) return;
+    const rect = stage.getBoundingClientRect();
+    emblem.style.setProperty('--tilt-x', ((event.clientY - rect.top) / rect.height * -6 + 3) + 'deg');
+    emblem.style.setProperty('--tilt-y', ((event.clientX - rect.left) / rect.width * 10 - 5) + 'deg');
+  }, { passive: true });
+  stage.addEventListener('pointerleave', reset);
+  motion.addEventListener('change', reset);
+  document.addEventListener('visibilitychange', () => {
+    stage.classList.toggle('is-paused', document.hidden);
+    if (document.hidden) reset();
+  });
+  const menu = document.querySelector('.nav');
+  if (menu && burger) new MutationObserver(() => {
+    burger.setAttribute('aria-expanded', String(menu.classList.contains('open')));
+  }).observe(menu, { attributes: true, attributeFilter: ['class'] });
+})();
+
+// Section indication only; existing navigation click handlers remain in charge.
+(() => {
+  const links = Array.from(document.querySelectorAll('.nav-menu a[href^="#"]'));
+  const sections = links.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+  let scheduled = false;
+  const update = () => {
+    scheduled = false;
+    const edge = document.querySelector('.topbar').getBoundingClientRect().bottom + 80;
+    let active = null;
+    for (const section of sections) if (section.getBoundingClientRect().top <= edge) active = section.id;
+    for (const link of links) {
+      if (link.getAttribute('href') === '#' + active) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    }
+  };
+  const schedule = () => {
+    if (!scheduled) { scheduled = true; requestAnimationFrame(update); }
+  };
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule, { passive: true });
+  update();
+})();
