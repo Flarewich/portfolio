@@ -1,5 +1,10 @@
 const dict = {
   ru: {
+    deutschly_title: "Deutschly — веб-приложение",
+    deutschly_preview: "Изучение немецкого языка: уроки, словарь и практика.",
+    deutschly_text: "Deutschly — платформа для изучения немецкого языка с уроками, словарём и практикой.",
+    deutschly_badge: "Доступно",
+
     nav_about: "Обо мне",
     nav_services: "Услуги",
     nav_portfolio: "Портфолио",
@@ -59,8 +64,8 @@ const dict = {
     w3_text: "Превью/визуал для контента.",
     w4_title: "Channel design",
     w4_text: "Оформление, баннеры, стиль.",
-    w5_title: "Coming soon",
-    w5_text: "Скоро добавлю новые кейсы.",
+    w5_title: "Монтаж YouTube",
+    w5_text: "Готовая работа по видеомонтажу для YouTube.",
 
     w6_title: "Mini Blog — сайт",
     w6_text: "Мини-блог на Vercel, адаптив + UI.",
@@ -80,9 +85,9 @@ const dict = {
     p3_badge: "В разработке",
     p3_title: "3D Props Pack",
     p3_text: "Набор 3D-объектов + превью-рендеры.",
-    p4_badge: "В разработке",
-    p4_title: "YouTube Montage",
-    p4_text: "Монтаж ролика: титры, динамика, нарезка под формат.",
+    p4_badge: "Готово",
+    p4_title: "Монтаж YouTube",
+    p4_text: "Готовая работа по видеомонтажу для YouTube.",
     p_coming: "Идёт разработка",
 
     why_title: "Почему со мной удобно",
@@ -108,6 +113,11 @@ const dict = {
   },
 
   en: {
+    deutschly_title: "Deutschly — Web app",
+    deutschly_preview: "Learn German with lessons, a dictionary and practice.",
+    deutschly_text: "Deutschly is a platform for learning German with lessons, a dictionary and practice.",
+    deutschly_badge: "Available",
+
     nav_about: "About",
     nav_services: "Services",
     nav_portfolio: "Portfolio",
@@ -167,8 +177,8 @@ const dict = {
     w3_text: "Visuals for content.",
     w4_title: "Channel design",
     w4_text: "Branding, banners, style.",
-    w5_title: "Coming soon",
-    w5_text: "More cases soon.",
+    w5_title: "YouTube video editing",
+    w5_text: "Completed video editing work for YouTube.",
 
     w6_title: "Mini Blog — Website",
     w6_text: "Mini blog on Vercel, responsive + UI.",
@@ -188,9 +198,9 @@ const dict = {
     p3_badge: "In progress",
     p3_title: "3D Props Pack",
     p3_text: "A set of 3D props + preview renders.",
-    p4_badge: "In progress",
-    p4_title: "YouTube Montage",
-    p4_text: "Video edit: captions, pacing, format-friendly cut.",
+    p4_badge: "Done",
+    p4_title: "YouTube video editing",
+    p4_text: "Completed video editing work for YouTube.",
     p_coming: "Work in progress",
 
     why_title: "Why working with me is easy",
@@ -217,6 +227,11 @@ const dict = {
   },
 
   uk: {
+    deutschly_title: "Deutschly — вебзастосунок",
+    deutschly_preview: "Вивчення німецької мови: уроки, словник і практика.",
+    deutschly_text: "Deutschly — платформа для вивчення німецької мови з уроками, словником і практикою.",
+    deutschly_badge: "Доступно",
+
     nav_about: "Про мене",
     nav_services: "Послуги",
     nav_portfolio: "Портфоліо",
@@ -276,8 +291,8 @@ const dict = {
     w3_text: "Прев'ю/візуал для контенту.",
     w4_title: "Channel design",
     w4_text: "Оформлення, банери, стиль.",
-    w5_title: "Coming soon",
-    w5_text: "Скоро додам нові кейси.",
+    w5_title: "Монтаж YouTube",
+    w5_text: "Готова робота з відеомонтажу для YouTube.",
 
     w6_title: "Mini Blog — сайт",
     w6_text: "Міні-блог на Vercel, адаптив + UI.",
@@ -297,9 +312,9 @@ const dict = {
     p3_badge: "У розробці",
     p3_title: "3D Props Pack",
     p3_text: "Набір 3D-об'єктів + прев'ю-рендери.",
-    p4_badge: "У розробці",
-    p4_title: "YouTube Montage",
-    p4_text: "Монтаж ролика: титри, динаміка, нарізка під формат.",
+    p4_badge: "Готово",
+    p4_title: "Монтаж YouTube",
+    p4_text: "Готова робота з відеомонтажу для YouTube.",
     p_coming: "Триває розробка",
 
     why_title: "Чому зі мною зручно",
@@ -326,6 +341,11 @@ const dict = {
   },
 
   de: {
+    deutschly_title: "Deutschly — Web-App",
+    deutschly_preview: "Deutsch lernen mit Lektionen, Wörterbuch und Übungen.",
+    deutschly_text: "Deutschly ist eine Plattform zum Deutschlernen mit Lektionen, Wörterbuch und Übungen.",
+    deutschly_badge: "Verfügbar",
+
     nav_about: "Über mich",
     nav_services: "Leistungen",
     nav_portfolio: "Portfolio",
@@ -385,8 +405,8 @@ const dict = {
     w3_text: "Visuals für Content.",
     w4_title: "Channel Design",
     w4_text: "Branding, Banner, Stil.",
-    w5_title: "Coming soon",
-    w5_text: "Mehr Cases bald.",
+    w5_title: "YouTube-Videoschnitt",
+    w5_text: "Abgeschlossene Videoschnittarbeit für YouTube.",
 
     w6_title: "Mini Blog — Website",
     w6_text: "Mini-Blog auf Vercel, responsive + UI.",
@@ -406,9 +426,9 @@ const dict = {
     p3_badge: "In Arbeit",
     p3_title: "3D Props Pack",
     p3_text: "Set aus 3D-Props + Preview-Renderings.",
-    p4_badge: "In Arbeit",
-    p4_title: "YouTube Montage",
-    p4_text: "Videoschnitt: Captions, Tempo, formatgerechter Cut.",
+    p4_badge: "Fertig",
+    p4_title: "YouTube-Videoschnitt",
+    p4_text: "Abgeschlossene Videoschnittarbeit für YouTube.",
     p_coming: "In Arbeit",
 
     why_title: "Warum die Zusammenarbeit easy ist",
@@ -436,8 +456,6 @@ const dict = {
   },
 };
 
-const els = Array.from(document.querySelectorAll("[data-i18n]"));
-
 const buttons = {
   uk: document.getElementById("btn-uk"),
   ru: document.getElementById("btn-ru"),
@@ -456,7 +474,7 @@ function setLang(lang) {
     btn.setAttribute("aria-pressed", String(code === lang));
   }
 
-  for (const el of els) {
+  for (const el of document.querySelectorAll("[data-i18n]")) {
     const key = el.getAttribute("data-i18n");
     if (!pack[key]) continue;
     el.innerHTML = pack[key];
