@@ -3,504 +3,541 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-    <title>Flarewich — Portfolio</title>
+    <title>Flarewich — сайты, графика и видео для бизнеса</title>
     <meta
       name="description"
-      content="Vladyslav Stashevskyi (Flarewich) — websites, 3D models, Photoshop, video editing. Contacts and portfolio."
+      content="Сайты, обложки и монтаж видео для малого бизнеса и блогеров — под ключ. Цены от 120 €, бесплатный мини-аудит вашего сайта."
     />
-
-    <!-- Open Graph / Twitter -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Flarewich — Portfolio" />
-    <meta
-      property="og:description"
-      content="Web • 3D • Video • Photoshop. Contacts and portfolio."
-    />
-    <meta property="og:image" content="./assets/og-flarewich.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    <meta property="og:title" content="Flarewich — сайты, графика и видео для бизнеса" />
+    <meta property="og:description" content="Сайт, графика и видео в одних руках. Цены на сайте, бесплатный мини-аудит." />
+    <meta property="og:image" content="https://flarewich.com/img/screen%20suite%201.png" />
     <meta name="twitter:card" content="summary_large_image" />
-    <link rel="stylesheet" href="style/style.css" />
-    <link rel="shortcut icon" href="img/ava.jpg" type="image/x-icon" />
+    <meta name="theme-color" content="#0c0b0a" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;800&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/ava.jpg" />
   </head>
   <body>
-    <header class="topbar">
+    <!-- ============ TOPBAR ============ -->
+    <header class="topbar" id="topbar">
       <div class="wrap topbar-inner">
-        <div class="brand">
-          <div class="logo" aria-hidden="true">F<span>↗</span></div>
-          <div>Flarewich</div>
-        </div>
+        <a href="#top" class="brand" aria-label="Flarewich">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span>Flarewich</span>
+        </a>
 
-        <nav class="nav" aria-label="Primary">
-          <div class="nav-menu" id="navMenu"><a href="#portfolio" data-i18n="nav_portfolio">Портфолио</a>
-<a href="#services" data-i18n="nav_services">Услуги</a>
-<a href="#about" data-i18n="nav_about">Обо мне</a>
-<a href="#contacts" data-i18n="nav_contacts">Контакты</a></div>
-
-          <div class="lang" role="group" aria-label="Language switcher">
-            <button type="button" id="btn-uk" aria-pressed="false">UA</button>
-            <button type="button" id="btn-ru" aria-pressed="true">RU</button>
-            <button type="button" id="btn-en" aria-pressed="false">EN</button>
-            <button type="button" id="btn-de" aria-pressed="false">DE</button>
-          </div>
-
-          <button class="nav-burger" id="navBurger" type="button" aria-label="Menu" aria-controls="navMenu" aria-expanded="false">☰</button>
+        <nav class="nav" id="nav" aria-label="Main">
+          <a href="#services" data-i18n="nav_services">Услуги</a>
+          <a href="#work" data-i18n="nav_work">Работы</a>
+          <a href="#pricing" data-i18n="nav_pricing">Цены</a>
+          <a href="#process" data-i18n="nav_process">Как работаю</a>
+          <a href="#faq" data-i18n="nav_faq">FAQ</a>
         </nav>
+
+        <div class="topbar-right">
+          <div class="lang" role="group" aria-label="Language">
+            <button type="button" data-lang="uk">UA</button>
+            <button type="button" data-lang="ru">RU</button>
+            <button type="button" data-lang="en">EN</button>
+            <button type="button" data-lang="de">DE</button>
+          </div>
+          <a class="btn btn-sm btn-flare hide-sm" href="https://t.me/flarew1ch" target="_blank" rel="noreferrer" data-i18n="cta_short">Написать</a>
+          <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+        </div>
       </div>
     </header>
 
-    <main>
-      <!-- HERO -->
-      <section class="hero-v2" id="home" aria-labelledby="hero-heading">
-        <div class="wrap hero-layout">
+    <main id="top">
+      <!-- ============ HERO ============ -->
+      <section class="hero">
+        <div class="wrap hero-grid">
           <div class="hero-copy">
-            <div class="hero-eyebrow"><span></span><span data-i18n="hero_kicker">FULLSTACK DEVELOPER · UI DESIGN · DIGITAL PROJECTS</span></div>
-            <p class="hero-name">Vladyslav Stashevskyi <span>(Flarewich)</span></p>
-            <h1 id="hero-heading" data-i18n="hero_title">Создаю цифровые продукты, которые <span class="hero-accent">впечатляют.</span></h1>
-            <p class="hero-description" data-i18n="hero_subtitle">Сайты, лендинги, блоги и интерфейсы под ключ — с адаптивной версткой, аккуратным UI и современным визуалом.</p>
-            <div class="actions hero-actions">
-              <a class="btn primary" href="https://t.me/flarew1ch" target="_blank" rel="noopener noreferrer"><span data-i18n="cta_tg">Написать в Telegram</span><span aria-hidden="true">↗</span></a>
-              <a class="btn" href="#portfolio"><span data-i18n="cta_portfolio">Смотреть портфолио</span><span aria-hidden="true">↓</span></a>
-            </div>
-            <div class="hero-process"><span class="hero-index" aria-hidden="true">01 — 05</span><p data-i18n="hero_lead">Работаю с идеей, структурой, дизайном, разработкой и запуском проекта.</p></div>
-          </div>
-          <div class="hero-stage" aria-hidden="true">
-            <div class="stage-grid"></div><div class="stage-orbit"></div><div class="stage-mark">F / 02</div>
-            <div class="emblem-float">
-              <div class="emblem" id="hero-emblem">
-                <div class="emblem-depth"></div>
-                <i class="emblem-slice" style="--depth: -40px"></i>
-                <i class="emblem-slice" style="--depth: -36px"></i>
-                <i class="emblem-slice" style="--depth: -32px"></i>
-                <i class="emblem-slice" style="--depth: -28px"></i>
-                <i class="emblem-slice" style="--depth: -24px"></i>
-                <i class="emblem-slice" style="--depth: -20px"></i>
-                <i class="emblem-slice" style="--depth: -16px"></i>
-                <i class="emblem-slice" style="--depth: -12px"></i>
-                <i class="emblem-slice" style="--depth: -8px"></i>
-                <i class="emblem-slice" style="--depth: -4px"></i>
-                <div class="emblem-face"></div><div class="emblem-edge"></div>
-              </div>
-            </div>
-            <span class="stage-label label-top"><i></i> UI / UX</span><span class="stage-label label-bottom"><i></i> CLEAN CODE</span>
-            <div class="stage-footer"><span>FLAREWICH</span><span>DIGITAL CRAFT / 2.0</span></div>
-          </div>
-        </div>
-        <div class="wrap hero-bottom"><span>DESIGN + DEVELOPMENT</span><a href="#portfolio"><span data-i18n="nav_portfolio">Портфолио</span> ↘</a></div>
-      </section>
-
-      <!-- SELECTED WORK -->
-      <section id="portfolio" class="studio-section">
-        <div class="wrap">
-          <div class="card pad">
-            <div class="section-eyebrow"><span>01 /</span> <span data-i18n="nav_portfolio">Портфолио</span></div>
-            <div class="carousel-head">
-              <div>
-                <h2
-                  class="section-title"
-                  style="margin-bottom: 6px"
-                  data-i18n="selected_title"
-                >Избранные проекты</h2>
-                <div class="muted" data-i18n="selected_intro">Реальные продукты. Продуманные интерфейсы. Внимание к каждой детали.</div>
-              </div>
+            <div class="eyebrow reveal">
+              <span class="pulse" aria-hidden="true"></span>
+              <span data-i18n="hero_eyebrow">Принимаю новые проекты</span>
             </div>
 
-            <!-- Projects -->
-            <div class="projects">
-<article class="project showcase featured showcase-1">
-  <div class="showcase-info">
-    <span class="project-index" aria-hidden="true">01</span>
-    <span class="badge ok" data-i18n="deutschly_badge">Доступно</span>
-    <span class="project-category" data-i18n="category_app">Веб-приложение</span>
-    <h3>Deutschly</h3>
-    <p data-i18n="deutschly_text">Deutschly — платформа для изучения немецкого языка с уроками, словарём и практикой.</p>
-    <div class="stack">
-                  <span>React</span>
-                  <span>Vite</span>
-                  <span>PWA</span>
-                  <span>Vercel</span>
-                </div>
-    <div class="links"><a href="https://deutschly-beta-phi.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="view_project">Смотреть проект</span><span class="project-link-arrow" aria-hidden="true">↗</span></a></div>
-  </div>
-  <div class="project-media browser-mockup">
-    <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>deutschly-beta-phi.vercel.app</span></div>
-    <img src="./img/Deutchly.png" alt="Deutschly" width="1853" height="954" loading="lazy" decoding="async" />
-  </div>
-</article>
+            <h1 class="reveal" data-i18n="hero_title">
+              Сайты, графика и&nbsp;видео, которые <em>приводят клиентов</em>
+            </h1>
 
-<article class="project showcase showcase-2">
-  <div class="showcase-info">
-    <span class="project-index" aria-hidden="true">02</span>
-    <span class="badge ok" data-i18n="p5_badge">Готово</span>
-    <span class="project-category" data-i18n="category_blog">Блог</span>
-    <h3>Mini Blog</h3>
-    <p data-i18n="p5_text">Мини-блог: адаптивная верстка + аккуратный интерфейс.</p>
-    <div class="stack">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>NodeJs</span>
-                  <span>Supabase</span>
-                </div>
-    <div class="links"><a href="https://mini-blog-ten-rho.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="view_project">Смотреть проект</span><span class="project-link-arrow" aria-hidden="true">↗</span></a></div>
-  </div>
-  <div class="project-media browser-mockup">
-    <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>mini-blog-ten-rho.vercel.app</span></div>
-    <img src="./img/mini-blog.png" alt="Mini Blog" width="1895" height="955" loading="lazy" decoding="async" />
-  </div>
-</article>
-
-<article class="project showcase showcase-3">
-  <div class="showcase-info">
-    <span class="project-index" aria-hidden="true">03</span>
-    <span class="badge ok" data-i18n="p1_badge">Готово</span>
-    <span class="project-category" data-i18n="category_site">Веб-сайт</span>
-    <h3>VH Permanent</h3>
-    <p data-i18n="p1_text">Пример работы: сайт/лендинг.</p>
-    <div class="stack">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
-                </div>
-    <div class="links"><a href="https://vhpermanent.vercel.app/" target="_blank" rel="noopener noreferrer"><span data-i18n="view_project">Смотреть проект</span><span class="project-link-arrow" aria-hidden="true">↗</span></a></div>
-  </div>
-  <div class="project-media browser-mockup">
-    <div class="browser-bar" aria-hidden="true"><i></i><i></i><i></i><span>vhpermanent.vercel.app</span></div>
-    <img src="/img/screen suite 1.png" alt="VH Permanent" width="1902" height="954" loading="lazy" decoding="async" />
-  </div>
-</article>
-
-<article class="project video-project">
-<div class="project-media video-art" aria-hidden="true"><span class="video-art-code">REC / 01</span><span class="video-play"></span><span class="video-art-label" data-i18n="category_video">Видеомонтаж</span></div>
-<span class="badge ok" data-i18n="p4_badge">Готово</span><span class="project-category" data-i18n="category_video">Видеомонтаж</span><h3 data-i18n="p4_title">Монтаж YouTube</h3><p data-i18n="p4_text">Готовая работа по видеомонтажу для YouTube.</p>
-<div class="stack">
-                  <span>CapCut — видеомонтаж</span>
-                  <span>Adobe Photoshop — графика</span>
-                  <span>OBS Studio — запись видео</span>
-                </div>
-<div class="links"><a href="https://www.youtube.com/watch?v=kMBmOW1_8vI" target="_blank" rel="noopener noreferrer" data-i18n="p_open">Открыть →</a></div></article>
-
-<article class="project"><span class="badge dev" data-i18n="p2_badge">В разработке</span><h3 data-i18n="p2_title">Landing Page</h3><p data-i18n="p2_text">Дизайн + адаптивная верстка. Скоро добавлю.</p><div class="links"><a href="#contacts" data-i18n="p_coming">Идёт разработка</a></div></article>
-
-<article class="project"><span class="badge dev" data-i18n="p3_badge">В разработке</span><h3 data-i18n="p3_title">3D Props Pack</h3><p data-i18n="p3_text">Набор 3D-объектов + превью-рендеры.</p><div class="links"><a href="#contacts" data-i18n="p_coming">Идёт разработка</a></div></article>
-</div>
-<div class="visual-gallery"><div class="gallery-heading"><h3 data-i18n="gallery_title">Визуальные эксперименты</h3><p data-i18n="gallery_intro">3D, графика, интерфейсы и видео — другие грани моей работы.</p></div><div class="carousel">
-              <div class="track" id="track">
-                <div class="marquee" id="marquee">
-                  <article class="slide">
-                    <img src="./img/Deutchly.png" alt="Deutschly" />
-                    <div class="cap">
-                      <strong data-i18n="deutschly_title">Deutschly — веб-приложение</strong>
-                      <span data-i18n="deutschly_preview">Изучение немецкого языка: уроки, словарь и практика.</span>
-                    </div>
-                  </article>
-
-                  <article class="slide">
-                    <img src="/img/screen suite 1.png" alt="Work 01" />
-                    <div class="cap">
-                      <strong data-i18n="w1_title">VH Permanent — сайт</strong>
-                      <span data-i18n="w1_text">Скрин проекта + UI.</span>
-                    </div>
-                  </article>
-
-                  <article class="slide">
-                    <img src="/img/3d.jpg" alt="Work 02" />
-                    <div class="cap">
-                      <strong data-i18n="w2_title">3D Render</strong>
-                      <span data-i18n="w2_text">Пример 3D-рендера/стиля.</span>
-                    </div>
-                  </article>
-
-                  <article class="slide">
-                    <img src="/img/Prewyu.jpg" alt="Work 03" />
-                    <div class="cap">
-                      <strong data-i18n="w3_title">YouTube / thumbnails</strong>
-                      <span data-i18n="w3_text">Превью/визуал для контента.</span>
-                    </div>
-                  </article>
-
-                  <article class="slide">
-                    <img src="./img/mini-blog.png" alt="Mini Blog website" />
-                    <div class="cap">
-                      <strong data-i18n="w6_title">Mini Blog — сайт</strong>
-                      <span data-i18n="w6_text">Мини-блог на Node.js, адаптив + UI.</span>
-                    </div>
-                  </article>
-
-                  <article class="slide">
-                    <img src="/img/shapka.jpg" alt="Work 04" />
-                    <div class="cap">
-                      <strong data-i18n="w4_title">Channel design</strong>
-                      <span data-i18n="w4_text">Оформление, баннеры, стиль.</span>
-                    </div>
-                  </article>
-
-                  <article class="slide">
-                    <div class="video-art video-art-slide" aria-hidden="true">
-                      <span class="video-art-code">REC / 01</span>
-                      <span class="video-play"></span>
-                      <span class="video-art-label" data-i18n="category_video">Видеомонтаж</span>
-                    </div>
-                    <div class="cap">
-                      <strong data-i18n="w5_title">Монтаж YouTube</strong>
-                      <span data-i18n="w5_text">Готовая работа по видеомонтажу для YouTube.</span>
-                    </div>
-                  </article>
-                </div>
-              </div>
-            </div></div></div>
-        </div>
-      </section>
-
-      <!-- EXPERTISE -->
-      <section id="services" class="studio-section">
-        <div class="wrap">
-          <div class="card pad">
-            <div class="section-eyebrow"><span>02 /</span> <span data-i18n="nav_services">Услуги</span></div>
-            <h2 class="section-title" data-i18n="expertise_title">Разные инструменты. Один подход.</h2>
-            <div class="two service-bento expertise-grid">
-              <div class="service service-primary"><span class="service-number" aria-hidden="true">01</span><span class="service-symbol" aria-hidden="true">&lt;/&gt;</span>
-                <h3 data-i18n="studio_web">Full-Stack Web Development</h3>
-                <p data-i18n="s1_text">
-                  Лендинги, визитки, многостраничные сайты. Адаптив, базовое
-                  SEO, чистая верстка.
-                </p>
-              </div>
-              <div class="service"><span class="service-number" aria-hidden="true">02</span><span class="service-symbol" aria-hidden="true">◇</span>
-                <h3 data-i18n="s2_title">3D-модели</h3>
-                <p data-i18n="s2_text">
-                  Модели/объекты, превью-рендеры, подготовка под дальнейшее
-                  использование.
-                </p>
-              </div>
-              <div class="service"><span class="service-number" aria-hidden="true">03</span><span class="service-symbol" aria-hidden="true">✳</span>
-                <h3 data-i18n="s3_title">Photoshop / обработка фото</h3>
-                <p data-i18n="s3_text">
-                  Ретушь, цветокор, удаление объектов, улучшение качества,
-                  баннеры и обложки.
-                </p>
-              </div>
-              <div class="service"><span class="service-number" aria-hidden="true">04</span><span class="service-symbol" aria-hidden="true">▷</span>
-                <h3 data-i18n="s4_title">Монтаж видео</h3>
-                <p data-i18n="s4_text">
-                  Монтаж роликов, нарезки, титры, базовые эффекты под
-                  YouTube/Shorts/Reels.
-                </p>
-              </div>
-              <div class="service service-ui"><span class="service-number" aria-hidden="true">05</span><span class="service-symbol" aria-hidden="true">↗</span><h3 data-i18n="studio_ui">UI / адаптивный дизайн</h3><p data-i18n="studio_ui_text">Продуманные интерфейсы и адаптивная верстка для любого экрана.</p><div class="ui-wireframe" aria-hidden="true"><i></i><i></i><i></i></div></div>
-            </div>
-
-            <div class="actions" style="margin-top: 18px">
-              <a
-                class="btn primary"
-                href="https://t.me/flarew1ch"
-                target="_blank"
-                rel="noreferrer"
-                data-i18n="services_cta"
-              >
-                Обсудить задачу в Telegram
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section id="about" class="studio-section">
-        <div class="wrap">
-          <div class="card pad">
-            <div class="section-eyebrow"><span>03 /</span> <span data-i18n="nav_about">Обо мне</span></div>
-            <div class="about-headline"><h2 class="section-title" data-i18n="about_statement">От идеи — к <span>работающему продукту.</span></h2><div class="about-signature">Flarewich<span data-i18n="hero_role">FullStack Developer • UI Designer</span></div></div>
-            <p class="muted" data-i18n="about_text">
-              Я беру проекты под ключ или точечно: дизайн/верстка, 3D, графика,
-              видео. Если нет ТЗ — помогу собрать требования и предложу
-              структуру.
+            <p class="hero-lead reveal" data-i18n="hero_lead">
+              Делаю под ключ для малого бизнеса, мастеров и блогеров: сайт, обложки для соцсетей и промо-ролик — всё в одних руках и в одном стиле.
             </p>
-            <div class="about-capabilities">
-              <div class="skill-line"><span data-i18n="studio_skills">Направления</span><div><span>FullStack</span><span>UI / UX</span><span>3D</span><span>Photoshop</span><span data-i18n="q4_title">Монтаж</span></div></div>
 
+            <div class="hero-actions reveal">
+              <a class="btn btn-flare" href="https://t.me/flarew1ch" target="_blank" rel="noreferrer">
+                <span data-i18n="cta_main">Обсудить проект</span>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+              <a class="btn btn-ghost" href="#pricing" data-i18n="cta_prices">Смотреть цены</a>
             </div>
 
-            <div class="two" style="margin-top: 16px">
-              <div class="service">
-                <h3 data-i18n="about_card1_title">Сильные стороны</h3>
-                <p data-i18n="about_card1_text">
-                  Адаптивная верстка, аккуратный интерфейс, внимательность к
-                  деталям.
-                </p>
-              </div>
+            <ul class="hero-facts reveal">
+              <li><strong><span data-i18n="from">от</span> 120 €</strong><span data-i18n="fact_1">лендинг под ключ</span></li>
+              <li><strong data-i18n="fact_2_num">5–10 дней</strong><span data-i18n="fact_2">от идеи до запуска</span></li>
+              <li><strong data-i18n="fact_3_num">3 в 1</strong><span data-i18n="fact_3">сайт + графика + видео</span></li>
+            </ul>
+          </div>
 
-              <!-- ✅ STEP 4: changed text (keys stay the same, update dict in JS) -->
-
+          <div class="hero-visual reveal">
+            <div class="hero3d" id="hero3d" aria-label="Interactive 3D"></div>
+            <div class="hint3d" aria-hidden="true">
+              <span class="hint-dot"></span>
+              <span data-i18n="hint3d">WebGL · Потяни, чтобы покрутить · Кликни по центру</span>
+              <b id="modeName">solid</b>
             </div>
-            <article class="education" aria-labelledby="education-school">
-              <div class="education-header">
-                <div class="education-eyebrow"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="m2 9 10-5 10 5-10 5L2 9Z"/><path d="M6 11v6c4 3 8 3 12 0v-6M22 9v7"/></svg><span data-i18n="edu_label">Образование</span></div>
-                <span class="education-status" data-i18n="edu_status">Обучение завершено</span>
+            <div class="shot shot-1">
+              <div class="shot-bar"><i></i><i></i><i></i><span>vhpermanent.vercel.app</span></div>
+              <img src="img/screen%20suite%201.png" alt="" />
+            </div>
+            <div class="shot shot-2">
+              <div class="shot-bar"><i></i><i></i><i></i><span>deutschly.app</span></div>
+              <img src="img/Deutchly.png" alt="" />
+            </div>
+            <div class="shot shot-3">
+              <img src="img/Prewyu.jpg" alt="" />
+            </div>
+            <div class="glow" aria-hidden="true"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ TICKER ============ -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track" id="ticker">
+          <span data-i18n="tk_1">Лендинги</span><b>✦</b>
+          <span data-i18n="tk_2">Сайты-визитки</span><b>✦</b>
+          <span data-i18n="tk_3">Обложки и превью</span><b>✦</b>
+          <span data-i18n="tk_4">Монтаж Reels / Shorts</span><b>✦</b>
+          <span data-i18n="tk_5">Ретушь фото</span><b>✦</b>
+          <span data-i18n="tk_6">Оформление каналов</span><b>✦</b>
+          <span data-i18n="tk_7">3D-модели</span><b>✦</b>
+        </div>
+      </div>
+
+      <!-- ============ SERVICES ============ -->
+      <section id="services" class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="num">01</span>
+            <h2 data-i18n="services_title">Чем могу помочь</h2>
+            <p data-i18n="services_sub">Беру задачу целиком или отдельную часть — как удобнее вам.</p>
+          </div>
+
+          <div class="services">
+            <article class="svc svc-main reveal">
+              <div class="svc-ico">
+                <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></svg>
               </div>
-              <div class="education-main">
-                <div class="education-info">
-                  <h3 id="education-school">IT Career Hub</h3>
-                  <p class="education-school-type" data-i18n="edu_school_type">Онлайн-школа</p>
-                  <p class="education-program">Full-Stack Web Development</p>
-                  <p class="education-description" data-i18n="edu_description">Завершённая программа подготовки по full-stack веб-разработке: от интерфейсов и серверной части до инженерных практик и развёртывания приложений.</p>
-                </div>
-                <div class="education-volume"><strong>580 <span>UE</span></strong><p data-i18n="edu_units">Учебных единиц по программе</p></div>
-              </div>
-              <ul class="education-topics" data-i18n="edu_topics"><li>HTML · CSS · JavaScript</li><li>React</li><li>Node.js · TypeScript</li><li>Веб-инженерия</li><li>DevOps</li><li>Docker · облачные технологии</li><li>Алгоритмы и структуры данных</li></ul>
-              <!-- Add a real document link here only after approval to publish its contents. -->
+              <h3 data-i18n="s1_title">Сайты и лендинги</h3>
+              <p data-i18n="s1_text">Сайт, по которому клиенту понятно, что вы делаете, сколько стоит и как записаться. Адаптив под телефоны, быстрая загрузка, базовое SEO, подключение домена.</p>
+              <ul class="svc-list">
+                <li data-i18n="s1_li1">Лендинг / сайт-визитка</li>
+                <li data-i18n="s1_li2">Многостраничный сайт</li>
+                <li data-i18n="s1_li3">Редизайн старого сайта</li>
+              </ul>
+              <div class="svc-price"><span data-i18n="from">от</span> 120 €</div>
             </article>
 
+            <article class="svc reveal">
+              <div class="svc-ico">
+                <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+              </div>
+              <h3 data-i18n="s2_title">Графика и Photoshop</h3>
+              <p data-i18n="s2_text">Обложки, превью для YouTube, баннеры, оформление Instagram и каналов. Ретушь, цветокор, удаление лишнего с фото.</p>
+              <div class="svc-price"><span data-i18n="from">от</span> 10 €</div>
+            </article>
+
+            <article class="svc reveal">
+              <div class="svc-ico">
+                <svg viewBox="0 0 24 24"><rect x="3" y="5" width="14" height="14"/><path d="M17 10l4-2v8l-4-2"/></svg>
+              </div>
+              <h3 data-i18n="s3_title">Монтаж видео</h3>
+              <p data-i18n="s3_text">Reels, Shorts, TikTok и ролики для YouTube: динамичная нарезка, субтитры, музыка, цвет. Промо-ролики для бизнеса.</p>
+              <div class="svc-price"><span data-i18n="from">от</span> 15 €</div>
+            </article>
+
+            <article class="svc reveal">
+              <div class="svc-ico">
+                <svg viewBox="0 0 24 24"><path d="M12 2l9 5v10l-9 5-9-5V7z"/><path d="M12 22V12M21 7l-9 5-9-5"/></svg>
+              </div>
+              <h3 data-i18n="s4_title">3D-модели</h3>
+              <p data-i18n="s4_text">Модели, пропсы и простые сцены, 3D-надписи и рендеры для превью, баннеров и презентаций.</p>
+              <div class="svc-price"><span data-i18n="from">от</span> 25 €</div>
+            </article>
           </div>
         </div>
       </section>
 
-      <!-- PROCESS -->
-      <section id="why" class="studio-section">
+      <!-- ============ WORK ============ -->
+      <section id="work" class="section">
         <div class="wrap">
-          <div class="card pad">
-            <div class="section-eyebrow"><span>04 /</span> <span data-i18n="why_label">Подход</span></div>
-            <h2 class="section-title" data-i18n="process_title">От первого разговора до запуска.</h2>
-            <p class="muted" data-i18n="process_intro">Понятные этапы, внимание к задаче и совместная работа над результатом.</p>
-
-            <ol class="process-timeline"><li class="process-row"><span class="process-number" aria-hidden="true">01</span><div><h3 data-i18n="process_brief_title">Обсуждение и анализ задачи</h3><p data-i18n="process_brief_text">Разбираемся в целях, собираем требования и определяем структуру проекта.</p></div><span class="process-arrow" aria-hidden="true">↗</span></li><li class="process-row"><span class="process-number" aria-hidden="true">02</span><div><h3 data-i18n="process_design_title">Структура и дизайн</h3><p data-i18n="process_design_text">Продумываю пользовательский путь, создаю прототип и визуальное решение.</p></div><span class="process-arrow" aria-hidden="true">↗</span></li><li class="process-row"><span class="process-number" aria-hidden="true">03</span><div><h3 data-i18n="process_build_title">Разработка и тестирование</h3><p data-i18n="process_build_text">Разрабатываю интерфейс и функциональность, проверяю работу на мобильных устройствах.</p></div><span class="process-arrow" aria-hidden="true">↗</span></li><li class="process-row"><span class="process-number" aria-hidden="true">04</span><div><h3 data-i18n="process_launch_title">Запуск и доработка</h3><p data-i18n="process_launch_text">Согласуем правки, запускаем проект и обсуждаем дальнейшую поддержку.</p></div><span class="process-arrow" aria-hidden="true">↗</span></li></ol><h3 class="approach-caption" data-i18n="why_title">Почему со мной удобно</h3><div class="why-grid">
-              <div class="why-item">
-                <div class="why-top">
-                  <span class="why-ico" aria-hidden="true">01</span>
-                  <strong data-i18n="why_1_title">Быстрая связь</strong>
-                </div>
-                <p data-i18n="why_1_text">Обычно отвечаю быстро, держу в курсе прогресса.</p>
-              </div>
-
-              <div class="why-item">
-                <div class="why-top">
-                  <span class="why-ico" aria-hidden="true">02</span>
-                  <strong data-i18n="why_2_title">Помогаю с ТЗ</strong>
-                </div>
-                <p data-i18n="why_2_text">Если нет структуры — предложу варианты и соберу требования.</p>
-              </div>
-
-              <div class="why-item">
-                <div class="why-top">
-                  <span class="why-ico" aria-hidden="true">03</span>
-                  <strong data-i18n="why_3_title">Адаптив и UX</strong>
-                </div>
-                <p data-i18n="why_3_text">Делаю аккуратно под мобилки и думаю о удобстве пользователя.</p>
-              </div>
-
-              <div class="why-item">
-                <div class="why-top">
-                  <span class="why-ico" aria-hidden="true">04</span>
-                  <strong data-i18n="why_4_title">Чистая работа</strong>
-                </div>
-                <p data-i18n="why_4_text">Понятная структура, аккуратная верстка, внимание к деталям.</p>
-              </div>
-            </div>
+          <div class="section-head reveal">
+            <span class="num">02</span>
+            <h2 data-i18n="work_title">Работы</h2>
+            <p data-i18n="work_sub">Живые проекты — можно открыть и потыкать.</p>
           </div>
-        </div>
-      <div class="process-note"><p data-i18n="about_card2_text">Собираю требования, предлагаю варианты, делаю прототип и дизайн, затем верстаю и добавляю функционал. Тестирую на мобильных устройствах, вношу правки с заказчиком и делаю деплой. Срочные проекты «за 1 день» не беру — работаю по предоплате.</p></div></section>
 
-      <!-- CONTACT -->
-      <section id="contacts" class="studio-section">
-        <div class="wrap">
-          <div class="card pad">
-            <div class="section-eyebrow"><span>05 /</span> <span data-i18n="nav_contacts">Контакты</span></div>
-            <h2 class="section-title contact-heading" data-i18n="contact_final_title">Есть идея?<br><span>Давайте воплотим её в жизнь.</span></h2>
-            <p class="muted" data-i18n="contact_invite">Расскажите о вашем проекте. Обсудим задачу, структуру и путь от идеи до запуска.</p>
-
-            <a class="btn primary contact-cta" href="https://t.me/flarew1ch" target="_blank" rel="noopener noreferrer"><span data-i18n="services_cta">Обсудить задачу в Telegram</span><span aria-hidden="true">↗</span></a>
-            <div class="contacts" style="margin-top: 16px">
-              <div class="contact-item">
-                <div>
-                  <div><strong>Telegram</strong></div>
-                  <span>@flarew1ch</span>
-                </div>
-                <a
-                  href="https://t.me/flarew1ch"
-                  target="_blank"
-                  rel="noreferrer"
-                  data-i18n="c_open"
-                  >Открыть →</a
-                >
+          <div class="cases">
+            <!-- Case 1 -->
+            <article class="case reveal">
+              <a class="case-img" href="https://vhpermanent.vercel.app/" target="_blank" rel="noreferrer">
+                <img src="img/screen%20suite%201.png" alt="VH Permanent website" loading="lazy" />
+                <span class="case-open" data-i18n="open_site">Открыть сайт ↗</span>
+              </a>
+              <div class="case-body">
+                <div class="case-tag" data-i18n="c1_tag">Сайт для бьюти-мастера</div>
+                <h3>VH Permanent</h3>
+                <dl class="case-dl">
+                  <div><dt data-i18n="task">Задача</dt><dd data-i18n="c1_task">Мастеру перманентного макияжа нужен был сайт, через который клиентки сразу видят услуги, работы «до/после» и записываются в пару кликов.</dd></div>
+                  <div><dt data-i18n="done">Что сделал</dt><dd data-i18n="c1_done">Дизайн и вёрстку с нуля: блок услуг, галерею работ, быструю связь через Instagram, WhatsApp и Telegram. Полностью адаптирован под телефон.</dd></div>
+                </dl>
+                <div class="chips"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Vercel</span></div>
               </div>
+            </article>
 
-              <div class="contact-item">
-                <div>
-                  <div><strong>Instagram</strong></div>
-                  <span>@vlad_flarewich</span>
-                </div>
-                <a
-                  href="https://www.instagram.com/vlad_flarewich/"
-                  target="_blank"
-                  rel="noreferrer"
-                  data-i18n="c_open"
-                  >Открыть →</a
-                >
+            <!-- Case 2 -->
+            <article class="case case-rev reveal">
+              <a class="case-img" href="https://deutschly-beta-phi.vercel.app/" target="_blank" rel="noreferrer">
+                <img src="img/Deutchly.png" alt="Deutschly web app" loading="lazy" />
+                <span class="case-open" data-i18n="open_app">Открыть приложение ↗</span>
+              </a>
+              <div class="case-body">
+                <div class="case-tag" data-i18n="c2_tag">Веб-приложение</div>
+                <h3>Deutschly</h3>
+                <dl class="case-dl">
+                  <div><dt data-i18n="task">Задача</dt><dd data-i18n="c2_task">Сделать удобную платформу для изучения немецкого: уроки, словарь, практика и отслеживание прогресса.</dd></div>
+                  <div><dt data-i18n="done">Что сделал</dt><dd data-i18n="c2_done">Спроектировал интерфейс и собрал приложение на React. Работает как PWA — можно установить на телефон как обычное приложение.</dd></div>
+                </dl>
+                <div class="chips"><span>React</span><span>Vite</span><span>PWA</span><span>Vercel</span></div>
               </div>
+            </article>
 
-              <div class="contact-item">
-                <div>
-                  <div><strong>YouTube</strong></div>
-                  <span>Фларевич</span>
-                </div>
-                <a
-                  href="https://www.youtube.com/@%D0%A4%D0%BB%D0%B0%D1%80%D0%B5%D0%B2%D0%B8%D1%87%D1%8C"
-                  target="_blank"
-                  rel="noreferrer"
-                  data-i18n="c_open"
-                  >Открыть →</a
-                >
+            <!-- Case 3 -->
+            <article class="case reveal">
+              <a class="case-img" href="https://mini-blog-ten-rho.vercel.app/" target="_blank" rel="noreferrer">
+                <img src="img/mini-blog.png" alt="Mini Blog website" loading="lazy" />
+                <span class="case-open" data-i18n="open_site">Открыть сайт ↗</span>
+              </a>
+              <div class="case-body">
+                <div class="case-tag" data-i18n="c3_tag">Блог с аккаунтами</div>
+                <h3>Mini Blog</h3>
+                <dl class="case-dl">
+                  <div><dt data-i18n="task">Задача</dt><dd data-i18n="c3_task">Блог, где пользователи регистрируются, публикуют посты с картинками и ставят лайки.</dd></div>
+                  <div><dt data-i18n="done">Что сделал</dt><dd data-i18n="c3_done">Фронтенд и бэкенд: авторизация, лента постов, загрузка изображений, база данных на Supabase.</dd></div>
+                </dl>
+                <div class="chips"><span>Node.js</span><span>Supabase</span><span>HTML/CSS</span></div>
               </div>
+            </article>
+          </div>
 
-              <div class="contact-item">
-                <div>
-                  <div><strong>Twitch</strong></div>
-                  <span>flarewich</span>
-                </div>
-                <a
-                  href="https://www.twitch.tv/flarewich"
-                  target="_blank"
-                  rel="noreferrer"
-                  data-i18n="c_open"
-                  >Открыть →</a
-                >
-              </div>
+          <!-- Visual gallery as a video editor -->
+          <div class="gallery-head reveal">
+            <h3 data-i18n="gallery_title">Графика, видео и 3D</h3>
+            <a class="link-arrow" href="https://www.youtube.com/@%D0%A4%D0%BB%D0%B0%D1%80%D0%B5%D0%B2%D0%B8%D1%87%D1%8C" target="_blank" rel="noreferrer" data-i18n="gallery_more">Больше на YouTube ↗</a>
+          </div>
 
-              <div class="contact-item">
-                <div>
-                  <div><strong>Facebook</strong></div>
-                  <span>profile</span>
-                </div>
-                <a
-                  href="https://www.facebook.com/profile.php?id=100040678399640&locale=ru_RU"
-                  target="_blank"
-                  rel="noreferrer"
-                  data-i18n="c_open"
-                  >Открыть →</a
-                >
-              </div>
-
-              <div class="contact-item">
-                <div>
-                  <div><strong data-i18n="phone_label">Телефон</strong></div>
-                  <span>+380 95 457 05 88</span>
-                </div>
-                <a href="tel:+380954570588" data-i18n="c_call">Позвонить →</a>
-              </div>
+          <div class="editor reveal" id="editor">
+            <div class="ed-top">
+              <div class="ed-dots"><i></i><i></i><i></i></div>
+              <div class="ed-title">flarewich_showreel_final_v7.prproj</div>
+              <div class="ed-rec"><span></span>REC</div>
             </div>
 
-            <div class="footer-wordmark" aria-hidden="true">FLAREWICH</div><div class="hr"></div>
-            <footer><span class="footer-brand">Flarewich<span>®</span></span>
-              <div data-i18n="footer_text">
-                © <span id="year"></span> Flarewich. Built with pure
-                HTML/CSS/JS.
+            <div class="ed-main">
+              <div class="ed-monitor" id="edMonitor">
+                <img id="edFrame" src="img/Prewyu.jpg" alt="" />
+                <div class="ed-safe" aria-hidden="true"></div>
+                <div class="ed-caption"><span id="edCapTag">01</span><strong id="edCap" data-i18n="g1">Превью для YouTube</strong></div>
+                <a class="ed-watch" id="edWatch" href="https://www.youtube.com/watch?v=kMBmOW1_8vI" target="_blank" rel="noreferrer" hidden>
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+                  <span data-i18n="watch">Смотреть ролик</span>
+                </a>
+                <div class="ed-tc" id="edTc">00:00:00:00</div>
               </div>
-            </footer>
+
+              <aside class="ed-side">
+                <div class="ed-side-title" data-i18n="ed_props">Свойства клипа</div>
+                <div class="ed-prop"><span data-i18n="ed_type">Тип</span><b id="edType">Thumbnail</b></div>
+                <div class="ed-prop"><span data-i18n="ed_tool">Инструмент</span><b id="edTool">Photoshop</b></div>
+                <div class="ed-prop"><span>FPS</span><b>60</b></div>
+                <div class="ed-meter" aria-hidden="true"><i></i><i></i></div>
+                <div class="ed-hint" data-i18n="ed_hint">Тащи плейхед или кликай по клипам ↓</div>
+              </aside>
+            </div>
+
+            <div class="ed-controls">
+              <button type="button" class="ed-play" id="edPlay" aria-label="Play / pause">
+                <svg class="i-pause" viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg>
+                <svg class="i-play" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </button>
+              <div class="ed-ruler" aria-hidden="true"></div>
+            </div>
+
+            <div class="ed-timeline" id="edTimeline">
+              <div class="ed-track ed-v">
+                <span class="ed-lbl">V1</span>
+                <div class="ed-clips" id="edClips">
+                  <button class="clip" data-src="img/Prewyu.jpg" data-cap="g1" data-type="Thumbnail" data-tool="Photoshop" style="--w:22"><img src="img/Prewyu.jpg" alt="" /></button>
+                  <button class="clip" data-src="https://i.ytimg.com/vi/kMBmOW1_8vI/hqdefault.jpg" data-cap="g2" data-type="Video edit" data-tool="CapCut · OBS" data-video="1" style="--w:24"><img src="https://i.ytimg.com/vi/kMBmOW1_8vI/hqdefault.jpg" alt="" onerror="this.style.visibility='hidden'" /></button>
+                  <button class="clip" data-src="img/Prewiu2.jpg" data-cap="g3" data-type="Stream cover" data-tool="Photoshop" data-pos="top" style="--w:16"><img src="img/Prewiu2.jpg" alt="" /></button>
+                  <button class="clip" data-src="img/shapka.jpg" data-cap="g4" data-type="Channel banner" data-tool="Photoshop" style="--w:22"><img src="img/shapka.jpg" alt="" /></button>
+                  <button class="clip" data-src="img/3d.jpg" data-cap="g5" data-type="3D render" data-tool="3D · Render" style="--w:16"><img src="img/3d.jpg" alt="" /></button>
+                </div>
+              </div>
+              <div class="ed-track ed-fx">
+                <span class="ed-lbl">FX</span>
+                <div class="ed-fxbar"><span style="--l:4;--w:14">Glow</span><span style="--l:26;--w:18">Zoom-in</span><span style="--l:52;--w:12">Shake</span><span style="--l:70;--w:20">Color grade</span></div>
+              </div>
+              <div class="ed-track ed-a">
+                <span class="ed-lbl">A1</span>
+                <div class="ed-wave" id="edWave"></div>
+              </div>
+              <div class="ed-playhead" id="edHead"><span></span></div>
+            </div>
           </div>
         </div>
       </section>
-</main>
 
-    <script src="/java/script.js"></script>
+      <!-- ============ AUDIT (hook) ============ -->
+      <section class="section section-tight">
+        <div class="wrap">
+          <div class="audit reveal">
+            <div class="audit-copy">
+              <span class="badge-free" data-i18n="audit_badge">Бесплатно</span>
+              <h2 data-i18n="audit_title">Мини-аудит вашего сайта или Instagram</h2>
+              <p data-i18n="audit_text">Пришлите ссылку — в течение 24 часов отвечу, какие 3 вещи мешают вам получать заявки и как это исправить. Без обязательств что-то заказывать.</p>
+            </div>
+            <a class="btn btn-dark" href="https://t.me/flarew1ch" target="_blank" rel="noreferrer">
+              <span data-i18n="audit_cta">Отправить ссылку</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PRICING ============ -->
+      <section id="pricing" class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="num">03</span>
+            <h2 data-i18n="pricing_title">Цены</h2>
+            <p data-i18n="pricing_sub">Итоговая стоимость зависит от объёма — точную цифру назову после короткого разговора. Без скрытых доплат.</p>
+          </div>
+
+          <div class="plans">
+            <article class="plan reveal">
+              <div class="plan-name" data-i18n="pl1_name">Старт</div>
+              <div class="plan-price"><span data-i18n="from">от</span> <b>120 €</b></div>
+              <p class="plan-for" data-i18n="pl1_for">Чтобы появиться в интернете и начать получать заявки.</p>
+              <ul>
+                <li data-i18n="pl1_1">Лендинг до 5 блоков</li>
+                <li data-i18n="pl1_2">Адаптив под телефоны</li>
+                <li data-i18n="pl1_3">Кнопки связи: Telegram, WhatsApp, звонок</li>
+                <li data-i18n="pl1_4">Публикация и подключение домена</li>
+              </ul>
+              <a class="btn btn-ghost btn-block" href="https://t.me/flarew1ch" target="_blank" rel="noreferrer" data-i18n="pl_cta">Хочу этот</a>
+            </article>
+
+            <article class="plan plan-hot reveal">
+              <div class="plan-flag" data-i18n="pl_popular">Чаще всего выбирают</div>
+              <div class="plan-name" data-i18n="pl2_name">Бизнес</div>
+              <div class="plan-price"><span data-i18n="from">от</span> <b>200 €</b></div>
+              <p class="plan-for" data-i18n="pl2_for">Сайт и соцсети в одном стиле — выглядите как бренд.</p>
+              <ul>
+                <li data-i18n="pl2_1">Всё из «Старт»</li>
+                <li data-i18n="pl2_2">До 8 блоков или 3 страницы</li>
+                <li data-i18n="pl2_3">Оформление Instagram: аватар, 5 обложек хайлайтов, шаблон поста</li>
+                <li data-i18n="pl2_4">Базовое SEO и карточка для Google</li>
+              </ul>
+              <a class="btn btn-flare btn-block" href="https://t.me/flarew1ch" target="_blank" rel="noreferrer" data-i18n="pl_cta">Хочу этот</a>
+            </article>
+
+            <article class="plan reveal">
+              <div class="plan-name" data-i18n="pl3_name">Под ключ</div>
+              <div class="plan-price"><span data-i18n="from">от</span> <b>350 €</b></div>
+              <p class="plan-for" data-i18n="pl3_for">Полный запуск: сайт, графика и видео для рекламы.</p>
+              <ul>
+                <li data-i18n="pl3_1">Всё из «Бизнес»</li>
+                <li data-i18n="pl3_2">Многостраничный сайт</li>
+                <li data-i18n="pl3_3">Промо-ролик 15–30 сек для Reels / TikTok</li>
+                <li data-i18n="pl3_4">Месяц бесплатных мелких правок</li>
+              </ul>
+              <a class="btn btn-ghost btn-block" href="https://t.me/flarew1ch" target="_blank" rel="noreferrer" data-i18n="pl_cta">Хочу этот</a>
+            </article>
+          </div>
+
+          <div class="alacarte reveal">
+            <div class="ac-title" data-i18n="ac_title">Отдельные услуги</div>
+            <div class="ac-grid">
+              <div class="ac-row"><span data-i18n="ac_1">Превью / обложка для YouTube</span><i></i><b><span data-i18n="from">от</span> 10 €</b></div>
+              <div class="ac-row"><span data-i18n="ac_2">Ретушь фото</span><i></i><b><span data-i18n="from">от</span> 7 €</b></div>
+              <div class="ac-row"><span data-i18n="ac_3">Монтаж Reels / Shorts</span><i></i><b><span data-i18n="from">от</span> 15 €</b></div>
+              <div class="ac-row"><span data-i18n="ac_4">Монтаж ролика для YouTube</span><i></i><b><span data-i18n="from">от</span> 30 €</b></div>
+              <div class="ac-row"><span data-i18n="ac_5">Шапка и оформление канала</span><i></i><b><span data-i18n="from">от</span> 20 €</b></div>
+              <div class="ac-row"><span data-i18n="ac_6">3D-модель / рендер</span><i></i><b><span data-i18n="from">от</span> 25 €</b></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROCESS ============ -->
+      <section id="process" class="section">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="num">04</span>
+            <h2 data-i18n="process_title">Как проходит работа</h2>
+            <p data-i18n="process_sub">Без сюрпризов: на каждом этапе знаете, что происходит и что будет дальше.</p>
+          </div>
+
+          <ol class="steps">
+            <li class="step reveal">
+              <span class="step-n">1</span>
+              <h3 data-i18n="st1_t">Созвон или переписка</h3>
+              <p data-i18n="st1_p">Разбираемся, что нужно и для кого. Нет ТЗ — помогу его составить. Называю цену и срок.</p>
+              <span class="step-time" data-i18n="st1_time">День 1</span>
+            </li>
+            <li class="step reveal">
+              <span class="step-n">2</span>
+              <h3 data-i18n="st2_t">Структура и дизайн</h3>
+              <p data-i18n="st2_p">Показываю макет. Вносим правки, пока вам не понравится. После согласования — предоплата 50%.</p>
+              <span class="step-time" data-i18n="st2_time">2–3 дня</span>
+            </li>
+            <li class="step reveal">
+              <span class="step-n">3</span>
+              <h3 data-i18n="st3_t">Разработка</h3>
+              <p data-i18n="st3_p">Собираю сайт, проверяю на телефонах и компьютерах. Присылаю ссылку, чтобы вы посмотрели вживую.</p>
+              <span class="step-time" data-i18n="st3_time">3–7 дней</span>
+            </li>
+            <li class="step reveal">
+              <span class="step-n">4</span>
+              <h3 data-i18n="st4_t">Запуск</h3>
+              <p data-i18n="st4_p">Финальные правки, подключаю домен, публикую. Оставшиеся 50% — только после сдачи.</p>
+              <span class="step-time" data-i18n="st4_time">Финиш</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ============ ABOUT ============ -->
+      <section class="section">
+        <div class="wrap about">
+          <div class="about-photo reveal">
+            <img src="img/AVA2.jpg" alt="Vladyslav Stashevskyi" loading="lazy" />
+          </div>
+          <div class="about-copy reveal">
+            <span class="num">05</span>
+            <h2 data-i18n="about_title">Привет, я Влад</h2>
+            <p data-i18n="about_p1">Full-stack разработчик и дизайнер. Делаю сайты, графику и монтаж — поэтому вам не нужно искать трёх разных людей и объяснять каждому, какой у вас стиль.</p>
+            <p data-i18n="about_p2">Мне важно, чтобы сайт не просто красиво выглядел, а работал: был понятен с первого экрана, быстро грузился на телефоне и вёл человека к кнопке «Написать».</p>
+            <ul class="about-points">
+              <li data-i18n="ab_1">Отвечаю в тот же день</li>
+              <li data-i18n="ab_2">Держу в курсе на каждом этапе</li>
+              <li data-i18n="ab_3">Работаю по договорённости и предоплате 50/50</li>
+            </ul>
+            <div class="edu">
+              <div class="edu-top"><span class="edu-lbl" data-i18n="edu_lbl">Образование</span><span class="edu-ok" data-i18n="edu_ok">Завершено</span></div>
+              <div class="edu-name"><b>IT Career Hub</b> — Full-Stack Web Development</div>
+              <p data-i18n="edu_text">Онлайн-программа: интерфейсы, серверная часть, инженерные практики и деплой — 580 учебных единиц.</p>
+              <div class="chips"><span>HTML · CSS · JS</span><span>React</span><span>Node.js · TypeScript</span><span>Docker</span><span>DevOps</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FAQ ============ -->
+      <section id="faq" class="section">
+        <div class="wrap faq-wrap">
+          <div class="section-head reveal">
+            <span class="num">06</span>
+            <h2 data-i18n="faq_title">Частые вопросы</h2>
+          </div>
+          <div class="faq">
+            <details class="reveal">
+              <summary data-i18n="fq1">У меня нет текстов и фото. Что делать?</summary>
+              <p data-i18n="fa1">Ничего страшного. Помогу составить тексты по вашим ответам на несколько вопросов, подберу качественные фото или обработаю ваши.</p>
+            </details>
+            <details class="reveal">
+              <summary data-i18n="fq2">Сколько стоят домен и хостинг?</summary>
+              <p data-i18n="fa2">Хостинг для простого сайта обычно бесплатный. Домен (.com, .de и т. п.) — примерно 10–15 € в год, оплачивается отдельно и оформляется на вас.</p>
+            </details>
+            <details class="reveal">
+              <summary data-i18n="fq3">Можно ли потом самому менять сайт?</summary>
+              <p data-i18n="fa3">Да. Сайт передаётся вам полностью. Мелкие правки после запуска делаю быстро — по договорённости или в рамках пакета.</p>
+            </details>
+            <details class="reveal">
+              <summary data-i18n="fq4">Нужно срочно, за 1–2 дня. Возьмёшь?</summary>
+              <p data-i18n="fa4">Обычно на хороший результат нужно от 5 дней. Если задача небольшая (обложка, монтаж короткого ролика) — напишите, постараюсь вписать.</p>
+            </details>
+            <details class="reveal">
+              <summary data-i18n="fq5">Как оплатить?</summary>
+              <p data-i18n="fa5">50% после согласования дизайна, 50% после сдачи работы. Способ оплаты обсудим — подберём удобный.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FINAL CTA / CONTACTS ============ -->
+      <section id="contacts" class="section">
+        <div class="wrap">
+          <div class="final reveal">
+            <h2 data-i18n="final_title">Расскажите о&nbsp;задаче — отвечу сегодня</h2>
+            <p data-i18n="final_text">Напишите пару строк: что за бизнес и что нужно. Отвечу с идеями, ценой и сроками.</p>
+            <a class="btn btn-flare btn-lg" href="https://t.me/flarew1ch" target="_blank" rel="noreferrer">
+              <svg class="tg" viewBox="0 0 24 24" aria-hidden="true"><path d="M21.5 4.5L2.8 11.7c-.9.4-.9 1.4 0 1.7l4.7 1.5 1.8 5.6c.2.7 1 .9 1.5.4l2.6-2.4 4.9 3.6c.6.4 1.4.1 1.6-.6l3.2-15.3c.2-.9-.7-1.6-1.6-1.2zM9.6 14.6l8.5-7.7-6.7 9.2-.3 3-1.5-4.5z"/></svg>
+              <span data-i18n="final_cta">Написать в Telegram</span>
+            </a>
+            <div class="final-alt">
+              <a href="https://www.instagram.com/vlad_flarewich/" target="_blank" rel="noreferrer">Instagram · @vlad_flarewich</a>
+              <a href="tel:+380954570588">+380 95 457 05 88</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div>© <span id="year"></span> Flarewich — Vladyslav Stashevskyi <span class="egg-hint" data-i18n="egg_hint">· psst… набери на клавиатуре «flare»</span></div>
+        <div class="footer-links">
+          <a href="https://www.youtube.com/@%D0%A4%D0%BB%D0%B0%D1%80%D0%B5%D0%B2%D0%B8%D1%87%D1%8C" target="_blank" rel="noreferrer">YouTube</a>
+          <a href="https://www.twitch.tv/flarewich" target="_blank" rel="noreferrer">Twitch</a>
+          <a href="https://www.facebook.com/profile.php?id=100040678399640" target="_blank" rel="noreferrer">Facebook</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Mobile sticky CTA -->
+    <a class="sticky-cta" id="stickyCta" href="https://t.me/flarew1ch" target="_blank" rel="noreferrer">
+      <span data-i18n="sticky_cta">Обсудить проект в Telegram</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+    </a>
+
+    <!-- X-ray: показать, как сверстан сайт -->
+    <button class="xray-btn" id="xrayBtn" type="button" aria-pressed="false">
+      <span class="xr-ico">&lt;/&gt;</span>
+      <span data-i18n="xray_btn">Режим разработчика</span>
+    </button>
+    <div class="xray-grid" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+    <!-- Курсор -->
+    <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-label" id="cursorLabel"></span></div>
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+    <!-- Пасхалка -->
+    <canvas class="fire" id="fire" aria-hidden="true"></canvas>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="script.js"></script>
+    <script src="fx.js"></script>
+    <script src="hero3d.js" defer></script>
   </body>
 </html>
