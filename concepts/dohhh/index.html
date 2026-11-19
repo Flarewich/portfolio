@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>DOHHH! Donut Club — frisch gebacken in Berlin (Konzept)</title>
+<meta name="description" content="Design-Konzept von Flarewich: Website für eine fiktive Donut-Bäckerei & Coffee Bar in Berlin." />
+<meta name="theme-color" content="#f8eee4" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --cream:#f8eee4; --orange:#ff5a1a; --wine:#6b1f33; --green:#0f5c43;
+  --pink:#f6c6e4; --blue:#2f8cff; --ink:#2a0d14;
+  --display:"Anton", Impact, "Arial Narrow", sans-serif;
+  --body:"Archivo", system-ui, sans-serif;
+  --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--body);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+img,svg{display:block}
+.display{font-family:var(--display);text-transform:uppercase;line-height:.86;letter-spacing:-.01em;font-weight:400}
+
+/* ---------- concept badge ---------- */
+.concept{position:fixed;right:14px;bottom:14px;z-index:80;background:var(--ink);color:var(--cream);font:600 12px var(--body);padding:8px 12px;border-radius:999px;display:flex;gap:8px;align-items:center}
+.concept b{color:var(--orange)}
+
+/* ---------- pill nav ---------- */
+.nav{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:70;display:flex;align-items:center;gap:10px;
+  padding:6px 6px 6px 6px;background:rgba(248,238,228,.88);backdrop-filter:blur(10px);border:2px solid var(--wine);border-radius:999px;
+  box-shadow:0 4px 0 var(--wine);min-width:min(420px,calc(100% - 32px));justify-content:space-between}
+.logo{width:40px;height:40px;border-radius:50%;background:var(--wine);display:grid;place-items:center}
+.logo svg{width:30px;height:30px}
+.nav-links{display:flex;gap:4px;font:800 13px var(--body);text-transform:uppercase}
+.nav-links a{padding:8px 10px;border-radius:999px;transition:.2s}
+.nav-links a:hover{background:var(--wine);color:var(--cream)}
+.nav-cta{background:var(--orange);color:var(--cream);font:800 12px var(--body);text-transform:uppercase;letter-spacing:.04em;padding:12px 16px;border-radius:999px;transition:transform .2s var(--ease)}
+.nav-cta:hover{transform:scale(1.06) rotate(-2deg)}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:100vh;padding:110px 4vw 80px;display:grid;grid-template-columns:1.2fr 1fr;align-items:end;overflow:hidden}
+.hero h1{margin:0;color:var(--orange);font-size:clamp(70px,13.5vw,240px)}
+.hero h1 .row{display:block;white-space:nowrap}
+.hero h1 .row:nth-child(2){padding-left:.5em}
+.hero h1 .row:nth-child(4){padding-left:.25em}
+.hero h1 .o{display:inline-block;width:.78em;height:.78em;vertical-align:-.02em;margin:0 .02em}
+.hero h1 .o svg{width:100%;height:100%;animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sticker{position:absolute;top:96px;left:3vw;width:130px;height:130px;border-radius:50%;background:var(--wine);color:var(--orange);
+  display:grid;place-items:center;transform:rotate(-14deg);font:400 38px/1 var(--display);z-index:3;animation:wobble 3s ease-in-out infinite}
+@keyframes wobble{50%{transform:rotate(-4deg) scale(1.05)}}
+.hero-side{align-self:center;justify-self:end;max-width:420px;position:relative;z-index:2}
+.hero-big-donut{width:min(36vw,460px);aspect-ratio:1;margin-left:auto;filter:drop-shadow(0 30px 40px rgba(107,31,51,.25));cursor:grab}
+.hero-big-donut svg{width:100%;height:100%}
+.hero-copy{margin-top:20px;font-size:18px;line-height:1.45;color:var(--wine);font-weight:600}
+.hero-copy strong{color:var(--orange)}
+.hero-tag{position:absolute;left:4vw;bottom:24px;font:800 14px var(--body);text-transform:uppercase;color:var(--green);letter-spacing:.06em;display:flex;gap:18px;align-items:center}
+.hero-tag i{width:10px;height:10px;background:var(--orange);border-radius:50%;display:inline-block}
+
+/* ---------- ticker ---------- */
+.ticker-wrap{overflow:hidden;padding:30px 0}
+.ticker{background:var(--wine);color:var(--pink);overflow:hidden;padding:18px 0;transform:rotate(-2deg);margin:0 -20px;border-block:3px solid var(--ink)}
+.ticker-track{display:flex;gap:40px;width:max-content;animation:tick 28s linear infinite;font:400 48px/1 var(--display);text-transform:uppercase;align-items:center}
+.ticker-track span{display:flex;align-items:center;gap:40px}
+.ticker-track svg{width:44px;height:44px}
+@keyframes tick{to{transform:translateX(-50%)}}
+
+/* ---------- statement (sprinkles parallax) ---------- */
+.statement{position:relative;padding:22vh 6vw;text-align:center;overflow:hidden}
+.statement p{margin:0 auto;max-width:1100px;font-size:clamp(40px,6vw,96px);color:var(--orange)}
+.statement p .w{display:inline-block;opacity:.15;transition:opacity .4s,transform .4s;transform:translateY(10px)}
+.statement p .w.on{opacity:1;transform:none}
+.statement small{display:block;margin-top:30px;font:800 15px var(--body);text-transform:uppercase;color:var(--wine);letter-spacing:.08em}
+.spr{position:absolute;width:14px;height:44px;border-radius:8px;will-change:transform;pointer-events:none}
+
+/* ---------- menu: sticky card stack ---------- */
+.menu{background:var(--green);color:var(--pink);position:relative;height:420vh;border-radius:40px 40px 0 0}
+.menu-stick{position:sticky;top:0;height:100vh;overflow:hidden;display:grid;place-items:center}
+.menu-bg{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:min(30vw,420px);color:var(--pink);white-space:nowrap;pointer-events:none}
+.menu-intro{position:absolute;left:4vw;bottom:8vh;max-width:340px;font:600 20px/1.35 var(--body);color:var(--cream);z-index:1}
+.menu-count{position:absolute;right:4vw;bottom:8vh;font:400 80px/1 var(--display);color:var(--cream);z-index:1}
+.stack{position:relative;width:min(380px,78vw);aspect-ratio:3/4;z-index:2}
+.card{position:absolute;inset:0;border-radius:22px;padding:26px;display:flex;flex-direction:column;border:3px solid var(--ink);
+  box-shadow:0 10px 0 var(--ink);transition:transform .7s var(--ease),opacity .5s;will-change:transform}
+.card h3{margin:0;font-size:clamp(46px,5.5vw,70px)}
+.card p{margin:12px 0 0;font:600 16px/1.4 var(--body)}
+.card .art{flex:1;display:grid;place-items:center}
+.card .art svg{width:68%;animation:spin 18s linear infinite}
+.card .cfoot{display:flex;justify-content:space-between;align-items:end}
+.card .price{font:400 54px/1 var(--display)}
+.card .num{font:800 13px var(--body);text-transform:uppercase;letter-spacing:.06em}
+.card.gone{transform:translate(-140%,-10%) rotate(-28deg)!important;opacity:0}
+
+/* ---------- rules ---------- */
+.rules{padding:18vh 4vw 12vh}
+.rules-head{font-size:clamp(34px,5vw,72px);color:var(--orange);text-align:center;margin:0 0 10vh}
+.rule{display:grid;grid-template-columns:120px 1fr 1fr;gap:30px;align-items:center;padding:36px 0;border-top:3px solid var(--wine)}
+.rule:last-child{border-bottom:3px solid var(--wine)}
+.rule .n{font:400 72px/1 var(--display);color:var(--wine)}
+.rule h3{margin:0;font-size:clamp(40px,5vw,80px);color:var(--wine);transition:color .3s}
+.rule p{margin:0;font:600 18px/1.5 var(--body);color:var(--wine);max-width:460px}
+.rule:hover h3{color:var(--orange)}
+.rule .pop{position:fixed;width:180px;pointer-events:none;opacity:0;transform:scale(.6) rotate(-10deg);transition:opacity .2s,transform .3s var(--ease);z-index:60}
+.rule:hover .pop{opacity:1;transform:scale(1) rotate(8deg)}
+
+/* ---------- visit ---------- */
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:4vw;align-items:center;padding:6vh 4vw 16vh}
+.arch{background:var(--pink);border-radius:999px 999px 40px 40px;aspect-ratio:4/5;display:grid;place-items:center;position:relative;overflow:hidden;border:3px solid var(--wine)}
+.arch svg.cup{width:62%}
+.arch .steam path{animation:steam 3s ease-in-out infinite;transform-origin:bottom}
+.arch .steam path:nth-child(2){animation-delay:.6s}.arch .steam path:nth-child(3){animation-delay:1.2s}
+@keyframes steam{0%,100%{opacity:.2;transform:translateY(6px)}50%{opacity:1;transform:translateY(-6px)}}
+.visit h2{margin:0;font-size:clamp(56px,8vw,140px);color:var(--orange)}
+.visit h2 span{color:var(--wine);display:block;padding-left:.6em}
+.hours{margin-top:36px;border-top:3px solid var(--wine)}
+.hours div{display:flex;justify-content:space-between;padding:16px 0;border-bottom:3px solid var(--wine);font:800 18px var(--body);color:var(--wine);text-transform:uppercase}
+.hours div.today{color:var(--orange)}
+.hours div.today::after{content:"heute";font-size:11px;background:var(--orange);color:var(--cream);padding:3px 8px;border-radius:99px;margin-left:10px;align-self:center}
+.addr{margin-top:26px;font:600 18px/1.5 var(--body);color:var(--wine)}
+.btn{display:inline-flex;gap:10px;align-items:center;margin-top:26px;background:var(--wine);color:var(--cream);font:800 15px var(--body);text-transform:uppercase;padding:18px 26px;border-radius:999px;border:3px solid var(--ink);box-shadow:0 5px 0 var(--ink);transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(3px);box-shadow:0 2px 0 var(--ink)}
+
+/* ---------- giant footer ---------- */
+.foot{background:var(--pink);color:var(--wine);padding:60px 3vw 4vw;border-radius:40px 40px 0 0;overflow:hidden;position:relative}
+.foot-top{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font:600 14px var(--body)}
+.foot-top a{text-decoration:underline}
+.foot .giant{font-size:18.2vw;margin:6vh 0 0;white-space:nowrap}
+.foot .giant span{display:block}
+.foot .giant span:nth-child(2){font-size:.56em;letter-spacing:.01em}
+.foot .giant span:nth-child(3){padding-bottom:.04em}
+.foot-donut{position:absolute;right:6vw;top:110px;width:clamp(120px,18vw,260px);transition:transform .2s}
+
+/* ---------- reveal ---------- */
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:860px){
+  .nav-links{display:none}
+  .hero{grid-template-columns:1fr;align-items:start;padding-top:120px}
+  .hero-side{justify-self:stretch;max-width:none;display:flex;gap:16px;align-items:center;margin-top:20px}
+  .hero-big-donut{width:40vw;flex:none;margin:0}
+  .hero-copy{margin:0;font-size:15px}
+  .sticker{width:90px;height:90px;font-size:26px;top:84px;left:auto;right:4vw}
+  .hero-tag{position:static;margin-top:30px;flex-wrap:wrap;gap:10px}
+  .ticker-track{font-size:32px}
+  .menu-intro{font-size:15px;max-width:60vw;bottom:5vh}
+  .menu-count{font-size:52px;bottom:5vh}
+  .rule{grid-template-columns:60px 1fr;gap:10px 18px}
+  .rule .n{font-size:44px}
+  .rule p{grid-column:2;font-size:15px}
+  .rule .pop{display:none}
+  .visit{grid-template-columns:1fr}
+  .arch{max-width:420px;width:100%;margin:0 auto}
+  .concept{font-size:11px;right:10px;bottom:10px}
+  .foot-donut{top:120px;width:90px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<a class="concept" href="https://www.flarewich.com" target="_blank" rel="noreferrer">Design-Konzept by <b>Flarewich</b> ↗</a>
+
+<nav class="nav">
+  <a class="logo" href="#top" aria-label="DOHHH!"><svg viewBox="0 0 100 100" data-donut="orange-mini"></svg></a>
+  <div class="nav-links"><a href="#menu">Menü</a><a href="#regeln">Regeln</a><a href="#besuch">Besuch</a></div>
+  <a class="nav-cta" href="#besuch">Vorbestellen</a>
+</nav>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="sticker">HALLO!</div>
+    <h1 class="display" aria-label="Frisch gebacken jeden Morgen">
+      <span class="row">Frisch</span>
+      <span class="row">Gebacken</span>
+      <span class="row">Jeden</span>
+      <span class="row">M<span class="o"><svg viewBox="0 0 100 100" data-donut="pink"></svg></span>rgen</span>
+    </h1>
+    <div class="hero-side">
+      <div class="hero-big-donut" id="bigDonut"><svg viewBox="0 0 100 100" data-donut="choco-big"></svg></div>
+      <p class="hero-copy">Handgemachte Donuts & Specialty Coffee aus <strong>Neukölln</strong>. Ab 7 Uhr warm aus dem Ofen — bis sie weg sind.</p>
+    </div>
+    <div class="hero-tag"><span><i></i> Donut Club seit 2026</span><span>Weserstr. 00, Berlin</span><span>Scroll ↓</span></div>
+  </section>
+
+  <div class="ticker-wrap"><div class="ticker" aria-hidden="true"><div class="ticker-track" id="ticker"></div></div></div>
+
+  <!-- STATEMENT -->
+  <section class="statement" id="statement">
+    <p class="display" id="stmt">Jeden Tag backen wir 120 Donuts. Wenn sie weg sind, sind sie weg.</p>
+    <small>Kein Vorrat. Keine Tiefkühltruhe. Nur Teig, Zeit und gute Laune.</small>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <div class="menu-stick">
+      <div class="menu-bg display">Menü Menü</div>
+      <div class="stack" id="stack"></div>
+      <p class="menu-intro">Vier Klassiker, jeden Tag. Scroll weiter — der nächste Donut wartet schon.</p>
+      <div class="menu-count" id="count">1/4</div>
+    </div>
+  </section>
+
+  <!-- RULES -->
+  <section class="rules" id="regeln">
+    <h2 class="rules-head display rv">Bei DOHHH! backen wir nach drei Regeln:</h2>
+    <div class="rule rv"><span class="n">01</span><h3 class="display">Teig braucht Zeit</h3><p>Unser Hefeteig ruht 18 Stunden. Deshalb ist er so fluffig — und deshalb gibt’s keine Abkürzungen.</p><svg class="pop" viewBox="0 0 100 100" data-donut="orange"></svg></div>
+    <div class="rule rv"><span class="n">02</span><h3 class="display">Weg ist weg</h3><p>Wir backen jeden Morgen frisch. Was am Abend übrig ist, geht an die Tafel nebenan.</p><svg class="pop" viewBox="0 0 100 100" data-donut="pink"></svg></div>
+    <div class="rule rv"><span class="n">03</span><h3 class="display">Kaffee ist Pflicht</h3><p>Bohnen von einer kleinen Rösterei aus Kreuzberg. Ein Donut ohne Kaffee ist nur ein halber Donut.</p><svg class="pop" viewBox="0 0 100 100" data-donut="choco"></svg></div>
+  </section>
+
+  <!-- VISIT -->
+  <section class="visit" id="besuch">
+    <div class="arch rv">
+      <svg class="cup" viewBox="0 0 200 220" aria-hidden="true">
+        <g class="steam" fill="none" stroke="#6b1f33" stroke-width="7" stroke-linecap="round">
+          <path d="M70 60c-12-14 12-22 0-38"/><path d="M100 60c-12-14 12-22 0-38"/><path d="M130 60c-12-14 12-22 0-38"/>
+        </g>
+        <path d="M150 105h14a24 24 0 0 1 0 48h-18" fill="none" stroke="#2a0d14" stroke-width="10"/>
+        <path d="M38 82h124l-12 108a14 14 0 0 1-14 12H64a14 14 0 0 1-14-12z" fill="#ff5a1a" stroke="#2a0d14" stroke-width="7"/>
+        <rect x="30" y="72" width="140" height="18" rx="9" fill="#f8eee4" stroke="#2a0d14" stroke-width="7"/>
+        <text x="100" y="160" text-anchor="middle" font-family="Anton, Impact" font-size="40" fill="#f8eee4">DOHHH!</text>
+      </svg>
+    </div>
+    <div class="rv">
+      <h2 class="display">Komm vorbei<span>bring Hunger mit</span></h2>
+      <div class="hours" id="hours">
+        <div data-d="1"><span>Mo – Fr</span><span>07:00 – 18:00</span></div>
+        <div data-d="6"><span>Samstag</span><span>08:00 – 18:00</span></div>
+        <div data-d="0"><span>Sonntag</span><span>09:00 – 16:00</span></div>
+      </div>
+      <p class="addr">Weserstraße 00 · 12045 Berlin-Neukölln<br/>U7 Rathaus Neukölln, 4 Minuten zu Fuß</p>
+      <a class="btn" href="#top">Box vorbestellen →</a>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="foot-top">
+    <div>© 2026 DOHHH! Donut Club — fiktive Marke, Design-Konzept.</div>
+    <div><a href="#top">Instagram</a> · <a href="#top">Impressum</a> · <a href="#top">Datenschutz</a></div>
+  </div>
+  <svg class="foot-donut" id="footDonut" viewBox="0 0 100 100" data-donut="choco"></svg>
+  <h2 class="giant display"><span>DOHHH!</span><span>Donuts & Kaffee</span><span>Berlin</span></h2>
+</footer>
+
+<script>
+/* ===== SVG donut generator ===== */
+const PAL = {
+  pink:   { icing:"#f6c6e4", spr:["#ff5a1a","#2f8cff","#0f5c43","#f8eee4"] },
+  orange: { icing:"#ff5a1a", spr:["#f8eee4","#6b1f33","#f6c6e4","#2f8cff"] },
+  choco:  { icing:"#6b1f33", spr:["#f6c6e4","#ff5a1a","#f8eee4","#2f8cff"] },
+  green:  { icing:"#0f5c43", spr:["#f6c6e4","#ff5a1a","#f8eee4"] },
+  blue:   { icing:"#2f8cff", spr:["#f8eee4","#ff5a1a","#f6c6e4"] },
+};
+function rnd(seed){ return () => (seed = (seed * 16807) % 2147483647) / 2147483647; }
+function donutSVG(kind, seed = 7, sprinkles = 22){
+  const key = kind.split("-")[0];
+  const p = PAL[key] || PAL.pink;
+  const r = rnd(seed * 97 + key.length * 13);
+  // wobbly icing outline
+  let d = "";
+  const N = 18;
+  for (let i = 0; i <= N; i++){
+    const a = (i / N) * Math.PI * 2;
+    const rad = 40 + (i % 2 ? 4.5 : -1.5) + (r() - .5) * 3;
+    const x = 50 + Math.cos(a) * rad, y = 50 + Math.sin(a) * rad;
+    d += (i ? "L" : "M") + x.toFixed(1) + " " + y.toFixed(1);
+  }
+  let spr = "";
+  for (let i = 0; i < sprinkles; i++){
+    const a = r() * Math.PI * 2, rr = 22 + r() * 18;
+    const x = 50 + Math.cos(a) * rr, y = 50 + Math.sin(a) * rr;
+    spr += `<rect x="${(x-1.4).toFixed(1)}" y="${(y-4).toFixed(1)}" width="2.8" height="8" rx="1.4" fill="${p.spr[i % p.spr.length]}" transform="rotate(${(r()*180)|0} ${x.toFixed(1)} ${y.toFixed(1)})"/>`;
+  }
+  return `
+    <circle cx="50" cy="52" r="47" fill="#2a0d14"/>
+    <circle cx="50" cy="50" r="47" fill="#e8a25c"/>
+    <circle cx="50" cy="50" r="47" fill="none" stroke="#2a0d14" stroke-width="2.5"/>
+    <path d="${d}Z" fill="${p.icing}" stroke="#2a0d14" stroke-width="2.5" stroke-linejoin="round"/>
+    <path d="M24 34c6-10 18-16 28-16" fill="none" stroke="#fff" stroke-opacity=".5" stroke-width="3" stroke-linecap="round"/>
+    ${spr}
+    <circle cx="50" cy="50" r="13" fill="#e8a25c" stroke="#2a0d14" stroke-width="2.5"/>
+    <circle cx="50" cy="50" r="9" fill="var(--hole, #f8eee4)" stroke="#2a0d14" stroke-width="2.5"/>`;
+}
+document.querySelectorAll("[data-donut]").forEach((el, i) => {
+  const k = el.dataset.donut;
+  el.innerHTML = donutSVG(k, i + 3, k.includes("mini") ? 10 : k.includes("big") ? 34 : 22);
+});
+document.querySelector(".logo svg").style.setProperty("--hole", "#6b1f33");
+
+/* ===== ticker ===== */
+const tk = document.getElementById("ticker");
+const words = ["Frisch", "Fluffig", "Handgemacht", "Kaffee", "Berlin"];
+const kinds = ["pink","orange","blue","green","choco"];
+const chunk = words.map((w, i) => `<span>${w}<svg viewBox="0 0 100 100">${donutSVG(kinds[i], i + 40, 10)}</svg></span>`).join("");
+tk.innerHTML = chunk + chunk + chunk + chunk;
+tk.querySelectorAll("svg").forEach(s => s.style.setProperty("--hole", "#6b1f33"));
+
+/* ===== big donut: drag to spin ===== */
+const big = document.getElementById("bigDonut");
+let rot = 0, vel = 0.15, dragging = false, lastX = 0;
+big.addEventListener("pointerdown", e => { dragging = true; lastX = e.clientX; big.setPointerCapture(e.pointerId); big.style.cursor = "grabbing"; });
+big.addEventListener("pointermove", e => { if (!dragging) return; vel = (e.clientX - lastX) * 0.6; lastX = e.clientX; });
+big.addEventListener("pointerup", () => { dragging = false; big.style.cursor = "grab"; });
+(function loop(){
+  if (!dragging) vel += (0.15 - vel) * 0.02;
+  rot += vel;
+  big.style.transform = `rotate(${rot}deg)`;
+  requestAnimationFrame(loop);
+})();
+
+/* ===== statement: words light up + sprinkle parallax ===== */
+const stmt = document.getElementById("stmt");
+stmt.innerHTML = stmt.textContent.split(" ").map(w => `<span class="w">${w}</span>`).join(" ");
+const ws = [...stmt.querySelectorAll(".w")];
+const stSec = document.getElementById("statement");
+const sprColors = ["#ff5a1a","#2f8cff","#f6c6e4","#0f5c43","#6b1f33"];
+const sprs = [];
+for (let i = 0; i < 26; i++){
+  const s = document.createElement("i");
+  s.className = "spr";
+  s.style.background = sprColors[i % sprColors.length];
+  s.style.left = Math.random() * 100 + "%";
+  s.style.top = Math.random() * 100 + "%";
+  s.dataset.speed = (Math.random() * 0.6 + 0.2).toFixed(2);
+  s.dataset.rot = (Math.random() * 360) | 0;
+  stSec.appendChild(s); sprs.push(s);
+}
+
+/* ===== menu card stack ===== */
+const items = [
+  { name:"Pink Panic", kind:"pink", bg:"#f8eee4", fg:"#6b1f33", desc:"Himbeer-Glasur, bunte Streusel, ein bisschen zu viel Zucker.", price:"3,20 €" },
+  { name:"Orange Crush", kind:"orange", bg:"#2f8cff", fg:"#f8eee4", desc:"Blutorangen-Curd im Inneren, karamellisierte Haube.", price:"3,50 €" },
+  { name:"Dark Side", kind:"choco", bg:"#ff5a1a", fg:"#2a0d14", desc:"Belgische Zartbitter-Schokolade und Meersalz-Flocken.", price:"3,40 €" },
+  { name:"Matcha Club", kind:"green", bg:"#6b1f33", fg:"#f6c6e4", desc:"Matcha-Ganache, weiße Schoki, für alle, die es grün mögen.", price:"3,80 €" },
+];
+const stack = document.getElementById("stack");
+const tilts = [-4, 5, -7, 3];
+items.forEach((it, i) => {
+  const c = document.createElement("article");
+  c.className = "card";
+  c.style.background = it.bg; c.style.color = it.fg;
+  c.style.zIndex = items.length - i;
+  c.style.transform = `rotate(${tilts[i]}deg) translate(${i*8}px, ${i*-10}px)`;
+  c.innerHTML = `<h3 class="display">${it.name}</h3><p>${it.desc}</p>
+    <div class="art"><svg viewBox="0 0 100 100" style="--hole:${it.bg}">${donutSVG(it.kind, i + 20, 26)}</svg></div>
+    <div class="cfoot"><span class="price">${it.price}</span><span class="num">${String(i+1).padStart(2,"0")} / 04</span></div>`;
+  stack.appendChild(c);
+});
+const cards = [...stack.children];
+const menu = document.getElementById("menu");
+const count = document.getElementById("count");
+const menuBg = document.querySelector(".menu-bg");
+
+/* ===== rules: follow-cursor popup ===== */
+document.querySelectorAll(".rule").forEach(r => {
+  const pop = r.querySelector(".pop");
+  r.addEventListener("pointermove", e => { pop.style.left = e.clientX + 20 + "px"; pop.style.top = e.clientY - 90 + "px"; });
+});
+
+/* ===== hours: highlight today ===== */
+const day = new Date().getDay();
+document.querySelectorAll("#hours div").forEach(d => {
+  const k = +d.dataset.d;
+  if ((k === 1 && day >= 1 && day <= 5) || k === day) d.classList.add("today");
+});
+
+/* ===== footer donut follows mouse ===== */
+const fd = document.getElementById("footDonut");
+document.querySelector(".foot").addEventListener("pointermove", e => {
+  const r = e.currentTarget.getBoundingClientRect();
+  const x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+  fd.style.transform = `translate(${x*60}px, ${y*40}px) rotate(${x*90}deg)`;
+});
+
+/* ===== scroll handler ===== */
+function onScroll(){
+  const vh = innerHeight;
+  // statement words
+  const sr = stSec.getBoundingClientRect();
+  const prog = Math.min(1, Math.max(0, (vh * 0.8 - sr.top) / (sr.height * 0.7)));
+  const lit = Math.floor(prog * ws.length);
+  ws.forEach((w, i) => w.classList.toggle("on", i < lit));
+  sprs.forEach(s => {
+    s.style.transform = `translateY(${(sr.top) * -s.dataset.speed}px) rotate(${+s.dataset.rot + sr.top * .2}deg)`;
+  });
+  // menu stack
+  const mr = menu.getBoundingClientRect();
+  const total = mr.height - vh;
+  const mp = Math.min(1, Math.max(0, -mr.top / total));
+  const idx = Math.min(items.length - 1, Math.floor(mp * items.length));
+  cards.forEach((c, i) => c.classList.toggle("gone", i < idx));
+  count.textContent = `${idx + 1}/${items.length}`;
+  menuBg.style.transform = `translateX(${(0.5 - mp) * 40}%)`;
+}
+addEventListener("scroll", onScroll, { passive:true });
+onScroll();
+
+/* ===== reveal ===== */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold:.15 });
+document.querySelectorAll(".rv").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
