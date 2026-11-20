@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Autoservice Jan — Kfz-Meisterbetrieb in Lutherstadt Wittenberg (Entwurf)</title>
+<meta name="robots" content="noindex, nofollow" />
+<meta name="description" content="Redesign-Entwurf von Flarewich für Autoservice Jan, Kfz-Meisterbetrieb Maik Pohle in Wittenberg." />
+<meta name="theme-color" content="#1c2127" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --white:#ffffff; --bg:#f4f5f7; --line:#e1e4e8; --text:#1c2127; --text-2:#4a525c; --mute:#7a828c;
+  --dark:#1c2127; --dark-2:#262c33; --red:#d71f26; --red-d:#b3191f; --ok:#1f9d55;
+  --head:"Barlow", "Arial Narrow", sans-serif; --body:"Inter", system-ui, sans-serif;
+  --r:6px; --shadow:0 1px 2px rgba(16,24,40,.06), 0 8px 24px rgba(16,24,40,.06);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:100px}
+body{margin:0;background:var(--white);color:var(--text);font:16px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--head);font-weight:700;margin:0;line-height:1.15;letter-spacing:-.005em}
+svg{display:block}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+
+/* pitch note */
+.pitch{background:#fff8e1;color:#6b5400;text-align:center;padding:7px 14px;font-size:12.5px;border-bottom:1px solid #f1e2a8}
+.pitch a{text-decoration:underline}
+
+/* info bar */
+.infobar{background:var(--dark);color:#c4cad1;font-size:13.5px}
+.infobar .wrap{display:flex;gap:28px;align-items:center;height:42px}
+.infobar span{display:flex;align-items:center;gap:8px}
+.infobar svg{width:15px;height:15px;color:var(--red)}
+.infobar .push{margin-left:auto}
+.infobar a:hover{color:#fff}
+.status-dot{width:8px;height:8px;border-radius:50%;background:var(--mute);display:inline-block}
+.status-dot.open{background:#3fcf7a}
+.status-dot.closed{background:var(--red)}
+
+/* header */
+.header{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--line);transition:box-shadow .2s}
+.header.scrolled{box-shadow:0 4px 20px rgba(16,24,40,.08)}
+.header .wrap{display:flex;align-items:center;gap:30px;height:78px}
+.logo{display:flex;align-items:center;gap:12px;margin-right:auto}
+.logo-mark{width:44px;height:44px;border-radius:var(--r);background:var(--red);display:grid;place-items:center}
+.logo-mark svg{width:26px;height:26px;color:#fff}
+.logo strong{display:block;font:700 21px/1 var(--head);letter-spacing:.01em}
+.logo small{display:block;margin-top:4px;font-size:12px;color:var(--mute)}
+.nav{display:flex;gap:28px;font-weight:500;font-size:15px;color:var(--text-2)}
+.nav a{position:relative;padding:6px 0}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--red);transform:scaleX(0);transition:transform .2s}
+.nav a:hover{color:var(--text)}
+.nav a:hover::after{transform:scaleX(1)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 22px;border-radius:var(--r);font-weight:600;font-size:15px;transition:background .2s,border-color .2s,color .2s;border:1px solid transparent;white-space:nowrap}
+.btn svg{width:18px;height:18px}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red-d)}
+.btn-line{border-color:rgba(255,255,255,.35);color:#fff}
+.btn-line:hover{background:rgba(255,255,255,.08);border-color:#fff}
+.btn-dark{border-color:var(--line);color:var(--text);background:#fff}
+.btn-dark:hover{border-color:var(--text)}
+
+/* hero */
+.hero{background:var(--dark);color:#fff;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background:
+  radial-gradient(800px 400px at 85% 20%, rgba(215,31,38,.18), transparent 60%),
+  repeating-linear-gradient(135deg, rgba(255,255,255,.025) 0 2px, transparent 2px 22px);pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.25fr .9fr;gap:60px;align-items:center;padding:90px 0 100px}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#e9a3a6}
+.eyebrow::before{content:"";width:24px;height:2px;background:var(--red)}
+.hero h1{margin-top:18px;font-size:clamp(38px,4.8vw,62px);font-weight:700}
+.hero h1 span{color:#ff4a50}
+.hero p.lead{margin:22px 0 0;max-width:560px;font-size:18px;color:#c4cad1}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.hero-check{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:38px;color:#c4cad1;font-size:14.5px}
+.hero-check span{display:flex;align-items:center;gap:8px}
+.hero-check svg{width:18px;height:18px;color:#3fcf7a}
+
+.quick{background:#fff;color:var(--text);border-radius:10px;box-shadow:0 30px 60px -20px rgba(0,0,0,.5);overflow:hidden}
+.quick-head{padding:22px 26px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.quick-head h3{font-size:22px}
+.badge{display:inline-flex;align-items:center;gap:7px;font-size:12.5px;font-weight:600;padding:5px 10px;border-radius:99px;background:var(--bg);color:var(--text-2)}
+.badge.open{background:#e6f6ed;color:#13804a}
+.badge.closed{background:#fdeceb;color:var(--red-d)}
+.quick-body{padding:22px 26px 26px;display:grid;gap:16px}
+.q-row{display:flex;gap:14px;align-items:flex-start}
+.q-ico{width:40px;height:40px;border-radius:var(--r);background:var(--bg);display:grid;place-items:center;flex:none;color:var(--red)}
+.q-ico svg{width:20px;height:20px}
+.q-row small{display:block;color:var(--mute);font-size:12.5px}
+.q-row b{font-weight:600}
+.q-row a b:hover{color:var(--red)}
+.quick .btn{width:100%;margin-top:4px}
+
+/* trust bar */
+.trust{border-bottom:1px solid var(--line);background:#fff}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.trust div{display:flex;gap:14px;align-items:center;padding:26px 20px;border-right:1px solid var(--line)}
+.trust div:first-child{padding-left:0}
+.trust div:last-child{border-right:0}
+.trust svg{width:34px;height:34px;color:var(--red);flex:none}
+.trust b{display:block;font:600 17px/1.2 var(--head);color:var(--text)}
+.trust span{font-size:13.5px;color:var(--mute)}
+
+/* sections */
+.sec{padding:96px 0}
+.sec.grey{background:var(--bg)}
+.sec-head{max-width:720px;margin-bottom:48px}
+.sec-head.center{margin-inline:auto;text-align:center}
+.label{font-weight:600;font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--red)}
+.sec-head h2{margin-top:10px;font-size:clamp(30px,3.4vw,42px)}
+.sec-head p{margin:14px 0 0;color:var(--text-2);font-size:17px}
+
+/* services */
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;grid-auto-flow:dense}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:30px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s,border-color .25s;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(16,24,40,.1);border-color:#d4d8dd}
+.card .ico{width:52px;height:52px;border-radius:10px;background:#fdeceb;color:var(--red);display:grid;place-items:center;margin-bottom:20px}
+.card .ico svg{width:26px;height:26px}
+.card h3{font-size:22px}
+.card p{margin:10px 0 0;color:var(--text-2);font-size:15px}
+.card ul{margin:16px 0 0;padding:0;list-style:none;display:grid;gap:6px;font-size:14.5px;color:var(--text-2)}
+.card li{display:flex;gap:8px;align-items:flex-start}
+.card li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red);margin-top:9px;flex:none}
+.card.feature{background:var(--dark);border-color:var(--dark);color:#fff;grid-column:span 2}
+.card.feature p,.card.feature ul{color:#c4cad1}
+.card.feature .ico{background:rgba(215,31,38,.18);color:#ff5a60}
+.card.feature .tag{display:inline-block;margin-top:18px;font-size:12.5px;font-weight:600;background:var(--red);color:#fff;padding:5px 10px;border-radius:99px;align-self:flex-start}
+
+/* HU */
+.hu{display:grid;grid-template-columns:1fr 1fr;gap:0;background:#fff;border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+.hu-l{padding:44px}
+.hu-l h3{font-size:28px}
+.hu-l > p{color:var(--text-2);margin:12px 0 0}
+.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.fields label span{display:block;font-size:13px;font-weight:600;color:var(--text-2);margin-bottom:6px}
+.fields select{width:100%;font:500 16px var(--body);padding:13px 14px;border:1px solid #cdd2d8;border-radius:var(--r);background:#fff;color:var(--text);cursor:pointer}
+.fields select:focus{outline:2px solid var(--red);outline-offset:1px}
+.result{margin-top:22px;padding:16px 18px;border-radius:var(--r);background:var(--bg);display:flex;gap:14px;align-items:flex-start}
+.result i{width:10px;height:10px;border-radius:50%;margin-top:8px;flex:none;background:var(--mute)}
+.result b{display:block;font:600 19px/1.3 var(--head)}
+.result small{display:block;color:var(--text-2);font-size:14px;margin-top:2px}
+.result.ok i{background:var(--ok)} .result.soon i{background:#e8a317} .result.due i{background:var(--red)}
+.result.due{background:#fdeceb}
+.hu-l .btn{margin-top:24px}
+.hu-r{background:var(--bg);border-left:1px solid var(--line);display:grid;place-items:center;padding:44px;text-align:center}
+.sticker{width:200px;height:200px;margin:0 auto}
+.sticker svg{width:100%;height:100%;filter:drop-shadow(0 10px 18px rgba(0,0,0,.15))}
+.hu-r p{margin:22px auto 0;max-width:300px;font-size:14px;color:var(--text-2)}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.photo{position:relative;border-radius:12px;overflow:hidden;background:var(--bg);border:1px solid var(--line);aspect-ratio:4/3}
+.photo svg{width:100%;height:100%}
+.photo .cap{position:absolute;left:16px;bottom:16px;background:rgba(28,33,39,.85);color:#fff;font-size:12.5px;padding:6px 10px;border-radius:4px}
+.about p{color:var(--text-2);font-size:16.5px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+.facts div{border:1px solid var(--line);border-radius:10px;padding:18px}
+.facts b{display:block;font:700 26px/1 var(--head);color:var(--red)}
+.facts span{display:block;margin-top:6px;font-size:13.5px;color:var(--text-2)}
+.owner{display:flex;gap:14px;align-items:center;margin-top:28px;padding-top:24px;border-top:1px solid var(--line)}
+.avatar{width:52px;height:52px;border-radius:50%;background:var(--dark);color:#fff;display:grid;place-items:center;font:700 18px var(--head)}
+.owner b{display:block;font-weight:600}
+.owner span{font-size:14px;color:var(--mute)}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{background:#fff;border:1px solid var(--line);border-radius:10px;padding:30px;position:relative}
+.step .no{width:40px;height:40px;border-radius:50%;background:var(--red);color:#fff;display:grid;place-items:center;font:700 18px var(--head)}
+.step h3{font-size:21px;margin-top:18px}
+.step p{margin:8px 0 0;color:var(--text-2);font-size:15px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.c-card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:36px;box-shadow:var(--shadow)}
+.c-card h3{font-size:24px;margin-bottom:20px}
+.c-list{display:grid;gap:18px}
+.c-list .q-row b{font-size:17px}
+.hours{width:100%;border-collapse:collapse;font-size:15.5px}
+.hours td{padding:12px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-weight:500}
+.hours tr.today td{font-weight:700;color:var(--text)}
+.hours tr.today td:first-child::after{content:"Heute";margin-left:10px;font-size:11.5px;font-weight:600;background:#fdeceb;color:var(--red-d);padding:3px 8px;border-radius:99px}
+.hours tr.off td:last-child{color:var(--mute)}
+.note{margin-top:18px;font-size:14px;color:var(--text-2);background:var(--bg);padding:12px 14px;border-radius:var(--r)}
+.maplink{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:24px;padding:16px 18px;border:1px solid var(--line);border-radius:var(--r);font-weight:600;transition:border-color .2s}
+.maplink:hover{border-color:var(--red);color:var(--red)}
+
+/* CTA band */
+.band{background:var(--red);color:#fff}
+.band .wrap{display:flex;align-items:center;justify-content:space-between;gap:30px;padding:46px 0}
+.band h2{font-size:clamp(26px,3vw,36px)}
+.band p{margin:6px 0 0;color:#ffd6d8}
+.band .btn{background:#fff;color:var(--red)}
+.band .btn:hover{background:#ffeeee}
+
+/* footer */
+.footer{background:var(--dark);color:#a9b1ba;font-size:14.5px}
+.footer .wrap{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding:64px 0 44px}
+.footer h4{margin:0 0 14px;color:#fff;font:600 16px var(--head);letter-spacing:.02em}
+.footer p{margin:0}
+.footer a:hover{color:#fff}
+.footer ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.footer .logo strong{color:#fff}
+.footer .logo small{color:#8a929b}
+.sub{border-top:1px solid #333a42}
+.sub .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 0;font-size:13px;color:#8a929b}
+
+/* mobile call bar */
+.mcall{display:none}
+
+/* reveal (subtle) */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1020px){
+  .nav{display:none}
+  .hero .wrap,.hu,.about,.contact{grid-template-columns:1fr}
+  .hero .wrap{padding:60px 0 70px;gap:40px}
+  .hu-r{border-left:0;border-top:1px solid var(--line)}
+  .svc,.steps{grid-template-columns:1fr 1fr}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust div{border-right:0;border-bottom:1px solid var(--line);padding-left:0}
+  .footer .wrap{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  .infobar .hide-s{display:none}
+  .infobar .wrap{gap:16px;font-size:12.5px}
+  .header .wrap{height:66px}
+  .header .btn{display:none}
+  .logo strong{font-size:19px}
+  .hero h1{font-size:34px}
+  .hero p.lead{font-size:16.5px}
+  .hero .actions .btn{flex:1 1 100%}
+  .svc,.steps,.trust .wrap{grid-template-columns:1fr}
+  .card.feature{grid-column:auto}
+  .hu-l,.hu-r,.c-card{padding:26px 20px}
+  .facts{grid-template-columns:1fr 1fr 1fr;gap:8px}
+  .facts div{padding:12px}
+  .facts b{font-size:20px}
+  .sec{padding:70px 0}
+  .band .wrap{flex-direction:column;align-items:flex-start}
+  .footer .wrap{grid-template-columns:1fr;gap:28px}
+  .mcall{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);padding:10px;gap:10px;box-shadow:0 -6px 20px rgba(16,24,40,.08)}
+  .mcall a{flex:1;justify-content:center}
+  body{padding-bottom:72px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="pitch">Entwurf · Redesign-Vorschlag von <a href="https://www.flarewich.com" target="_blank" rel="noreferrer">Flarewich</a> für Autoservice Jan — kein offizieller Internetauftritt</div>
+
+<div class="infobar">
+  <div class="wrap">
+    <span><i class="status-dot" id="dot"></i><span id="statusTxt">…</span></span>
+    <span class="hide-s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Mo–Fr 8:00–17:00</span>
+    <span class="hide-s"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>Gotenweg 9, 06886 Wittenberg</span>
+    <a class="push hide-s" href="tel:+493491505199"><span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>03491 505199</span></a>
+  </div>
+</div>
+
+<header class="header" id="header">
+  <div class="wrap">
+    <a class="logo" href="#top">
+      <span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></span>
+      <span><strong>AUTOSERVICE JAN</strong><small>Kfz-Meisterbetrieb Maik Pohle</small></span>
+    </a>
+    <nav class="nav">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#hu">HU / AU</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="btn btn-red" href="tel:+493491505199">Termin vereinbaren</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Kfz-Meisterbetrieb in Lutherstadt Wittenberg</span>
+        <h1>Ihre freie Werkstatt für <span>alle Marken.</span></h1>
+        <p class="lead">Wartung, Reparatur, Reifen- und Klimaservice sowie Hauptuntersuchung durch DEKRA direkt bei uns vor Ort. Persönlich beraten, fair kalkuliert, sauber ausgeführt.</p>
+        <div class="actions">
+          <a class="btn btn-red" href="tel:+493491505199"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>03491 505199</a>
+          <a class="btn btn-line" href="#leistungen">Unsere Leistungen</a>
+        </div>
+        <div class="hero-check">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4 10-10"/></svg>Meisterbetrieb der Kfz-Innung</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4 10-10"/></svg>HU durch DEKRA im Haus</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l4 4 10-10"/></svg>Fahrzeuge aller Hersteller</span>
+        </div>
+      </div>
+
+      <aside class="quick rv">
+        <div class="quick-head"><h3>Kontakt & Termin</h3><span class="badge" id="badge">…</span></div>
+        <div class="quick-body">
+          <a class="q-row" href="tel:+493491505199"><span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span><small>Telefon</small><b>03491 505199</b></span></a>
+          <a class="q-row" href="mailto:autoservice-jan@gmx.de?subject=Terminanfrage"><span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span><small>E-Mail</small><b>autoservice-jan@gmx.de</b></span></a>
+          <div class="q-row"><span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><span><small>Öffnungszeiten</small><b>Mo – Fr: 8:00 – 17:00</b></span></div>
+          <a class="btn btn-red" href="tel:+493491505199">Jetzt anrufen</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <div class="trust">
+    <div class="wrap">
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="9" r="6"/><path d="M8.5 14L7 22l5-3 5 3-1.5-8"/></svg><span><b>Meisterbetrieb</b><span>Mitglied der Kfz-Innung</span></span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 5-5"/></svg><span><b>DEKRA vor Ort</b><span>HU Mo–Fr oder nach Termin</span></span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M3 16v-3l2-5h14l2 5v3zM6 16v2M18 16v2"/><circle cx="7.5" cy="13" r="1"/><circle cx="16.5" cy="13" r="1"/></svg><span><b>Alle Marken</b><span>Pkw aller Hersteller</span></span></div>
+      <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 12h3l3 7 4-14 3 7h3"/></svg><span><b>Moderne Diagnose</b><span>Fehlerspeicher auslesen</span></span></div>
+    </div>
+  </div>
+
+  <!-- SERVICES -->
+  <section class="sec grey" id="leistungen">
+    <div class="wrap">
+      <div class="sec-head center rv">
+        <span class="label">Leistungen</span>
+        <h2>Alles rund um Ihr Fahrzeug</h2>
+        <p>Reparatur, Wartung und Unfallinstandsetzung aus einer Hand. Vor jeder Reparatur besprechen wir mit Ihnen die wirtschaftlichste Lösung.</p>
+      </div>
+      <div class="svc" id="svc"></div>
+    </div>
+  </section>
+
+  <!-- HU -->
+  <section class="sec" id="hu">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="label">Hauptuntersuchung · Abgasuntersuchung</span>
+        <h2>HU und AU direkt bei uns</h2>
+        <p>Ein DEKRA-Sachverständiger prüft Ihr Fahrzeug in unserer Werkstatt — Montag bis Freitag oder nach individueller Terminabsprache. Bitte bringen Sie Ihren Fahrzeugschein mit.</p>
+      </div>
+      <div class="hu rv">
+        <div class="hu-l">
+          <h3>Wann ist Ihre HU fällig?</h3>
+          <p>Auf der Prüfplakette steht oben der Monat und in der Mitte das Jahr. Wählen Sie beides aus:</p>
+          <div class="fields">
+            <label><span>Monat</span><select id="huM"></select></label>
+            <label><span>Jahr</span><select id="huY"></select></label>
+          </div>
+          <div class="result" id="huRes"><i></i><div><b>…</b><small></small></div></div>
+          <a class="btn btn-red" href="tel:+493491505199">HU-Termin vereinbaren</a>
+        </div>
+        <div class="hu-r">
+          <div>
+            <div class="sticker"><svg viewBox="0 0 200 200" id="sticker"></svg></div>
+            <p id="stickerTxt">So sieht Ihre Prüfplakette aus.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec grey" id="ueber-uns">
+    <div class="wrap about">
+      <div class="photo rv">
+        <svg viewBox="0 0 640 480" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <rect width="640" height="480" fill="#e9ecef"/>
+          <rect y="380" width="640" height="100" fill="#d9dde2"/>
+          <path d="M70 380V170l250-60 250 60v210z" fill="#fff" stroke="#c9ced5" stroke-width="3"/>
+          <rect x="70" y="186" width="500" height="34" fill="#d71f26"/>
+          <text x="320" y="210" text-anchor="middle" font-family="Barlow, Arial" font-weight="700" font-size="22" fill="#fff" letter-spacing="3">AUTOSERVICE JAN</text>
+          <rect x="110" y="250" width="170" height="130" fill="#d71f26"/><rect x="360" y="250" width="170" height="130" fill="#d71f26"/>
+          <g stroke="#b3191f" stroke-width="2"><path d="M110 276h170M110 302h170M110 328h170M110 354h170M360 276h170M360 302h170M360 328h170M360 354h170"/></g>
+          <rect x="296" y="270" width="48" height="110" fill="#f4f5f7" stroke="#c9ced5" stroke-width="3"/>
+        </svg>
+        <span class="cap">Platzhalter — hier kommt Ihr Werkstattfoto</span>
+      </div>
+      <div class="rv">
+        <span class="label">Über uns</span>
+        <h2 style="margin-top:10px;font-size:clamp(30px,3.4vw,42px)">Wir lieben Technik.</h2>
+        <p>Autoservice Jan ist eine freie Kfz-Werkstatt in Lutherstadt Wittenberg. Wir stehen für hochwertigen Service zu fairen Preisen, zuverlässige Inspektionen sowie präzise und schnelle Instandsetzung.</p>
+        <p>Da Kraftfahrzeuge technisch immer komplexer werden, ist regelmäßige Weiterbildung für uns selbstverständlich. Ihre Anliegen klären wir im persönlichen Gespräch.</p>
+        <div class="facts">
+          <div><b>2017</b><span>Meister des Kfz-Gewerbes</span></div>
+          <div><b>7</b><span>Leistungsbereiche</span></div>
+          <div><b>DEKRA</b><span>Prüfung im Haus</span></div>
+        </div>
+        <div class="owner"><span class="avatar">MP</span><div><b>Maik Pohle</b><span>Inhaber · Kfz-Meister und gelernter Kfz-Mechaniker</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="sec-head center rv">
+        <span class="label">Ablauf</span>
+        <h2>In drei Schritten zum Termin</h2>
+      </div>
+      <div class="steps">
+        <div class="step rv"><span class="no">1</span><h3>Termin vereinbaren</h3><p>Rufen Sie uns an oder schreiben Sie eine E-Mail. Wir finden kurzfristig einen passenden Termin.</p></div>
+        <div class="step rv"><span class="no">2</span><h3>Diagnose & Beratung</h3><p>Wir prüfen Ihr Fahrzeug mit moderner Technik und besprechen mit Ihnen die wirtschaftlichste Lösung.</p></div>
+        <div class="step rv"><span class="no">3</span><h3>Reparatur & Abholung</h3><p>Wir führen die Arbeiten sorgfältig aus — Sie holen Ihr Fahrzeug zum vereinbarten Zeitpunkt ab.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="sec grey" id="kontakt">
+    <div class="wrap">
+      <div class="sec-head rv">
+        <span class="label">Kontakt</span>
+        <h2>So erreichen Sie uns</h2>
+      </div>
+      <div class="contact">
+        <div class="c-card rv">
+          <h3>Autoservice Jan</h3>
+          <div class="c-list">
+            <div class="q-row"><span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg></span><span><small>Adresse</small><b>Gotenweg 9, 06886 Lutherstadt Wittenberg</b></span></div>
+            <a class="q-row" href="tel:+493491505199"><span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><span><small>Telefon</small><b>03491 505199</b></span></a>
+            <div class="q-row"><span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 7h6M9 11h6M9 15h3"/></svg></span><span><small>Fax</small><b>03491 505198</b></span></div>
+            <a class="q-row" href="mailto:autoservice-jan@gmx.de"><span class="q-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span><small>E-Mail</small><b>autoservice-jan@gmx.de</b></span></a>
+          </div>
+          <a class="maplink" href="https://www.google.com/maps/search/?api=1&query=Gotenweg+9+06886+Wittenberg" target="_blank" rel="noreferrer"><span>Route in Google Maps planen</span><span>↗</span></a>
+        </div>
+        <div class="c-card rv">
+          <h3>Öffnungszeiten</h3>
+          <table class="hours" id="hours">
+            <tr data-d="1"><td>Montag</td><td>8:00 – 17:00</td></tr>
+            <tr data-d="2"><td>Dienstag</td><td>8:00 – 17:00</td></tr>
+            <tr data-d="3"><td>Mittwoch</td><td>8:00 – 17:00</td></tr>
+            <tr data-d="4"><td>Donnerstag</td><td>8:00 – 17:00</td></tr>
+            <tr data-d="5"><td>Freitag</td><td>8:00 – 17:00</td></tr>
+            <tr data-d="6" class="off"><td>Samstag</td><td>geschlossen</td></tr>
+            <tr data-d="0" class="off"><td>Sonntag</td><td>geschlossen</td></tr>
+          </table>
+          <p class="note">Hauptuntersuchung durch DEKRA: Montag bis Freitag oder nach Terminabsprache. Bitte vereinbaren Sie vorab einen Termin.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="band">
+    <div class="wrap">
+      <div><h2>Vertrauen verbindet.</h2><p>Rufen Sie uns an — wir beraten Sie gern persönlich.</p></div>
+      <a class="btn" href="tel:+493491505199">03491 505199 anrufen</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#top"><span class="logo-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/></svg></span><span><strong>AUTOSERVICE JAN</strong><small>Kfz-Meisterbetrieb Maik Pohle</small></span></a>
+      <p style="margin-top:16px;max-width:300px">Freie Kfz-Werkstatt für Fahrzeuge aller Hersteller in Lutherstadt Wittenberg.</p>
+    </div>
+    <div><h4>Leistungen</h4><ul><li><a href="#leistungen">Wartung & Inspektion</a></li><li><a href="#leistungen">Instandsetzung</a></li><li><a href="#leistungen">Reifenservice</a></li><li><a href="#hu">HU / AU</a></li></ul></div>
+    <div><h4>Kontakt</h4><ul><li>Gotenweg 9</li><li>06886 Lutherstadt Wittenberg</li><li><a href="tel:+493491505199">03491 505199</a></li><li><a href="mailto:autoservice-jan@gmx.de">autoservice-jan@gmx.de</a></li></ul></div>
+    <div><h4>Öffnungszeiten</h4><ul><li>Mo – Fr: 8:00 – 17:00</li><li>Sa – So: geschlossen</li></ul></div>
+  </div>
+  <div class="sub"><div class="wrap"><span>© Autoservice Jan · Kfz-Meisterbetrieb Maik Pohle</span><span><a href="#top">Impressum</a> · <a href="#top">Datenschutz</a> · Entwurf: <a href="https://www.flarewich.com" target="_blank" rel="noreferrer">Flarewich</a></span></div></div>
+</footer>
+
+<div class="mcall">
+  <a class="btn btn-red" href="tel:+493491505199">Anrufen</a>
+  <a class="btn btn-dark" href="https://www.google.com/maps/search/?api=1&query=Gotenweg+9+06886+Wittenberg" target="_blank" rel="noreferrer">Route</a>
+</div>
+
+<script>
+/* ===== Services (content from the current website) ===== */
+const I = {
+  diag:'<path d="M4 12h3l3 7 4-14 3 7h3"/>',
+  wrench:'<path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.6 2.6-2.4-.6-.6-2.4z"/>',
+  car:'<path d="M3 16v-3l2-5h14l2 5v3zM6 16v2M18 16v2"/><circle cx="7.5" cy="13" r="1"/><circle cx="16.5" cy="13" r="1"/>',
+  tire:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v5M12 16v5M3 12h5M16 12h5"/>',
+  check:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 5-5"/>',
+  gauge:'<path d="M4 15a8 8 0 1 1 16 0"/><path d="M12 15l4-5"/><circle cx="12" cy="15" r="1.5"/>',
+  snow:'<path d="M12 2v20M4.9 6.5l14.2 11M19.1 6.5L4.9 17.5"/>',
+};
+const services = [
+  { ico:"diag", t:"Fahrzeugdiagnose", d:"Wir ermitteln und analysieren Schäden an Ihrem Fahrzeug. Mit neuesten Diagnosegeräten lesen wir den Fehlercode aus.", li:["Fehlerspeicher auslesen","Elektronik-Check"] },
+  { ico:"wrench", t:"Wartung & Inspektion", d:"Regelmäßige Inspektionen nach Herstellervorgaben verringern Verschleiß und erhöhen die Lebensdauer.", li:["Ölwechsel, Bremsencheck","Filter, Flüssigkeiten, Stoßdämpfer","Zahnriemenwechsel"] },
+  { ico:"car", t:"Instandsetzung", d:"Reparaturen an Karosserie, Auspuffanlage, Elektrik, Motor, Scheiben und Reifen.", li:["Unfallinstandsetzung","Motor & Elektrik"] },
+  { ico:"check", t:"Hauptuntersuchung (HU)", d:"Die HU nach §29 StVZO führt ein DEKRA-Sachverständiger direkt in unserer Werkstatt durch — erstmals ab dem dritten Jahr, danach alle 24 Monate.", li:["Bremsen, Lenkung, Beleuchtung, Elektrik","Rahmen, Räder, Reifen, Scheiben, Abgas"], feature:true },
+  { ico:"tire", t:"Reifenservice", d:"Reifen aller Markenhersteller für Pkw — rund um den Service.", li:["Montage & Auswuchten","Reifeneinlagerung"] },
+  { ico:"gauge", t:"Abgasuntersuchung (AU)", d:"Prüfung aller abgasrelevanten Bauteile nach Herstellervorgaben und gesetzlichen Grenzwerten.", li:["in der Regel alle 24 Monate"] },
+  { ico:"snow", t:"Klimaservice", d:"Spätestens alle zwei Jahre sollte die Klimaanlage auf ihre wichtigsten Verschleißteile geprüft werden.", li:["Prüfung & Wartung"] },
+  { ico:"wrench", t:"Ihr Anliegen fehlt?", d:"Sprechen Sie uns an — wir sagen Ihnen ehrlich, ob und wie wir helfen können.", li:["Telefon 03491 505199"] },
+];
+const ico = k => `<span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">${I[k]}</svg></span>`;
+document.getElementById("svc").innerHTML = services.map(s => `
+  <article class="card rv${s.feature ? " feature" : ""}">
+    ${ico(s.ico)}<h3>${s.t}</h3><p>${s.d}</p>
+    <ul>${s.li.map(x => `<li>${x}</li>`).join("")}</ul>
+    ${s.feature ? '<span class="tag">DEKRA direkt vor Ort</span>' : ""}
+  </article>`).join("");
+
+/* ===== Opening status (Europe/Berlin) ===== */
+function berlinNow(){
+  const p = new Intl.DateTimeFormat("de-DE",{timeZone:"Europe/Berlin",weekday:"short",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date());
+  const g = t => p.find(x => x.type === t).value;
+  return { wd:["So","Mo","Di","Mi","Do","Fr","Sa"].indexOf(g("weekday").replace(".","")), min:+g("hour")*60 + +g("minute") };
+}
+function status(){
+  const { wd, min } = berlinNow();
+  const work = wd >= 1 && wd <= 5, open = work && min >= 480 && min < 1020;
+  let t;
+  if (open) t = "Jetzt geöffnet · bis 17:00 Uhr";
+  else if (work && min < 480) t = "Geschlossen · öffnet heute um 8:00 Uhr";
+  else if (wd >= 1 && wd <= 4) t = "Geschlossen · öffnet morgen um 8:00 Uhr";
+  else t = "Geschlossen · öffnet Montag um 8:00 Uhr";
+  document.getElementById("statusTxt").textContent = t;
+  document.getElementById("dot").className = "status-dot " + (open ? "open" : "closed");
+  const b = document.getElementById("badge");
+  b.className = "badge " + (open ? "open" : "closed");
+  b.textContent = open ? "Geöffnet" : "Geschlossen";
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.d === wd));
+}
+status(); setInterval(status, 60000);
+
+/* ===== Header shadow ===== */
+const hd = document.getElementById("header");
+addEventListener("scroll", () => hd.classList.toggle("scrolled", scrollY > 60), { passive:true });
+
+/* ===== HU calculator ===== */
+// Fälligkeitsjahr → Plakettenfarbe: 2025 Orange, 2026 Blau, 2027 Gelb, 2028 Braun, 2029 Rosa, 2030 Grün
+const C = ["#f08a1c","#2b6fd6","#f2cf1d","#8a5a32","#f2a0c0","#3aa35a"], N = ["Orange","Blau","Gelb","Braun","Rosa","Grün"];
+const idx = y => ((y - 2025) % 6 + 6) % 6;
+const MON = ["Januar","Februar","März","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"];
+const huM = document.getElementById("huM"), huY = document.getElementById("huY");
+const now = new Date(), Y = now.getFullYear(), M = now.getMonth() + 1;
+huM.innerHTML = MON.map((m, i) => `<option value="${i+1}">${i+1} – ${m}</option>`).join("");
+for (let y = Y - 2; y <= Y + 3; y++) huY.innerHTML += `<option value="${y}">${String(y).slice(2)} – ${y}</option>`;
+const ex = new Date(Y, M - 1 + 7); huM.value = ex.getMonth() + 1; huY.value = ex.getFullYear();
+
+function drawSticker(m, y){
+  const c = C[idx(y)], fg = ["#2b6fd6","#8a5a32","#3aa35a"].includes(c) ? "#fff" : "#1c2127";
+  let t = "";
+  for (let k = 0; k < 12; k++){
+    const mm = ((m - 1 + k) % 12) + 1, a = k / 12 * Math.PI * 2 - Math.PI / 2;
+    t += `<text x="${(100 + Math.cos(a) * 74).toFixed(1)}" y="${(106 + Math.sin(a) * 74).toFixed(1)}" text-anchor="middle" font-family="Barlow, Arial" font-weight="700" font-size="${k ? 15 : 20}" fill="${fg}">${mm}</text>`;
+  }
+  document.getElementById("sticker").innerHTML = `<circle cx="100" cy="100" r="96" fill="${c}"/><circle cx="100" cy="100" r="96" fill="none" stroke="rgba(0,0,0,.18)" stroke-width="2"/>
+    <circle cx="100" cy="100" r="52" fill="none" stroke="${fg}" stroke-opacity=".35" stroke-width="2"/>${t}
+    <text x="100" y="117" text-anchor="middle" font-family="Barlow, Arial" font-weight="700" font-size="50" fill="${fg}">${String(y).slice(2)}</text>`;
+  document.getElementById("stickerTxt").textContent = `Plakette ${N[idx(y)]} · fällig im ${MON[m-1]} ${y}`;
+}
+function updateHU(){
+  const m = +huM.value, y = +huY.value, d = (y - Y) * 12 + (m - M);
+  drawSticker(m, y);
+  let cls, h, s;
+  if (d < 0){ cls="due"; h=`Überfällig seit ${-d} Monat${-d===1?"":"en"}`; s="Bitte vereinbaren Sie zeitnah einen Termin."; }
+  else if (d === 0){ cls="due"; h="In diesem Monat fällig"; s="Rufen Sie uns an — wir finden einen Termin."; }
+  else if (d <= 2){ cls="soon"; h=`In ${d} Monat${d===1?"":"en"} fällig`; s="Jetzt ist ein guter Zeitpunkt für die Terminvereinbarung."; }
+  else { cls="ok"; h=`Noch ${d} Monate gültig`; s=`Nächste HU im ${MON[m-1]} ${y}.`; }
+  const r = document.getElementById("huRes");
+  r.className = "result " + cls;
+  r.innerHTML = `<i></i><div><b>${h}</b><small>${s}</small></div>`;
+}
+huM.onchange = huY.onchange = updateHU; updateHU();
+
+/* ===== Reveal ===== */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold:.1 });
+document.querySelectorAll(".rv").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
