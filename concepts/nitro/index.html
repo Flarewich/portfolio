@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NITRO — Energy Drink</title>
+<meta name="description" content="NITRO Energy Drink — zero sugar, five electric flavours.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Outfit:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="preload" as="image" href="img/can-green.webp">
+</head>
+<body>
+<canvas id="sparks"></canvas>
+<div class="cursor" id="cursor"></div>
+
+<header class="header" id="header">
+  <div class="wrap">
+    <a href="#home" class="logo">NITRO</a>
+    <nav class="nav" id="nav">
+      <a href="#home" class="on">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#about">About</a>
+      <a href="#flavours" data-flav>Flavours</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#shop" class="btn lime cart">Buy Now <b id="cartN">0</b></a>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===== STORY: hero → since 2002 → flavour switcher ===== -->
+<section class="story" id="home">
+  <div class="stage" id="stage">
+    <div class="bg"></div>
+    <div class="glow" id="glow"></div>
+
+    <div class="bigword" id="bigword" aria-label="NITRO"><span>N</span><span>I</span><span>T</span><span>R</span><span>O</span></div>
+
+    <div class="photo" id="photo"><img src="img/football.webp" alt="Football player with a ball"></div>
+    <h2 class="since tech" id="since"><span class="ln"><span>SINCE</span></span><span class="ln"><span>2002</span></span><span class="ln"><span>PROD</span></span><span class="ln"><span>UCING</span></span></h2>
+
+    <div class="flavor-word" id="flavorWord">GREEN</div>
+
+    <svg class="bolt" id="bolt" viewBox="0 0 200 320" aria-hidden="true"><path d="M120 0L20 180h62L58 320 180 120h-66z"/></svg>
+
+    <div class="can-wrap" id="canWrap">
+      <div class="can-float">
+        <div class="can-3d" id="can3d">
+          <img class="can" id="can" src="img/can-green.webp" alt="NITRO Green can">
+          <div class="can-shine" id="shine"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-bottom" id="heroBottom">
+      <div class="wrap">
+        <p>Zero sugar. Full voltage. A charge of natural caffeine, B-vitamins and an electric taste built for the moments that matter.</p>
+        <div class="cta"><a href="#shop" class="btn white">Buy Now</a><a href="#about" class="btn ghost">More info</a></div>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8V6.5c0-.8.2-1.3 1.4-1.3H17V2.2c-.3 0-1.3-.2-2.4-.2-2.4 0-4 1.5-4 4.1V8H8v3.2h2.6V22H14V11.2h2.7L17 8h-3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 8.2a3.2 3.2 0 110-6.4 3.2 3.2 0 010 6.4zM17.3 5.5a1.2 1.2 0 100 2.4 1.2 1.2 0 000-2.4zM12 3.8c2.7 0 3 0 4 .1 2.7.1 4 1.4 4.1 4.1.1 1 .1 1.3.1 4s0 3-.1 4c-.1 2.7-1.4 4-4.1 4.1-1 .1-1.3.1-4 .1s-3 0-4-.1C5.3 20 4 18.7 3.9 16c-.1-1-.1-1.3-.1-4s0-3 .1-4C4 5.3 5.3 4 8 3.9c1-.1 1.3-.1 4-.1zM12 2C9.3 2 8.9 2 7.9 2.1 4.2 2.3 2.3 4.2 2.1 7.9 2 8.9 2 9.3 2 12s0 3.1.1 4.1c.2 3.7 2.1 5.6 5.8 5.8 1 .1 1.4.1 4.1.1s3.1 0 4.1-.1c3.7-.2 5.6-2.1 5.8-5.8.1-1 .1-1.4.1-4.1s0-3.1-.1-4.1c-.2-3.7-2.1-5.6-5.8-5.8C15.1 2 14.7 2 12 2z"/></svg></a>
+          <a href="#" aria-label="X"><svg viewBox="0 0 24 24"><path d="M17.8 3h3.3l-7.2 8.2L22.4 21h-6.6l-5.2-6.8L4.7 21H1.4l7.7-8.8L1 3h6.8l4.7 6.2L17.8 3zm-1.2 16h1.8L7.5 4.9H5.6L16.6 19z"/></svg></a>
+          <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9.75h4V21H3V9.75zM9.5 9.75h3.8v1.6h.06c.53-1 1.82-2.05 3.75-2.05 4 0 4.74 2.6 4.74 6V21h-4v-5c0-1.2 0-2.75-1.68-2.75s-1.94 1.3-1.94 2.66V21h-4V9.75z"/></svg></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" id="panel">
+      <div class="idx"><b id="pIdx">01</b> / 05 &nbsp;— FLAVOURS</div>
+      <h2><span class="swap">NITRO <span class="c" id="pName">GREEN</span></span></h2>
+      <div class="tag swap" id="pTag">Original lime surge · High intensity</div>
+      <p class="desc swap" id="pDesc">The one that started it all. Sharp lime, a hint of citrus peel and a clean, electric finish.</p>
+      <div class="specs">
+        <div><b>0g</b><small>Sugar</small></div>
+        <div><b>160mg</b><small>Caffeine</small></div>
+        <div><b id="pKcal">12</b><small>Kcal</small></div>
+      </div>
+      <div class="buyrow"><span class="price swap" id="pPrice">12.00 $</span><button class="btn lime" data-add>Add to cart</button></div>
+      <div class="fdots" id="fdots"></div>
+    </div>
+
+    <div class="progress"><i id="prog"></i></div>
+    <div class="scroll-hint" id="hint">SCROLL<i></i></div>
+  </div>
+</section>
+<div id="flavours" style="position:absolute;top:430vh"></div>
+
+<!-- ===== MARQUEE ===== -->
+<div class="marquee" aria-hidden="true"><div class="row" id="mq"><span>ZERO SUGAR</span><span>160MG CAFFEINE</span><span>5 FLAVOURS</span><span>B-VITAMINS</span><span>SINCE 2002</span><span>ZERO SUGAR</span><span>160MG CAFFEINE</span><span>5 FLAVOURS</span><span>B-VITAMINS</span><span>SINCE 2002</span></div></div>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="wrap">
+    <h3 class="split">Born on the pitch, <em>made for every game.</em></h3>
+    <p class="rv">NITRO started in 2002 as a drink for local football teams who needed energy without the sugar crash. Today it fuels athletes, gamers and night owls in 40 countries — same zero-sugar recipe, now in five electric flavours.</p>
+  </div>
+  <div class="wrap stats">
+    <div class="stat"><b data-n="24">0</b><small>Years producing</small></div>
+    <div class="stat"><b data-n="40">0</b><small>Countries</small></div>
+    <div class="stat"><b data-n="5">0</b><small>Electric flavours</small></div>
+  </div>
+</section>
+
+<!-- ===== SHOP LINEUP ===== -->
+<section class="shop" id="shop">
+  <div class="head"><h3 class="split">Pick your charge</h3><p>Click a can to spin it to the front</p></div>
+  <div class="lineup" id="lineup"><div class="spot"></div></div>
+  <div class="lineup-nav">
+    <button id="lPrev" aria-label="Previous"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+    <button class="btn lime" data-add style="height:54px">Add to cart</button>
+    <button id="lNext" aria-label="Next"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div class="frow">
+      <h4>Get <em>10% off</em> your first pack and early access to new flavours.</h4>
+      <form class="sub" id="sub"><input type="email" placeholder="Your e-mail" required><button class="btn lime" type="submit">Subscribe</button></form>
+    </div>
+    <div class="big">NITRO</div>
+    <div class="copy"><span>© 2026 NITRO Energy Drink · Concept website</span><span>hello@nitro-energy.com</span></div>
+  </div>
+</footer>
+<div class="toast" id="toast">Added to cart ⚡</div>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
