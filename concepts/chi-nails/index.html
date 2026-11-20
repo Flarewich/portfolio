@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Chi Nails — Beauty Studio in Lutherstadt Wittenberg (Entwurf)</title>
+<meta name="robots" content="noindex, nofollow" />
+<meta name="description" content="Redesign-Entwurf von Flarewich für Chi Nails Beauty Studio, Collegienstraße 7, Lutherstadt Wittenberg." />
+<meta name="theme-color" content="#f7f1ec" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --cream:#f7f1ec; --blush:#efe0d8; --rose:#e6cfc5; --white:#fffdfb;
+  --wine:#7a1f2f; --wine-d:#5e1623; --ink:#2b2224; --text:#5b4e50; --mute:#9a8b8c; --line:#e5d8d1;
+  --serif:"Cormorant Garamond", Georgia, serif; --sans:"Jost", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--cream);color:var(--text);font:300 17px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:500;color:var(--ink);margin:0;line-height:1.08}
+em{font-style:italic;color:var(--wine)}
+svg{display:block}
+.wrap{width:min(1180px,100% - 40px);margin-inline:auto}
+.eyebrow{font:400 12.5px var(--sans);letter-spacing:.22em;text-transform:uppercase;color:var(--wine)}
+
+.pitch{background:var(--ink);color:#e9dcd6;text-align:center;font-size:12.5px;padding:7px 14px;letter-spacing:.02em}
+.pitch a{text-decoration:underline}
+
+/* header */
+.header{position:sticky;top:0;z-index:50;background:rgba(247,241,236,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header .wrap{display:flex;align-items:center;gap:36px;height:82px}
+.logo{margin-right:auto;line-height:1}
+.logo b{display:block;font:italic 500 34px/1 var(--serif);color:var(--ink)}
+.logo span{display:block;margin-top:4px;font:400 10px var(--sans);letter-spacing:.32em;text-transform:uppercase;color:var(--mute)}
+.nav{display:flex;gap:30px;font-size:15px;font-weight:400}
+.nav a{color:var(--text);transition:color .2s}
+.nav a:hover{color:var(--wine)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:15px 28px;border-radius:999px;font:400 14px var(--sans);letter-spacing:.08em;text-transform:uppercase;transition:background .25s,color .25s,border-color .25s;border:1px solid transparent;white-space:nowrap}
+.btn-wine{background:var(--wine);color:#fff}
+.btn-wine:hover{background:var(--wine-d)}
+.btn-line{border-color:var(--ink);color:var(--ink)}
+.btn-line:hover{background:var(--ink);color:#fff}
+.btn svg{width:17px;height:17px}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center;padding:80px 0 90px}
+.hero h1{font-size:clamp(52px,6.6vw,96px);margin-top:20px}
+.hero p{max-width:470px;margin:26px 0 0;font-size:18px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:36px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:34px;margin-top:46px;padding-top:26px;border-top:1px solid var(--line);font-size:14.5px}
+.hero-meta b{display:block;font:500 13px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin-bottom:4px}
+.status{display:inline-flex;align-items:center;gap:8px}
+.status i{width:7px;height:7px;border-radius:50%;background:var(--mute)}
+.status.open i{background:#4caf7d}
+.status.closed i{background:var(--wine)}
+
+.arch{position:relative;aspect-ratio:4/5;border-radius:999px 999px 18px 18px;background:linear-gradient(160deg,#f3e4dc 0%,#e8cfc4 55%,#d9b3a6 100%);overflow:hidden;box-shadow:0 40px 80px -40px rgba(122,31,47,.35)}
+.arch::before{content:"";position:absolute;inset:18px;border-radius:999px 999px 12px 12px;border:1px solid rgba(255,255,255,.6)}
+.arch .nails{position:absolute;left:50%;top:54%;transform:translate(-50%,-50%);width:74%}
+.arch .tag{position:absolute;left:50%;bottom:30px;transform:translateX(-50%);background:rgba(255,253,251,.85);backdrop-filter:blur(6px);padding:10px 18px;border-radius:999px;font-size:13px;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;color:var(--ink)}
+.petal{position:absolute;border-radius:60% 0 60% 0;background:rgba(255,255,255,.55)}
+
+/* services */
+.sec{padding:110px 0}
+.sec.white{background:var(--white)}
+.head{text-align:center;max-width:680px;margin:0 auto 60px}
+.head h2{font-size:clamp(40px,4.6vw,62px);margin-top:14px}
+.head p{margin:16px 0 0}
+.svc{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.svc article{background:var(--white);padding:40px 34px 36px;position:relative;transition:background .3s}
+.svc article:hover{background:var(--cream)}
+.svc .no{font:italic 500 18px var(--serif);color:var(--mute)}
+.svc h3{font-size:31px;margin:14px 0 12px}
+.svc p{margin:0;font-size:15.5px}
+.svc ul{list-style:none;margin:18px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.svc li{font-size:12.5px;letter-spacing:.06em;padding:5px 12px;border:1px solid var(--line);border-radius:999px;color:var(--text)}
+.svc .more{display:inline-block;margin-top:22px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--wine);border-bottom:1px solid currentColor;padding-bottom:2px}
+.svc .ico{position:absolute;right:30px;top:36px;width:34px;height:34px;color:var(--wine);opacity:.75}
+
+
+
+/* photos */
+.arch-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.arch::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(43,34,36,.25))}
+.arch .tag{z-index:2}
+.sv-img{margin:-40px -34px 26px;aspect-ratio:16/10;overflow:hidden;background:var(--blush)}
+.sv-img img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.svc article:hover .sv-img img{transform:scale(1.05)}
+.svc .ico{top:auto;margin-top:-4px;position:static;float:right}
+.shop{margin:34px 0 0;border-radius:16px;overflow:hidden;position:relative;background:var(--blush);aspect-ratio:5/4}
+.shop img{width:100%;height:100%;object-fit:cover}
+.shop figcaption{position:absolute;left:14px;bottom:14px;background:rgba(255,253,251,.9);padding:7px 12px;border-radius:999px;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink)}
+.gal{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:240px 240px;gap:14px}
+.gal figure{margin:0;border-radius:14px;overflow:hidden;background:var(--blush)}
+.gal img{width:100%;height:100%;object-fit:cover;transition:transform .8s ease}
+.gal figure:hover img{transform:scale(1.05)}
+.g1{grid-row:span 2}
+@media (max-width:640px){.gal{grid-template-columns:1fr 1fr;grid-template-rows:auto}.gal figure{aspect-ratio:1}.g1{grid-column:span 2;grid-row:auto;aspect-ratio:12/7!important}.sv-img{margin:-40px -34px 22px}}
+/* prices */
+.tabs{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-bottom:34px}
+.tab{font:400 13px var(--sans);letter-spacing:.1em;text-transform:uppercase;padding:11px 18px;border-radius:999px;border:1px solid var(--line);background:var(--white);color:var(--text);cursor:pointer;transition:.2s}
+.tab:hover{border-color:var(--wine);color:var(--wine)}
+.tab.on{background:var(--wine);border-color:var(--wine);color:#fff}
+.plist{max-width:820px;margin:0 auto;background:var(--white);border:1px solid var(--line);border-radius:18px;padding:14px 36px}
+.prow{display:grid;grid-template-columns:1fr auto auto;gap:20px;align-items:baseline;padding:16px 0;border-bottom:1px solid var(--line)}
+.prow:last-child{border-bottom:0}
+.prow b{font:500 21px var(--serif);color:var(--ink)}
+.prow .dur{font-size:13.5px;color:var(--mute);white-space:nowrap}
+.prow .pr{font:500 22px var(--serif);color:var(--wine);white-space:nowrap;min-width:70px;text-align:right}
+.pnote{text-align:center;margin-top:24px;font-size:14px;color:var(--mute)}
+.pnote a{color:var(--wine);border-bottom:1px solid currentColor}
+@media (max-width:640px){.plist{padding:6px 18px}.prow{grid-template-columns:1fr auto;gap:2px 14px}.prow .dur{grid-column:1;grid-row:2}.prow .pr{grid-row:1/3;grid-column:2;align-self:center}.prow b{font-size:19px}}
+/* color picker */
+.picker{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.preview{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:50px 40px 40px;text-align:center}
+.preview svg{width:100%;max-width:420px;margin:0 auto}
+.preview .nail-fill{transition:fill .5s ease}
+.preview .shade-name{margin-top:20px;font:italic 500 30px var(--serif);color:var(--ink)}
+.preview .shade-sub{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.picker h2{font-size:clamp(40px,4.4vw,60px);margin-top:14px}
+.picker p{margin:18px 0 0}
+.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:32px;max-width:420px}
+.sw{aspect-ratio:1;border-radius:50%;border:2px solid var(--white);box-shadow:0 0 0 1px var(--line);cursor:pointer;transition:transform .2s,box-shadow .2s}
+.sw:hover{transform:scale(1.08)}
+.sw.on{box-shadow:0 0 0 2px var(--wine);transform:scale(1.1)}
+.picker .btn{margin-top:32px}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr 1.1fr;gap:80px;align-items:center}
+.quote{font:italic 500 clamp(34px,3.6vw,50px)/1.15 var(--serif);color:var(--ink)}
+.quote::before{content:"“";display:block;font-size:90px;line-height:.6;color:var(--wine);margin-bottom:12px}
+.about p{margin:20px 0 0}
+.values{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:34px}
+.values div{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:22px}
+.values svg{width:26px;height:26px;color:var(--wine)}
+.values b{display:block;margin-top:12px;font:500 22px var(--serif);color:var(--ink)}
+.values span{font-size:14.5px}
+
+/* info */
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:38px 34px}
+.card h3{font-size:30px;margin-bottom:18px}
+.hours{width:100%;border-collapse:collapse;font-size:15.5px}
+.hours td{padding:10px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;color:var(--ink);font-weight:400}
+.hours tr.today td{color:var(--wine);font-weight:500}
+.hours tr.off td:last-child{color:var(--mute)}
+.c-row{display:flex;gap:14px;padding:12px 0;border-bottom:1px solid var(--line);align-items:flex-start}
+.c-row:last-child{border-bottom:0}
+.c-row svg{width:20px;height:20px;color:var(--wine);flex:none;margin-top:4px}
+.c-row small{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute)}
+.c-row b{font-weight:400;color:var(--ink)}
+.c-row a:hover b{color:var(--wine)}
+.note{margin-top:18px;padding:14px 16px;border-radius:12px;background:var(--blush);font-size:14.5px;color:var(--ink)}
+.social{display:flex;gap:10px;margin-top:22px}
+.social a{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);display:grid;place-items:center;transition:background .2s,color .2s,border-color .2s}
+.social a:hover{background:var(--wine);border-color:var(--wine);color:#fff}
+.social svg{width:19px;height:19px}
+
+/* booking band */
+.book{background:var(--wine);color:#f6e7e9;text-align:center;padding:90px 20px;position:relative;overflow:hidden}
+.book h2{color:#fff;font-size:clamp(42px,5vw,72px)}
+.book h2 em{color:#f3c9cf}
+.book p{margin:16px auto 34px;max-width:520px}
+.book .btn{background:#fff;color:var(--wine)}
+.book .btn:hover{background:var(--cream)}
+.book .ring{position:absolute;border:1px solid rgba(255,255,255,.15);border-radius:50%}
+
+/* footer */
+.footer{padding:60px 0 40px;font-size:14.5px}
+.footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:30px;align-items:flex-end}
+.footer .links{display:flex;gap:22px;flex-wrap:wrap}
+.footer a:hover{color:var(--wine)}
+.footer .copy{width:100%;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:var(--mute)}
+
+.mbar{display:none}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1000px){
+  .nav{display:none}
+  .hero .wrap,.picker,.about{grid-template-columns:1fr;gap:50px}
+  .hero .wrap{padding:50px 0 70px}
+  .arch{max-width:440px;width:100%;margin:0 auto}
+  .svc{grid-template-columns:1fr 1fr}
+  .info{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  .header .wrap{height:70px}
+  .header .btn{display:none}
+  .logo b{font-size:30px}
+  .hero h1{font-size:50px}
+  .hero .actions .btn{flex:1 1 100%}
+  .hero-meta{gap:20px}
+  .svc{grid-template-columns:1fr}
+  .sec{padding:80px 0}
+  .values{grid-template-columns:1fr}
+  .preview{padding:34px 20px 28px}
+  .card{padding:30px 22px}
+  .mbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;gap:10px;padding:10px;background:rgba(247,241,236,.95);backdrop-filter:blur(8px);border-top:1px solid var(--line)}
+  .mbar .btn{flex:1;padding:14px 10px}
+  body{padding-bottom:74px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="pitch">Entwurf · Redesign-Vorschlag von <a href="https://www.flarewich.com" target="_blank" rel="noreferrer">Flarewich</a> für Chi Nails — kein offizieller Internetauftritt</div>
+
+<header class="header">
+  <div class="wrap">
+    <a class="logo" href="#top"><b>Chi Nails</b><span>Beauty Studio · Lutherstadt</span></a>
+    <nav class="nav">
+      <a href="#leistungen">Leistungen</a>
+      <a href="#galerie">Galerie</a>
+      <a href="#preise">Preise</a>
+      <a href="#studio">Studio</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <a class="btn btn-wine" href="https://mschinails.setmore.com" target="_blank" rel="noreferrer">Termin buchen</a>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <span class="eyebrow">Nägel · Wimpern · Permanent Make-up</span>
+        <h1>Der erste Eindruck <em>zählt.</em></h1>
+        <p>Gepflegte Hände sind die Visitenkarte einer Frau. Ob kurz oder lang, kräftiges Rot, dezentes Nude oder verspielte Verzierungen — wir setzen Ihre Wünsche um.</p>
+        <div class="actions">
+          <a class="btn btn-wine" href="https://mschinails.setmore.com" target="_blank" rel="noreferrer">Online Termin buchen</a>
+          <a class="btn btn-line" href="tel:+4915206163443"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>Anrufen</a>
+        </div>
+        <div class="hero-meta">
+          <div><b>Heute</b><span class="status" id="status"><i></i><span id="statusTxt">…</span></span></div>
+          <div><b>Studio</b>Collegienstraße 7, Wittenberg</div>
+        </div>
+      </div>
+
+      <div class="arch rv">
+        <img class="arch-img" src="https://content.pancake.vn/1/s708x885/fwebp80/a3/d7/8a/92/604cabf5bb3834c5656c95763858ad39c58ecc77ed7196e5a352fd7a-w:1170-h:1462-l:145731-t:image/jpeg.jpg" alt="Nagelmodellage von Chi Nails" />
+        <span class="tag">Handgemacht in Wittenberg</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="sec white" id="leistungen">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="eyebrow">Unsere Leistungen</span>
+        <h2>Schönheit bis in die <em>Fingerspitzen</em></h2>
+        <p>Professionelle und saubere Arbeit ist für uns das A und O — vom schnellen Auffrischen bis zur kompletten Neumodellage.</p>
+      </div>
+      <div class="svc" id="svc"></div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="sec" id="galerie">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="eyebrow">Galerie</span>
+        <h2>Aus unserem <em>Studio</em></h2>
+        <p>Ein kleiner Einblick in unsere Arbeiten — mehr finden Sie täglich auf Instagram.</p>
+      </div>
+      <div class="gal">
+        <figure class="g1 rv"><img src="https://content.pancake.vn/1/fwebp90/10/72/d0/72/82c3216c1ffb2e4cf333c214b003cac8c9f912b3b1a3f6d07989d532-w:1200-h:500-l:676545-t:image/png.png" alt="French Nails mit Verzierung" loading="lazy" /></figure>
+        <figure class="g2 rv"><img src="https://content.pancake.vn/1/s499x499/fwebp80/3f/81/bd/0c/9cbd8d0daa3099a9e1eee142889a83e99341329a3f1c3a7fcf2f8ba3-w:560-h:560-l:50837-t:image/jpeg.jpg" alt="Nude und Bordeaux" loading="lazy" /></figure>
+        <figure class="g3 rv"><img src="https://content.pancake.vn/1/s505x500/fwebp80/15/b1/05/d8/2482d116e18b87e7f10d2df711a5a4cfe00b8424a5aea49d6380f444-w:512-h:506-l:74651-t:image/jpeg.jpg" alt="Augenbrauen" loading="lazy" /></figure>
+        <figure class="g4 rv"><img src="https://content.pancake.vn/1/s499x499/fwebp80/ee/8f/02/73/e2244ed1ebd4088e288fd56025789ac76eea4bacd3eb6e3bda2b91d2-w:560-h:560-l:97900-t:image/jpeg.jpg" alt="Pediküre" loading="lazy" /></figure>
+        <figure class="g5 rv"><img src="https://content.pancake.vn/1/s499x756/fwebp80/58/23/e5/5f/3cfb947379a08cb9c2d1b7f05c6424c72ee36702706650bde021bc2f-w:602-h:912-l:92553-t:image/jpeg.jpg" alt="Lidstrich Permanent Make-up" loading="lazy" /></figure>
+      </div>
+      <p class="pnote"><a href="https://www.instagram.com/ms.chi.nails/" target="_blank" rel="noreferrer">Mehr auf Instagram @ms.chi.nails ↗</a></p>
+    </div>
+  </section>
+
+  <!-- PRICES -->
+  <section class="sec white" id="preise">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="eyebrow">Preisliste</span>
+        <h2>Transparente <em>Preise</em></h2>
+        <p>Alle Leistungen auf einen Blick — wählen Sie eine Kategorie.</p>
+      </div>
+      <div class="tabs" id="tabs"></div>
+      <div class="plist rv" id="plist"></div>
+      <p class="pnote">Preise laut Online-Buchung · <a href="https://mschinails.setmore.com" target="_blank" rel="noreferrer">direkt Termin buchen ↗</a></p>
+    </div>
+  </section>
+
+  <!-- COLOR PICKER -->
+  <section class="sec" id="farben">
+    <div class="wrap picker">
+      <div class="preview rv">
+        <svg viewBox="0 0 400 260" id="pickNails" aria-hidden="true"></svg>
+        <div class="shade-name" id="shadeName">Rosé Nude</div>
+        <div class="shade-sub" id="shadeSub">zeitlos · dezent</div>
+      </div>
+      <div class="rv">
+        <span class="eyebrow">Farbwahl</span>
+        <h2>Welche Farbe darf es <em>heute</em> sein?</h2>
+        <p>Tippen Sie auf einen Farbton und sehen Sie sofort, wie er wirkt. Ihre Lieblingsfarbe bringen Sie einfach zum Termin mit — gemeinsam finden wir den perfekten Look.</p>
+        <div class="swatches" id="swatches"></div>
+        <a class="btn btn-wine" id="pickBook" href="https://mschinails.setmore.com" target="_blank" rel="noreferrer">Mit dieser Farbe buchen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="sec white" id="studio">
+    <div class="wrap about">
+      <div class="rv">
+        <span class="eyebrow">Das Studio</span>
+        <p class="quote" style="margin-top:20px">Professionelle &amp; saubere Arbeit ist das A und O.</p>
+        <figure class="shop"><img src="https://content.pancake.vn/web-media-263/s909x728/fwebp80/91/a0/44/ca/2c7c498ea680a7d799a30c418c7624bd5db440e59b0709520eed9bb0-w:1402-h:1122-l:277882-t:image/jpeg.jpeg" alt="Studio Chi Nails, Collegienstraße 7" loading="lazy" /><figcaption>Unser Studio in der Collegienstraße 7</figcaption></figure>
+      </div>
+      <div class="rv">
+        <p>Nicht jeder hat Zeit, Lust und Geschick, sich zu Hause um die eigenen Finger- und Fußnägel zu kümmern. Gönnen Sie sich eine Auszeit bei Chi Nails in der Wittenberger Altstadt und begeben Sie sich in die Hände von Profis.</p>
+        <p>Neben Maniküre und Gelnägeln sind wir auch für Wimpern, Microblading und Permanent Make-up Ihre Ansprechpartner.</p>
+        <div class="values">
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 3h12l3 6-9 12L3 9z"/><path d="M3 9h18M9 3l3 18 3-18"/></svg><b>Hochwertige Produkte</b><span>für ein langanhaltendes Ergebnis</span></div>
+          <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 5-5"/></svg><b>Professionelle Beratung</b><span>wir finden gemeinsam Ihren Look</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INFO -->
+  <section class="sec" id="kontakt">
+    <div class="wrap">
+      <div class="head rv">
+        <span class="eyebrow">Besuchen Sie uns</span>
+        <h2>Wir freuen uns <em>auf Sie</em></h2>
+      </div>
+      <div class="info">
+        <div class="card rv">
+          <h3>Öffnungszeiten</h3>
+          <table class="hours" id="hours">
+            <tr data-d="1"><td>Montag</td><td>9:00 – 19:00</td></tr>
+            <tr data-d="2"><td>Dienstag</td><td>9:00 – 19:00</td></tr>
+            <tr data-d="3"><td>Mittwoch</td><td>9:00 – 19:00</td></tr>
+            <tr data-d="4"><td>Donnerstag</td><td>9:00 – 19:00</td></tr>
+            <tr data-d="5"><td>Freitag</td><td>9:00 – 19:00</td></tr>
+            <tr data-d="6"><td>Samstag</td><td>9:00 – 17:00</td></tr>
+            <tr data-d="0" class="off"><td>Sonntag</td><td>geschlossen</td></tr>
+          </table>
+        </div>
+        <div class="card rv">
+          <h3>Kontakt</h3>
+          <a class="c-row" href="tel:+4915206163443"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg><span><small>Telefon</small><b>0152 0616 3443</b></span></a>
+          <a class="c-row" href="mailto:nailsc562@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span><small>E-Mail</small><b>nailsc562@gmail.com</b></span></a>
+          <a class="c-row" href="https://mschinails.setmore.com" target="_blank" rel="noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span><small>Online-Buchung</small><b>Termin rund um die Uhr buchen ↗</b></span></a>
+          <div class="social">
+            <a href="https://www.instagram.com/ms.chi.nails/" target="_blank" rel="noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+            <a href="https://www.tiktok.com/@mschis.nguyen" target="_blank" rel="noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3v11.5a3.5 3.5 0 1 1-3.5-3.5"/><path d="M14 3c.5 3 2.5 5 5.5 5"/></svg></a>
+            <a href="https://www.facebook.com/chi.nguyen.5473894" target="_blank" rel="noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z"/></svg></a>
+          </div>
+        </div>
+        <div class="card rv">
+          <h3>Anfahrt</h3>
+          <div class="c-row"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg><span><small>Adresse</small><b>Collegienstraße 7<br/>06886 Lutherstadt Wittenberg</b></span></div>
+          <p class="note">Bitte beachten Sie die Hausnummer — wir sind in der Collegienstraße <b>7</b>.</p>
+          <a class="btn btn-line" style="margin-top:22px;width:100%" href="https://www.google.com/maps/search/?api=1&query=Collegienstra%C3%9Fe+7+06886+Lutherstadt+Wittenberg" target="_blank" rel="noreferrer">Route planen ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOK -->
+  <section class="book">
+    <span class="ring" style="width:520px;height:520px;left:-160px;top:-200px"></span>
+    <span class="ring" style="width:380px;height:380px;right:-120px;bottom:-180px"></span>
+    <div class="rv">
+      <span class="eyebrow" style="color:#f3c9cf">Termin</span>
+      <h2 style="margin-top:14px">Gönnen Sie sich <em>eine Auszeit.</em></h2>
+      <p>Buchen Sie Ihren Wunschtermin bequem online — oder rufen Sie uns einfach an.</p>
+      <a class="btn" href="https://mschinails.setmore.com" target="_blank" rel="noreferrer">Jetzt Termin buchen</a>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <a class="logo" href="#top"><b>Chi Nails</b><span>Beauty Studio · Lutherstadt</span></a>
+    <div class="links"><a href="#leistungen">Leistungen</a><a href="#galerie">Galerie</a><a href="#preise">Preise</a><a href="#farben">Farbwahl</a><a href="#studio">Studio</a><a href="#kontakt">Kontakt</a><a href="#top">Impressum</a><a href="#top">Datenschutz</a></div>
+    <div class="copy"><span>© Chi Nails · Collegienstraße 7 · 06886 Lutherstadt Wittenberg</span><span>Entwurf: <a href="https://www.flarewich.com" target="_blank" rel="noreferrer">Flarewich</a></span></div>
+  </div>
+</footer>
+
+<div class="mbar">
+  <a class="btn btn-wine" href="https://mschinails.setmore.com" target="_blank" rel="noreferrer">Termin buchen</a>
+  <a class="btn btn-line" href="tel:+4915206163443">Anrufen</a>
+</div>
+
+<script>
+/* ===== Nail illustration ===== */
+function nailsSVG(color, tip){
+  // five almond nails on soft fingertips
+  const xs = [52, 124, 200, 276, 348], hs = [150, 190, 205, 190, 145], ys = [92, 50, 34, 50, 98];
+  let out = "";
+  xs.forEach((x, i) => {
+    const h = hs[i], y = ys[i], w = i === 0 || i === 4 ? 54 : 62;
+    out += `<rect x="${x - w/2 - 6}" y="${y + 40}" width="${w + 12}" height="${260 - y}" rx="${(w + 12)/2}" fill="#f1d6c8"/>`;
+    out += `<rect x="${x - w/2 - 6}" y="${y + 40}" width="${w + 12}" height="${260 - y}" rx="${(w + 12)/2}" fill="none" stroke="#e2bfae" stroke-width="1.5"/>`;
+    const nail = `M${x - w/2} ${y + 96} V${y + 46} C${x - w/2} ${y + 10}, ${x - 8} ${y - 6}, ${x} ${y - 10} C${x + 8} ${y - 6}, ${x + w/2} ${y + 10}, ${x + w/2} ${y + 46} V${y + 96} Q${x} ${y + 108} ${x - w/2} ${y + 96}Z`;
+    out += `<path class="nail-fill" d="${nail}" fill="${color}"/>`;
+    if (tip) out += `<path d="M${x - w/2 + 2} ${y + 34} C${x - w/2 + 4} ${y + 6}, ${x - 8} ${y - 6}, ${x} ${y - 9} C${x + 8} ${y - 6}, ${x + w/2 - 4} ${y + 6}, ${x + w/2 - 2} ${y + 34} Q${x} ${y + 22} ${x - w/2 + 2} ${y + 34}Z" fill="#fffdfb"/>`;
+    out += `<path d="M${x - w/2 + 9} ${y + 70} V${y + 46} C${x - w/2 + 9} ${y + 24}, ${x - 10} ${y + 8}, ${x - 4} ${y + 4}" fill="none" stroke="#fff" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/>`;
+  });
+  return out;
+}
+
+/* ===== Services (from the current website) ===== */
+const ico = {
+  nail:'<path d="M8 21V9a4 4 0 0 1 8 0v12"/><path d="M8 13h8"/>',
+  hand:'<path d="M7 11V6a1.5 1.5 0 0 1 3 0v5M10 10V4.5a1.5 1.5 0 0 1 3 0V10M13 10V5.5a1.5 1.5 0 0 1 3 0V12M16 9.5a1.5 1.5 0 0 1 3 0V14a7 7 0 0 1-7 7h-1a6 6 0 0 1-5-3l-2.5-4a1.5 1.5 0 0 1 2.5-1.6L7 14"/>',
+  foot:'<path d="M9 21c-3 0-4-3-4-6s1-9 5-9 5 4 5 7-1 3-1 5-2 3-5 3z"/><circle cx="16" cy="4" r="1.3"/><circle cx="18.5" cy="6.5" r="1.1"/><circle cx="19.5" cy="9.5" r="1"/>',
+  lash:'<path d="M3 12c4-4 14-4 18 0"/><path d="M6 10l-1.5-3M9.5 8.7 9 5.5M14.5 8.7 15 5.5M18 10l1.5-3"/>',
+  brow:'<path d="M3 13c4-5 11-6 18-2"/><path d="M5 12.5l.5-1.5M8 10.6l.4-1.6M11 9.8l.2-1.6M14 9.8v-1.6M17 10.4l-.2-1.6"/>',
+  lips:'<path d="M3 12c3-4 6-4 9-2 3-2 6-2 9 2-3 5-15 5-18 0z"/><path d="M3 12h18"/>',
+};
+const services = [
+  { img:"https://content.pancake.vn/1/s629x839/fwebp80/06/35/1f/cb/367ba7e7e266423881c31c287a497269d09b76d9ae3b1f74e6b3a00a-w:1536-h:2048-l:217221-t:image/jpeg.jpg", n:"I", t:"Nagelmodellage", d:"Eine professionelle Modellage lässt Ihre Hände im Handumdrehen zum gepflegten Hingucker werden — wir begleiten Sie mit Know-how zu Ihrem Lieblingslook.", li:["Gelnägel","Verzierungen","French"], i:"nail" },
+  { img:"https://content.pancake.vn/1/s499x499/fwebp80/4f/54/89/c9/6d23e0a8682007daefe6995ce7de9a0befad8a2d0a3edee5dc74077c-w:560-h:560-l:67001-t:image/jpeg.jpg", n:"II", t:"Maniküre", d:"Bei uns sind Sie in den besten Händen, wenn Sie sich eine professionelle Maniküre wünschen — für einen langanhaltend gepflegten Look.", li:["Nagelpflege","Lack","Gel"], i:"hand" },
+  { img:"https://content.pancake.vn/1/s499x499/fwebp80/ee/8f/02/73/e2244ed1ebd4088e288fd56025789ac76eea4bacd3eb6e3bda2b91d2-w:560-h:560-l:97900-t:image/jpeg.jpg", n:"III", t:"Pediküre", d:"Geben Sie Ihren Füßen eine Auszeit: ausführliche Pflege und Säuberung — inklusive einer kleinen Massage.", li:["Fußpflege","Massage"], i:"foot" },
+  { img:"https://content.pancake.vn/1/s746x498/fwebp80/9e/2d/2d/f0/9375684bd1a181c6f6c5ab0eb7f51775f7829df9bb7902e597b39164-w:800-h:533-l:65565-t:image/jpeg.jpg", n:"IV", t:"Wimpernverlängerung", d:"Ausdrucksstarker Blick ohne tägliches Tuschen — individuell auf Ihre Augenform abgestimmt.", li:["Wimpern","Natürlich bis voluminös"], i:"lash" },
+  { img:"https://content.pancake.vn/1/s505x500/fwebp80/15/b1/05/d8/2482d116e18b87e7f10d2df711a5a4cfe00b8424a5aea49d6380f444-w:512-h:506-l:74651-t:image/jpeg.jpg", n:"V", t:"Microblading", d:"Natürlich wirkende Augenbrauen durch feine, haarähnliche Striche — für einen gepflegten Rahmen Ihres Gesichts.", li:["Augenbrauen"], i:"brow" },
+  { img:"https://content.pancake.vn/1/s499x756/fwebp80/58/23/e5/5f/3cfb947379a08cb9c2d1b7f05c6424c72ee36702706650bde021bc2f-w:602-h:912-l:92553-t:image/jpeg.jpg", n:"VI", t:"Permanent Make-up", d:"Langanhaltend schön für Augenbrauen, Lippen und Lidstrich — morgens einfach aufstehen und fertig sein.", li:["Augenbrauen","Lippen","Lidstrich"], i:"lips" },
+];
+document.getElementById("svc").innerHTML = services.map(s => `
+  <article class="rv">
+    <div class="sv-img"><img src="${s.img}" alt="${s.t}" loading="lazy" /></div>
+    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round">${ico[s.i]}</svg>
+    <span class="no">${s.n}</span>
+    <h3>${s.t}</h3>
+    <p>${s.d}</p>
+    <ul>${s.li.map(x => `<li>${x}</li>`).join("")}</ul>
+    <a class="more" href="https://mschinails.setmore.com" target="_blank" rel="noreferrer">Termin buchen</a>
+  </article>`).join("");
+
+
+/* ===== Price list (from the Setmore booking page) ===== */
+const prices = {
+  "Nägel": [["Neumodellage","1 Std.","50 €"],["Neumodellage Natur / Make-up / Farbgel","1 Std.","40 €"],["Auffüllen","1 Std.","45 €"],["Auffüllen Natur / Make-up / Farbe","1 Std.","38 €"],["Ablösen","20 Min.","12 €"],["Shellac ohne Maniküre","30 Min.","25 €"]],
+  "Maniküre": [["Maniküre","30 Min.","15 €"],["Maniküre mit Shellac","40 Min.","30 €"],["Maniküre mit Shellac French","40 Min.","35 €"]],
+  "Pediküre": [["Pediküre","30 Min.","30 €"],["Pediküre mit Shellac","1 Std.","45 €"],["Pediküre mit French Shellac","1 Std.","50 €"],["Zehenmodellage","1 Std.","50 €"],["Zehenmodellage mit Pediküre","1 Std.","65 €"]],
+  "Wimpern": [["Neues Set Natur","1 Std.","ab 65 €"],["Neues Set Volumentechnik","1 Std. 30 Min.","ab 85 €"],["Natur Auffüllen (2 / 3 / 4 Wochen)","30–40 Min.","35 / 45 / 55 €"],["Volumen Auffüllen (2 / 3 / 4 Wochen)","30–45 Min.","45 / 55 / 65 €"],["Wimpern Lifting","20 Min.","40 €"],["Wimpern Lifting mit Färben","1 Std.","50 €"],["Wimpern färben","5 Min.","15 €"],["Ablösen","30 Min.","20 €"]],
+  "Augenbrauen": [["Augenbrauen Combo","1 Std.","60 €"],["Lifting Augenbrauen","20 Min.","40 €"],["Färben Augenbrauen","10 Min.","15 €"],["Zupfen Augenbrauen","5 Min.","10 €"]],
+  "Permanent Make-up": [["Augenbrauen Microblading","3 Std.","299 €"],["Augenbrauen Powder","3 Std.","250 €"],["Microblading & Puderschattierung","3 Std.","399 €"],["Lippenkontur","3–4 Std.","250 – 350 €"],["Lidstrich oben","2 Std.","190 €"],["Lidstrich unten","2 Std.","110 €"],["Lidstrich oben und unten","2 Std.","250 €"],["Lidstrich Wimpernkranzverdichtung","2 Std.","270 €"],["Alte Farbe auffrischen","4 Std.","499 €"],["Permanent Make-up Entfernung","1–2 Std.","ab 80 €"]],
+};
+const tabs = document.getElementById("tabs"), plist = document.getElementById("plist");
+function showCat(cat){
+  [...tabs.children].forEach(b => b.classList.toggle("on", b.dataset.c === cat));
+  plist.innerHTML = prices[cat].map(([n, d, p]) => `<div class="prow"><b>${n}</b><span class="dur">${d}</span><span class="pr">${p}</span></div>`).join("");
+}
+Object.keys(prices).forEach(c => {
+  const b = document.createElement("button");
+  b.type = "button"; b.className = "tab"; b.dataset.c = c; b.textContent = c;
+  b.onclick = () => showCat(c); tabs.appendChild(b);
+});
+showCat("Nägel");
+
+/* ===== Color picker ===== */
+const shades = [
+  { c:"#e8b9ad", n:"Rosé Nude", s:"zeitlos · dezent" },
+  { c:"#f3e6de", n:"French", s:"klassisch · elegant", tip:true },
+  { c:"#b23a4a", n:"Kirschrot", s:"kräftig · feminin" },
+  { c:"#6e1a2b", n:"Bordeaux", s:"edel · Herbst" },
+  { c:"#d98a8f", n:"Altrosa", s:"weich · romantisch" },
+  { c:"#c9b3d9", n:"Lavendel", s:"frisch · Frühling" },
+  { c:"#a9d3c3", n:"Mint", s:"leicht · Sommer" },
+  { c:"#d8b15e", n:"Gold Glow", s:"festlich · Glanz" },
+  { c:"#5a6f8f", n:"Nachtblau", s:"modern · tief" },
+  { c:"#2b2224", n:"Schwarz", s:"mutig · cool" },
+];
+const pick = document.getElementById("pickNails"), sw = document.getElementById("swatches");
+function setShade(i){
+  const s = shades[i];
+  pick.innerHTML = nailsSVG(s.tip ? "#f1cfc4" : s.c, s.tip);
+  document.getElementById("shadeName").textContent = s.n;
+  document.getElementById("shadeSub").textContent = s.s;
+  [...sw.children].forEach((b, k) => b.classList.toggle("on", k === i));
+}
+shades.forEach((s, i) => {
+  const b = document.createElement("button");
+  b.className = "sw"; b.type = "button"; b.title = s.n; b.setAttribute("aria-label", s.n);
+  b.style.background = s.tip ? "linear-gradient(180deg,#fffdfb 0 40%,#f1cfc4 40%)" : s.c;
+  b.addEventListener("click", () => setShade(i));
+  sw.appendChild(b);
+});
+setShade(0);
+
+/* ===== Opening status (Europe/Berlin) ===== */
+function nowBerlin(){
+  const p = new Intl.DateTimeFormat("de-DE",{timeZone:"Europe/Berlin",weekday:"short",hour:"2-digit",minute:"2-digit",hourCycle:"h23"}).formatToParts(new Date());
+  const g = t => p.find(x => x.type === t).value;
+  return { wd:["So","Mo","Di","Mi","Do","Fr","Sa"].indexOf(g("weekday").replace(".","")), m:+g("hour")*60 + +g("minute") };
+}
+function status(){
+  const { wd, m } = nowBerlin();
+  const close = wd === 6 ? 17*60 : wd >= 1 && wd <= 5 ? 19*60 : 0;
+  const open = close && m >= 540 && m < close;
+  let t;
+  if (open) t = `Geöffnet bis ${close/60}:00 Uhr`;
+  else if (close && m < 540) t = "Öffnet heute um 9:00 Uhr";
+  else if (wd === 6 || wd === 0) t = "Öffnet Montag um 9:00 Uhr";
+  else t = "Öffnet morgen um 9:00 Uhr";
+  document.getElementById("statusTxt").textContent = t;
+  document.getElementById("status").className = "status " + (open ? "open" : "closed");
+  document.querySelectorAll("#hours tr").forEach(r => r.classList.toggle("today", +r.dataset.d === wd));
+}
+status(); setInterval(status, 60000);
+
+/* ===== Reveal ===== */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold:.1 });
+document.querySelectorAll(".rv").forEach(el => io.observe(el));
+</script>
+</body>
+</html>
