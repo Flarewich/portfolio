@@ -1,0 +1,673 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Planto. — Plant Shop (Figma to code by Flarewich)</title>
+<meta name="description" content="Planto — interactive plant shop website, built from a Figma community design by Flarewich." />
+<meta name="theme-color" content="#171f12" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --bg:#171f12; --bg-2:#222c1d; --glass:rgba(255,255,255,.05); --stroke:rgba(255,255,255,.45);
+  --w:#fff; --w75:rgba(255,255,255,.75); --w60:rgba(255,255,255,.6); --green:#55b24e; --star:#ffd233;
+  --r:42px; --ease:cubic-bezier(.2,.8,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--w);font:400 16px/1.5 "Inter",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+h1,h2,h3,p{margin:0}
+.wrap{width:min(1600px,100% - 64px);margin-inline:auto}
+
+/* demo badge */
+.badge-demo{position:fixed;right:14px;bottom:14px;z-index:90;background:rgba(0,0,0,.55);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,.2);padding:8px 14px;border-radius:999px;font-size:12px;color:var(--w75)}
+.badge-demo b{color:#fff}
+
+/* ---------- glass ---------- */
+.glass{background:var(--glass);border:2px solid var(--stroke);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:58px;padding:0 38px;border:2px solid var(--w75);border-radius:13px;color:var(--w75);font-size:22px;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.btn:hover{background:#fff;color:var(--bg);border-color:#fff}
+.btn:active{transform:scale(.97)}
+.icon-btn{width:58px;height:58px;border:2px solid var(--w75);border-radius:13px;display:grid;place-items:center;color:var(--w75);transition:background .25s,color .25s,transform .25s}
+.icon-btn:hover{background:#fff;color:var(--bg)}
+.icon-btn:active{transform:scale(.92)}
+.icon-btn svg{width:26px;height:26px}
+.stars{display:flex;gap:3px;color:var(--star)}
+.stars svg{width:15px;height:15px}
+
+/* ---------- header ---------- */
+.header{position:fixed;inset:0 0 auto;z-index:60;transition:background .3s,backdrop-filter .3s,padding .3s;padding:40px 0}
+.header.scrolled{background:rgba(23,31,18,.75);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);padding:16px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+.header .wrap{display:flex;align-items:center;gap:40px}
+.logo{display:flex;align-items:center;gap:10px;font:700 25px "Inter";margin-right:auto}
+.logo img{height:48px;width:auto}
+.nav{display:flex;gap:64px;font-size:24px;color:var(--w75)}
+.nav a,.nav button{position:relative;padding:4px 0;transition:color .2s}
+.nav a:hover,.nav button:hover{color:#fff}
+.nav a::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:var(--green);transform:scaleX(0);transition:transform .25s var(--ease)}
+.nav a:hover::after{transform:scaleX(1)}
+.drop{position:relative}
+.drop > button{display:flex;align-items:center;gap:8px}
+.drop > button svg{width:14px;transition:transform .25s}
+.drop.open > button svg{transform:rotate(180deg)}
+.menu{position:absolute;top:calc(100% + 18px);left:-20px;min-width:240px;padding:12px;border-radius:20px;background:rgba(30,40,25,.92);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.18);opacity:0;transform:translateY(-8px);pointer-events:none;transition:.25s var(--ease)}
+.drop.open .menu{opacity:1;transform:none;pointer-events:auto}
+.menu a{display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:12px;font-size:18px}
+.menu a:hover{background:rgba(255,255,255,.08)}
+.menu a::after{display:none}
+.menu img{width:34px;height:34px;object-fit:contain}
+.tools{display:flex;align-items:center;gap:40px;margin-left:auto}
+.tools button{position:relative;width:28px;height:28px;color:#fff;transition:transform .2s}
+.tools button:hover{transform:scale(1.1)}
+.tools svg{width:26px;height:26px}
+.cart-count{position:absolute;top:-8px;right:-10px;min-width:20px;height:20px;padding:0 5px;border-radius:99px;background:var(--green);color:#fff;font:700 11px/20px "Inter";text-align:center;transform:scale(0);transition:transform .3s var(--ease)}
+.cart-count.on{transform:scale(1)}
+.cart-count.bump{animation:bump .4s}
+@keyframes bump{40%{transform:scale(1.4)}}
+.search{position:absolute;right:0;top:calc(100% + 14px);width:min(420px,calc(100vw - 32px));display:flex;gap:10px;padding:10px;border-radius:18px;background:rgba(30,40,25,.95);border:1px solid rgba(255,255,255,.18);opacity:0;transform:translateY(-8px);pointer-events:none;transition:.25s var(--ease)}
+.search.open{opacity:1;transform:none;pointer-events:auto}
+.search input{flex:1;background:transparent;border:1px solid rgba(255,255,255,.25);border-radius:12px;color:#fff;padding:12px 14px;font:16px "Inter";outline:none}
+.search input:focus{border-color:var(--green)}
+.search .res{position:absolute;left:10px;right:10px;top:calc(100% + 6px);background:rgba(30,40,25,.97);border:1px solid rgba(255,255,255,.18);border-radius:14px;overflow:hidden;display:none}
+.search .res a{display:flex;gap:12px;align-items:center;padding:10px 14px}
+.search .res a:hover{background:rgba(255,255,255,.07)}
+.search .res img{width:36px;height:36px;object-fit:contain}
+.burger{display:flex;flex-direction:column;align-items:flex-end;gap:5px;width:30px}
+.burger i{display:block;height:2px;background:#fff;border-radius:2px;width:30px;transition:.3s}
+.burger i:last-child{width:20px}
+.burger.on i:first-child{transform:translateY(3.5px) rotate(45deg)}
+.burger.on i:last-child{width:30px;transform:translateY(-3.5px) rotate(-45deg)}
+.tools-wrap{position:relative}
+
+/* mobile drawer */
+.drawer{position:fixed;inset:0;z-index:55;background:rgba(23,31,18,.96);backdrop-filter:blur(16px);display:flex;flex-direction:column;justify-content:center;gap:12px;padding:40px;opacity:0;pointer-events:none;transition:.35s var(--ease)}
+.drawer.open{opacity:1;pointer-events:auto}
+.drawer a{font:600 clamp(32px,8vw,56px) "Inter";transform:translateY(20px);opacity:0;transition:.4s var(--ease)}
+.drawer.open a{transform:none;opacity:1}
+.drawer.open a:nth-child(2){transition-delay:.05s}.drawer.open a:nth-child(3){transition-delay:.1s}.drawer.open a:nth-child(4){transition-delay:.15s}.drawer.open a:nth-child(5){transition-delay:.2s}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:2400px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url("assets/bg.jpg") center top / cover no-repeat;will-change:transform}
+.hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(23,31,18,.35) 0%,rgba(23,31,18,.15) 40%,rgba(23,31,18,.6) 85%,var(--bg) 100%)}
+.hero .wrap{position:relative}
+.hero-top{display:grid;grid-template-columns:1fr 512px;gap:40px;padding-top:200px}
+.hero h1{font:600 clamp(64px,8.3vw,143px)/1 "Inter";letter-spacing:-.01em;color:var(--w75)}
+.hero h1 span{display:inline-block;opacity:0;transform:translateY(30px);animation:rise .9s var(--ease) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+.hero-lead{margin-top:20px;max-width:820px;font-size:23px;color:var(--w75)}
+.hero-cta{display:flex;align-items:center;gap:26px;margin-top:26px}
+.play{display:flex;align-items:center;gap:16px;font-size:18px;color:var(--w75)}
+.play i{width:58px;height:58px;border-radius:50%;border:2px solid var(--w75);display:grid;place-items:center;transition:background .25s,transform .25s}
+.play i svg{width:20px;height:20px;margin-left:3px;fill:currentColor}
+.play:hover i{background:#fff;color:var(--bg);transform:scale(1.06)}
+.review-mini{margin-top:215px;width:409px;padding:44px 34px 34px;border-radius:var(--r)}
+.who{display:flex;align-items:center;gap:18px}
+.who img{width:60px;height:60px;border-radius:50%;object-fit:cover;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.who b{display:block;font:500 24px "Inter"}
+.review-mini p{margin-top:24px;font-size:17px;opacity:.75}
+
+/* trendy card (hero right) */
+.feature{position:relative;margin-top:110px;height:644px;border-radius:var(--r);padding:0 50px 42px;display:flex;flex-direction:column;justify-content:flex-end}
+.feature-img{position:absolute;left:50%;top:-110px;width:400px;height:420px;transform:translateX(-50%)}
+.feature-img img{position:absolute;inset:0;margin:auto;max-height:100%;width:auto;object-fit:contain;filter:drop-shadow(0 40px 40px rgba(0,0,0,.35));transition:opacity .45s,transform .6s var(--ease)}
+.feature-img img.out{opacity:0;transform:translateY(20px) scale(.92)}
+.feature small{font-size:23px;color:#fff}
+.feature h3{margin-top:10px;font:400 38px "Inter";color:var(--w75)}
+.feature .btn{margin-top:22px;align-self:flex-start;height:58px;padding:0 38px;font-size:24px}
+.feature .next{position:absolute;right:34px;top:calc(100% - 210px);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;color:var(--w75);transition:background .2s,color .2s}
+.feature .next:hover{background:rgba(255,255,255,.12);color:#fff}
+.feature .next svg{width:20px;height:20px}
+.dots{display:flex;gap:10px;justify-content:center;margin-top:24px}
+.dots button{width:6px;height:6px;border-radius:99px;background:rgba(255,255,255,.55);transition:width .3s,background .3s}
+.dots button.on{width:21px;background:#fff}
+
+/* section title with brackets */
+.stitle{position:relative;display:block;width:max-content;margin:0 auto;padding:12px 44px;font:600 clamp(34px,3.9vw,67px)/1.1 "Inter";text-align:center}
+.stitle::before,.stitle::after{content:"";position:absolute;width:56px;height:58px;border:3px solid var(--green);opacity:.9}
+.stitle::before{left:0;bottom:0;border-top:0;border-right:0;border-bottom-left-radius:22px}
+.stitle::after{right:0;top:0;border-bottom:0;border-left:0;border-top-right-radius:22px}
+
+/* trendy rows */
+.trendy{margin-top:200px}
+.row{position:relative;display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:526px;margin-top:140px;border-radius:72px}
+.row + .row{margin-top:136px}
+.row-img{position:relative;height:526px}
+.row-img img{position:absolute;bottom:0;left:50%;width:auto;height:732px;max-width:none;transform:translateX(-50%);filter:drop-shadow(0 50px 50px rgba(0,0,0,.4));transition:transform .8s var(--ease)}
+.row:hover .row-img img{transform:translateX(-50%) translateY(-14px) rotate(-2deg)}
+.row-body{padding:60px 70px 60px 30px}
+.row h3{font:600 38px "Inter"}
+.row p{margin-top:24px;font-size:20px;opacity:.75;max-width:616px}
+.row .price{margin-top:24px;font:600 38px "Inter"}
+.row .acts{display:flex;gap:23px;margin-top:24px}
+.row.rev .row-img{order:2}
+.row.rev .row-body{padding:60px 30px 60px 150px}
+.row.rev .row-img img{height:600px}
+
+/* top selling */
+.sec{padding-top:180px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:31px;margin-top:180px;row-gap:160px}
+.pcard{position:relative;padding:330px 38px 40px;--clip:path("M0 108 C0 60 30 32 78 32 L170 32 C230 32 252 0 296 0 L434 0 C482 0 512 30 512 78 L512 600 C512 624 492 644 468 644 L44 644 C20 644 0 624 0 600 Z")}
+.pcard::before{content:"";position:absolute;inset:0;border-radius:42px;background:var(--glass);border:2px solid var(--stroke);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);mask:linear-gradient(#000,#000);transition:background .3s,border-color .3s}
+.pcard:hover::before{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.7)}
+.pcard .pimg{position:absolute;left:50%;top:-140px;width:80%;height:440px;transform:translateX(-50%);display:flex;align-items:flex-end;justify-content:center;pointer-events:none}
+.pcard .pimg img{max-height:100%;width:auto;object-fit:contain;filter:drop-shadow(0 34px 30px rgba(0,0,0,.45));transition:transform .7s var(--ease)}
+.pcard:hover .pimg img{transform:translateY(-16px) scale(1.04)}
+.pcard > *{position:relative}
+.pcard h3{font:400 38px "Inter";color:var(--w75)}
+.pcard p{margin-top:20px;font-size:23px;opacity:.75;max-width:320px}
+.pcard .foot{display:flex;justify-content:space-between;align-items:center;margin-top:28px}
+.pcard .price{font:400 38px "Inter";color:var(--w75)}
+.pcard .icon-btn{width:57px;height:57px}
+.icon-btn.added{background:var(--green);border-color:var(--green);color:#fff}
+
+/* reviews */
+.reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:180px}
+.rcard{border-radius:var(--r);padding:100px 48px 70px;transition:transform .35s var(--ease),background .3s}
+.rcard:hover{transform:translateY(-8px);background:rgba(255,255,255,.08)}
+.rcard .who img{width:71px;height:71px}
+.rcard .who b{font:500 24px "Inter"}
+.rcard p{margin-top:40px;font-size:20px;opacity:.75}
+
+/* best o2 slider */
+.best{position:relative;margin-top:216px;height:755px;border-radius:72px;display:grid;grid-template-columns:1fr 1fr}
+.best-img{position:relative}
+.best-img img{position:absolute;left:-120px;bottom:0;height:1036px;width:auto;max-width:none;filter:drop-shadow(0 60px 60px rgba(0,0,0,.45));transition:opacity .5s,transform .7s var(--ease)}
+.best-img img.out{opacity:0;transform:translateX(-40px)}
+.best-body{padding:146px 80px 0 0}
+.best h3{font:600 38px/1.2 "Inter";color:var(--w75);max-width:653px}
+.best p{margin-top:44px;font:600 23px/1.45 "Inter";opacity:.75;max-width:678px}
+.best p + p{margin-top:24px}
+.best-ctrl{display:flex;align-items:center;justify-content:space-between;margin-top:48px;max-width:678px}
+.best-ctrl .btn{height:58px;padding:0 44px;font-size:24px}
+.pager{display:flex;align-items:center;gap:20px;font:600 24px "Inter"}
+.pager small{font-size:14px;opacity:.6}
+.pager button{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;transition:background .2s}
+.pager button:hover{background:rgba(255,255,255,.1)}
+.pager svg{width:22px;height:22px}
+.best-dots{margin-top:66px}
+
+/* footer */
+.footer{margin-top:240px;background:var(--bg-2);padding:96px 0 60px}
+.footer .wrap{display:grid;grid-template-columns:1.2fr .6fr 1fr;gap:60px}
+.footer .wrap > div{min-width:0}
+.footer .logo{font-size:44px;margin:0}
+.footer .logo img{height:60px}
+.footer .about{margin-top:38px;font:600 23px/1.45 "Inter";max-width:589px}
+.socials{display:flex;gap:60px;margin-top:150px;font:600 24px "Inter"}
+.socials a{transition:color .2s}
+.socials a:hover{color:var(--green)}
+.footer h4{margin:0;font:600 24px "Inter"}
+.footer ul{list-style:none;padding:0;margin:48px 0 0;display:grid;gap:22px;font-size:20px;color:var(--w75)}
+.footer ul a:hover{color:#fff}
+.sub{display:flex;margin-top:48px;height:67px;border:2px solid #fff;border-radius:8px;overflow:hidden;max-width:563px}
+.sub input{flex:1;min-width:0;background:transparent;border:0;color:#fff;font:18px "Inter";padding:0 30px;outline:none}
+.sub input::placeholder{color:var(--w60)}
+.sub button{background:#fff;color:#000;font:700 16px "Inter";padding:0 30px;letter-spacing:.02em;transition:background .2s}
+.sub button:hover{background:var(--green);color:#fff}
+.sub-msg{margin-top:12px;min-height:22px;font-size:15px;color:var(--green)}
+.copy{margin-top:150px;font-size:22px;color:var(--w75)}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:28px;z-index:95;transform:translate(-50%,30px);opacity:0;display:flex;align-items:center;gap:12px;padding:12px 18px 12px 12px;border-radius:16px;background:rgba(30,40,25,.95);border:1px solid rgba(255,255,255,.2);backdrop-filter:blur(10px);font-size:16px;transition:.35s var(--ease);pointer-events:none}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+.toast img{width:40px;height:40px;object-fit:contain}
+.toast b{color:var(--green)}
+
+/* video modal */
+.modal{position:fixed;inset:0;z-index:99;background:rgba(0,0,0,.75);backdrop-filter:blur(6px);display:grid;place-items:center;opacity:0;pointer-events:none;transition:.3s}
+.modal.open{opacity:1;pointer-events:auto}
+.modal-box{width:min(900px,92vw);aspect-ratio:16/9;border-radius:24px;overflow:hidden;position:relative;background:var(--bg-2) url("assets/bg.jpg") center 35% / cover;display:grid;place-items:center;transform:scale(.94);transition:transform .35s var(--ease)}
+.modal.open .modal-box{transform:none}
+.modal-box::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.35)}
+.modal-box p{position:relative;font:600 28px "Inter";text-align:center;padding:20px}
+.modal-box p small{display:block;margin-top:8px;font:400 16px "Inter";opacity:.75}
+.modal-close{position:absolute;top:16px;right:16px;z-index:2;width:44px;height:44px;border-radius:50%;background:rgba(0,0,0,.5);display:grid;place-items:center}
+.modal-close svg{width:20px;height:20px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s var(--ease),transform .9s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* ---------- responsive ---------- */
+@media (max-width:1400px){
+  .nav{gap:40px;font-size:20px}
+  .tools{gap:28px}
+  .hero-top{grid-template-columns:1fr 440px}
+  .row-body{padding:50px 50px 50px 10px}
+  .row.rev .row-body{padding:50px 10px 50px 80px}
+  .row-img img{height:620px}
+  .row.rev .row-img img{height:520px}
+  .pcard{padding:300px 30px 34px}
+  .pcard h3,.pcard .price{font-size:32px}
+  .pcard p{font-size:19px}
+  .rcard{padding:70px 34px 50px}
+  .best-img img{height:880px;left:-120px}
+  .best-body{padding-top:110px}
+}
+@media (max-width:1100px){
+  .nav{display:none}
+  .hero{min-height:0;padding-bottom:120px}
+  .hero-top{grid-template-columns:1fr;padding-top:150px}
+  .hero-left{display:flex;flex-direction:column}
+  .review-mini{margin-top:60px}
+  .feature{margin:220px auto 0;width:min(512px,100%)}
+  .trendy{margin-top:120px}
+  .row,.row.rev{grid-template-columns:1fr;border-radius:48px;margin-top:300px}
+  .row + .row{margin-top:300px}
+  .row.rev .row-img{order:0}
+  .row-img{height:auto;min-height:120px}
+  .row-img img,.row.rev .row-img img{position:absolute;bottom:-20px;height:440px}
+  .row-body,.row.rev .row-body{padding:40px 40px 50px}
+  .grid{grid-template-columns:1fr 1fr;row-gap:150px;margin-top:170px}
+  .reviews{grid-template-columns:1fr;max-width:620px;margin-inline:auto;margin-top:100px}
+  .best{grid-template-columns:1fr;height:auto;border-radius:48px;margin-top:360px}
+  .best-img{height:220px}
+  .best-img img{left:50%;transform:translateX(-50%);height:620px;bottom:0}
+  .best-img img.out{transform:translateX(-50%) translateY(20px)}
+  .best-body{padding:40px}
+  .footer .wrap{grid-template-columns:1fr 1fr}
+  .footer .wrap > div:first-child{grid-column:span 2}
+  .socials,.copy{margin-top:50px}
+}
+@media (max-width:640px){
+  .wrap{width:calc(100% - 32px)}
+  .header{padding:18px 0}
+  .header.scrolled{padding:12px 0}
+  .logo{font-size:21px}
+  .logo img{height:38px}
+  .tools{gap:22px}
+  .tools svg{width:22px;height:22px}
+  .hero-top{padding-top:110px}
+  .hero h1{font-size:46px;white-space:nowrap}
+  .hero-lead{font-size:16px}
+  .btn{height:50px;padding:0 26px;font-size:18px}
+  .play i{width:50px;height:50px}
+  .review-mini{width:100%;padding:30px 24px 26px;border-radius:30px}
+  .who b{font-size:19px}
+  .review-mini p{font-size:15px;margin-top:16px}
+  .feature{height:520px;padding:0 30px 30px;border-radius:32px;margin-top:200px}
+  .feature-img{width:300px;height:340px;top:-130px}
+  .feature small{font-size:17px}
+  .feature h3{font-size:30px}
+  .feature .btn{height:50px;font-size:18px}
+  .feature .next{top:auto;bottom:150px;right:20px}
+  .stitle{font-size:30px;padding:10px 30px}
+  .stitle::before,.stitle::after{width:34px;height:38px;border-width:2px}
+  .row,.row.rev{margin-top:240px;border-radius:32px}
+  .row + .row{margin-top:240px}
+  .row-img img,.row.rev .row-img img{height:330px}
+  .row-body,.row.rev .row-body{padding:34px 24px 34px}
+  .row h3{font-size:26px}
+  .row p{font-size:15px;margin-top:14px}
+  .row .price{font-size:28px;margin-top:14px}
+  .icon-btn{width:50px;height:50px}
+  .sec{padding-top:120px}
+  .grid{grid-template-columns:1fr;row-gap:140px;max-width:420px;margin-inline:auto;margin-top:150px}
+  .pcard{padding:250px 26px 28px}
+  .pcard .pimg{height:360px;top:-120px}
+  .pcard h3,.pcard .price{font-size:28px}
+  .pcard p{font-size:16px;margin-top:12px}
+  .rcard{padding:44px 26px 36px;border-radius:30px}
+  .rcard p{font-size:16px;margin-top:22px}
+  .best{margin-top:300px;border-radius:32px}
+  .best-img{height:170px}
+  .best-img img{height:460px}
+  .best-body{padding:30px 24px 34px}
+  .best h3{font-size:26px}
+  .best p{font-size:15px;margin-top:20px}
+  .best-ctrl{flex-wrap:wrap;gap:18px}
+  .footer{margin-top:140px;padding:60px 0 90px}
+  .footer .wrap{grid-template-columns:1fr;gap:40px}
+  .footer .wrap > div:first-child{grid-column:auto}
+  .footer .logo{font-size:32px}
+  .footer .about{font-size:17px;margin-top:20px}
+  .footer ul{margin-top:20px;gap:14px;font-size:17px}
+  .sub{margin-top:20px;height:56px}
+  .sub input{padding:0 16px;font-size:15px}
+  .sub button{padding:0 18px;font-size:13px}
+  .copy{font-size:16px}
+  .badge-demo{left:50%;right:auto;transform:translateX(-50%);bottom:10px;white-space:nowrap}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv,.hero h1 span{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<a class="badge-demo" href="https://www.flarewich.com" target="_blank" rel="noreferrer">Figma → code by <b>Flarewich</b> ↗</a>
+
+<!-- HEADER -->
+<header class="header" id="header">
+  <div class="wrap">
+    <a class="logo" href="#top"><img src="assets/logo.png" alt="" />Planto.</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#top">Home</a>
+      <div class="drop" id="drop">
+        <button type="button" aria-expanded="false">Plant Type’s <svg viewBox="0 0 12 7"><path d="M0 0h12L6 7z" fill="currentColor"/></svg></button>
+        <div class="menu" id="typeMenu"></div>
+      </div>
+      <a href="#best">More</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="tools-wrap">
+      <div class="tools">
+        <button type="button" id="searchBtn" aria-label="Search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="7"/><path d="M16 16l5.5 5.5"/></svg></button>
+        <button type="button" id="cartBtn" aria-label="Cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="cart-count" id="cartCount">0</span></button>
+        <button type="button" class="burger" id="burger" aria-label="Menu"><i></i><i></i></button>
+      </div>
+      <div class="search" id="search">
+        <input id="searchInput" type="search" placeholder="Search plants…" autocomplete="off" />
+        <div class="res" id="searchRes"></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<nav class="drawer" id="drawer">
+  <a href="#top">Home</a><a href="#trendy">Plant Type’s</a><a href="#selling">Top Selling</a><a href="#best">More</a><a href="#contact">Contact</a>
+</nav>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" id="heroBg"></div>
+    <div class="wrap">
+      <div class="hero-top">
+        <div class="hero-left">
+          <h1 id="heroTitle">Breath Natural</h1>
+          <p class="hero-lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="hero-cta">
+            <a class="btn" href="#selling">Explore</a>
+            <button class="play" type="button" id="playBtn"><i><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></i>Live Demo...</button>
+          </div>
+          <div class="review-mini glass rv">
+            <div class="who"><img src="assets/ava-alina.png" alt="Alina Patel" /><div><b>Alina Patel</b><div class="stars" data-stars="4.5"></div></div></div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt...</p>
+          </div>
+        </div>
+
+        <div>
+          <div class="feature glass rv" id="feature">
+            <div class="feature-img" id="featureImg"></div>
+            <small id="fTag">Trendy House Plant</small>
+            <h3 id="fName">Calathea plant</h3>
+            <button class="btn" type="button" id="fBuy">Buy Now</button>
+            <button class="next" type="button" id="fNext" aria-label="Next plant"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 5l7 7-7 7"/></svg></button>
+            <div class="dots" id="fDots"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRENDY -->
+      <div class="trendy" id="trendy">
+        <h2 class="stitle rv">Our Trendy plants</h2>
+        <article class="row glass rv">
+          <div class="row-img"><img src="assets/pothos.png" alt="Pothos in round pot" /></div>
+          <div class="row-body">
+            <h3>For Small Desk Ai Plant</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            <div class="price">Rs. 599/-</div>
+            <div class="acts"><button class="btn" type="button" data-buy="Desk Ai Plant|pothos">Buy Now</button><button class="icon-btn" type="button" data-add="Desk Ai Plant|pothos" aria-label="Add to cart"></button></div>
+          </div>
+        </article>
+        <article class="row rev glass rv">
+          <div class="row-img"><img src="assets/haworthia.png" alt="Haworthia in mint pot" /></div>
+          <div class="row-body">
+            <h3>For Small Desk Ai Plant</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+            <div class="price">Rs. 599/-</div>
+            <div class="acts"><button class="btn" type="button" data-buy="Haworthia|haworthia">Buy Now</button><button class="icon-btn" type="button" data-add="Haworthia|haworthia" aria-label="Add to cart"></button></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- TOP SELLING -->
+  <section class="sec" id="selling">
+    <div class="wrap">
+      <h2 class="stitle rv">Our Top Selling</h2>
+      <div class="grid" id="grid"></div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="sec">
+    <div class="wrap">
+      <h2 class="stitle rv">Customer Review</h2>
+      <div class="reviews">
+        <article class="rcard glass rv"><div class="who"><img src="assets/ava-1.png" alt="" /><div><b>Maln Josi</b><div class="stars" data-stars="4.5"></div></div></div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p></article>
+        <article class="rcard glass rv"><div class="who"><img src="assets/ava-2.png" alt="" /><div><b>Alina Thakur</b><div class="stars" data-stars="4.5"></div></div></div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p></article>
+        <article class="rcard glass rv"><div class="who"><img src="assets/ava-3.png" alt="" /><div><b>Max Makvana</b><div class="stars" data-stars="4.5"></div></div></div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEST O2 -->
+  <section class="sec" id="best">
+    <div class="wrap">
+      <h2 class="stitle rv">Our Best o2</h2>
+      <article class="best glass rv">
+        <div class="best-img"><img id="bestImg" src="assets/monstera.png" alt="" /></div>
+        <div class="best-body">
+          <h3 id="bestTitle">We Have Small And Best O2 Plants Collection’s</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+          <div class="best-ctrl">
+            <a class="btn" href="#selling">Explore</a>
+            <div class="pager">
+              <button type="button" id="bPrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 5l-7 7 7 7"/></svg></button>
+              <span><span id="bNum">01</span><small>/04</small></span>
+              <button type="button" id="bNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 5l7 7-7 7"/></svg></button>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="dots best-dots" id="bDots"></div>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+  <div class="wrap">
+    <div>
+      <a class="logo" href="#top"><img src="assets/logo.png" alt="" />Planto.</a>
+      <p class="about">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <div class="socials"><a href="#top">FB</a><a href="#top">TW</a><a href="#top">LI</a></div>
+    </div>
+    <div>
+      <h4>Quick Link’s</h4>
+      <ul><li><a href="#top">Home</a></li><li><a href="#trendy">Plant Type’s</a></li><li><a href="#contact">Contact</a></li><li><a href="#top">Privacy</a></li></ul>
+    </div>
+    <div>
+      <h4>For Every Update’s</h4>
+      <form class="sub" id="subForm"><input type="email" required placeholder="Enter Email..." aria-label="Email" /><button type="submit">SUBSCRIBE</button></form>
+      <p class="sub-msg" id="subMsg"></p>
+      <p class="copy">Planto © All right reserve</p>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"><img id="toastImg" src="" alt="" /><span id="toastTxt"></span></div>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <button class="modal-close" type="button" id="modalClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <p>Live Demo<small>Concept project — video placeholder</small></p>
+  </div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s), $$ = s => [...document.querySelectorAll(s)];
+const bagSVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 8h14l-1 13H6z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>';
+const checkSVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 12l5 5 9-10"/></svg>';
+
+/* ---------- data (from the Figma file) ---------- */
+const products = [
+  { n:"Calathea plant", p:309, img:"calathea" },
+  { n:"Desk plant", p:359, img:"desk" },
+  { n:"Calathea ai plant", p:399, img:"aloe" },
+  { n:"Cal 874 plant", p:259, img:"cactus" },
+  { n:"Show plant", p:759, img:"monstera" },
+  { n:"Calat O2 plant", p:659, img:"strelitzia" },
+];
+
+/* ---------- stars ---------- */
+$$("[data-stars]").forEach(el => {
+  const v = +el.dataset.stars; let h = "";
+  for (let i = 1; i <= 5; i++){
+    const fill = v >= i ? "currentColor" : v > i - 1 ? "url(#half)" : "none";
+    h += `<svg viewBox="0 0 24 24"><defs><linearGradient id="half"><stop offset="50%" stop-color="currentColor"/><stop offset="50%" stop-color="transparent"/></linearGradient></defs><path d="M12 2l3 6.5 7 .8-5.2 4.8 1.4 7L12 17.6 5.8 21.1l1.4-7L2 9.3l7-.8z" fill="${fill}" stroke="currentColor" stroke-width="1.5"/></svg>`;
+  }
+  el.innerHTML = h;
+});
+
+/* ---------- hero title letter rise ---------- */
+const ht = $("#heroTitle");
+ht.innerHTML = ht.textContent.split("").map((c, i) => `<span style="animation-delay:${i * 40}ms">${c === " " ? "&nbsp;" : c}</span>`).join("");
+
+/* ---------- header ---------- */
+const header = $("#header"), heroBg = $("#heroBg");
+addEventListener("scroll", () => {
+  header.classList.toggle("scrolled", scrollY > 40);
+  if (scrollY < 2600) heroBg.style.transform = `translateY(${scrollY * 0.25}px) scale(1.05)`;
+}, { passive:true });
+
+/* dropdown */
+const drop = $("#drop");
+$("#typeMenu").innerHTML = products.map(p => `<a href="#selling"><img src="assets/${p.img}.png" alt="" />${p.n}</a>`).join("");
+drop.querySelector("button").addEventListener("click", e => { e.stopPropagation(); drop.classList.toggle("open"); });
+document.addEventListener("click", e => { if (!e.target.closest(".drop")) drop.classList.remove("open"); if (!e.target.closest(".tools-wrap")) search.classList.remove("open"); });
+
+/* search */
+const search = $("#search"), sIn = $("#searchInput"), sRes = $("#searchRes");
+$("#searchBtn").addEventListener("click", e => { e.stopPropagation(); search.classList.toggle("open"); if (search.classList.contains("open")) setTimeout(() => sIn.focus(), 100); });
+sIn.addEventListener("input", () => {
+  const q = sIn.value.trim().toLowerCase();
+  const hits = q ? products.filter(p => p.n.toLowerCase().includes(q)) : [];
+  sRes.style.display = q ? "block" : "none";
+  sRes.innerHTML = hits.length ? hits.map(p => `<a href="#selling" data-go="${p.n}"><img src="assets/${p.img}.png" alt="" />${p.n} · Rs. ${p.p}/-</a>`).join("") : `<a>No plants found</a>`;
+});
+sRes.addEventListener("click", e => {
+  const a = e.target.closest("[data-go]"); if (!a) return;
+  search.classList.remove("open");
+  const card = $$(".pcard").find(c => c.dataset.name === a.dataset.go);
+  if (card){ setTimeout(() => { card.scrollIntoView({ behavior:"smooth", block:"center" }); card.animate([{ transform:"scale(1)" },{ transform:"scale(1.04)" },{ transform:"scale(1)" }], { duration:700, delay:500 }); }, 50); }
+});
+
+/* burger */
+const burger = $("#burger"), drawer = $("#drawer");
+burger.addEventListener("click", () => { burger.classList.toggle("on"); drawer.classList.toggle("open"); document.body.style.overflow = drawer.classList.contains("open") ? "hidden" : ""; });
+drawer.addEventListener("click", e => { if (e.target.closest("a")){ burger.classList.remove("on"); drawer.classList.remove("open"); document.body.style.overflow = ""; } });
+
+/* ---------- cart ---------- */
+let cart = 0;
+const cc = $("#cartCount"), toast = $("#toast"); let tt;
+function addToCart(name, img, btn){
+  cart++; cc.textContent = cart; cc.classList.add("on"); cc.classList.remove("bump"); void cc.offsetWidth; cc.classList.add("bump");
+  $("#toastImg").src = `assets/${img}.png`;
+  $("#toastTxt").innerHTML = `<b>${name}</b> added to cart · ${cart} item${cart > 1 ? "s" : ""}`;
+  toast.classList.add("show"); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove("show"), 2400);
+  if (btn && btn.classList.contains("icon-btn")){ btn.classList.add("added"); btn.innerHTML = checkSVG; setTimeout(() => { btn.classList.remove("added"); btn.innerHTML = bagSVG; }, 1400); }
+}
+$("#cartBtn").addEventListener("click", () => {
+  $("#toastImg").src = "assets/logo.png";
+  $("#toastTxt").innerHTML = cart ? `Your cart: <b>${cart} item${cart > 1 ? "s" : ""}</b> (demo)` : "Your cart is empty — add a plant 🌱";
+  toast.classList.add("show"); clearTimeout(tt); tt = setTimeout(() => toast.classList.remove("show"), 2400);
+});
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-add],[data-buy]"); if (!b) return;
+  const [n, img] = (b.dataset.add || b.dataset.buy).split("|"); addToCart(n, img, b);
+});
+
+/* ---------- product grid ---------- */
+$("#grid").innerHTML = products.map(p => `
+  <article class="pcard rv" data-name="${p.n}">
+    <div class="pimg"><img src="assets/${p.img}.png" alt="${p.n}" loading="lazy" /></div>
+    <h3>${p.n}</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    <div class="foot"><span class="price">Rs. ${p.p}/-</span><button class="icon-btn" type="button" data-add="${p.n}|${p.img}" aria-label="Add ${p.n} to cart"></button></div>
+  </article>`).join("");
+$$(".icon-btn[data-add]").forEach(b => b.innerHTML = bagSVG);
+
+/* ---------- hero feature carousel ---------- */
+const slides = [
+  { tag:"Trendy House Plant", n:"Calathea plant", img:"calathea" },
+  { tag:"Desk Favourite", n:"Pothos plant", img:"pothos" },
+  { tag:"Easy Care", n:"Haworthia plant", img:"haworthia" },
+];
+const fImg = $("#featureImg"), fDots = $("#fDots");
+fImg.innerHTML = slides.map((s, i) => `<img src="assets/${s.img}.png" alt="${s.n}" class="${i ? "out" : ""}" />`).join("");
+fDots.innerHTML = slides.map((_, i) => `<button type="button" aria-label="Slide ${i + 1}" class="${i ? "" : "on"}"></button>`).join("");
+let fi = 0, fTimer;
+function showF(i){
+  fi = (i + slides.length) % slides.length; const s = slides[fi];
+  [...fImg.children].forEach((im, k) => im.classList.toggle("out", k !== fi));
+  [...fDots.children].forEach((d, k) => d.classList.toggle("on", k === fi));
+  $("#fTag").textContent = s.tag; $("#fName").textContent = s.n;
+  $("#fBuy").dataset.buy = `${s.n}|${s.img}`;
+}
+function autoF(){ clearInterval(fTimer); fTimer = setInterval(() => showF(fi + 1), 4500); }
+$("#fNext").addEventListener("click", () => { showF(fi + 1); autoF(); });
+fDots.addEventListener("click", e => { const i = [...fDots.children].indexOf(e.target); if (i >= 0){ showF(i); autoF(); } });
+showF(0); autoF();
+
+/* ---------- best o2 slider ---------- */
+const best = [
+  { img:"monstera", t:"We Have Small And Best O2 Plants Collection’s" },
+  { img:"strelitzia", t:"Tall Green Friends For Bright Living Rooms" },
+  { img:"calathea", t:"Colourful Leaves That Clean Your Air" },
+  { img:"pothos", t:"Easy Plants For Every Desk And Shelf" },
+];
+let bi = 0;
+const bImg = $("#bestImg"), bDots = $("#bDots");
+bDots.innerHTML = best.map((_, i) => `<button type="button" aria-label="Slide ${i + 1}" class="${i ? "" : "on"}"></button>`).join("");
+function showB(i){
+  bi = (i + best.length) % best.length;
+  bImg.classList.add("out");
+  setTimeout(() => { bImg.src = `assets/${best[bi].img}.png`; bImg.classList.remove("out"); }, 300);
+  $("#bestTitle").textContent = best[bi].t;
+  $("#bNum").textContent = String(bi + 1).padStart(2, "0");
+  [...bDots.children].forEach((d, k) => d.classList.toggle("on", k === bi));
+}
+$("#bPrev").onclick = () => showB(bi - 1);
+$("#bNext").onclick = () => showB(bi + 1);
+bDots.addEventListener("click", e => { const i = [...bDots.children].indexOf(e.target); if (i >= 0) showB(i); });
+// swipe
+let sx = null; const bestCard = $(".best");
+bestCard.addEventListener("pointerdown", e => sx = e.clientX);
+bestCard.addEventListener("pointerup", e => { if (sx !== null && Math.abs(e.clientX - sx) > 50) showB(bi + (e.clientX < sx ? 1 : -1)); sx = null; });
+
+/* ---------- modal ---------- */
+const modal = $("#modal");
+$("#playBtn").onclick = () => modal.classList.add("open");
+$("#modalClose").onclick = () => modal.classList.remove("open");
+modal.addEventListener("click", e => { if (e.target === modal) modal.classList.remove("open"); });
+addEventListener("keydown", e => { if (e.key === "Escape"){ modal.classList.remove("open"); search.classList.remove("open"); drop.classList.remove("open"); } });
+
+/* ---------- subscribe ---------- */
+$("#subForm").addEventListener("submit", e => { e.preventDefault(); $("#subMsg").textContent = "Thanks! You’re subscribed 🌿 (demo)"; e.target.reset(); });
+
+/* ---------- 3D tilt on cards ---------- */
+if (matchMedia("(pointer:fine)").matches){
+  $$(".pcard,.rcard").forEach(c => {
+    c.addEventListener("pointermove", e => {
+      const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - .5, y = (e.clientY - r.top) / r.height - .5;
+      c.style.transform = `perspective(1000px) rotateY(${x * 6}deg) rotateX(${-y * 6}deg)`;
+    });
+    c.addEventListener("pointerleave", () => c.style.transform = "");
+  });
+}
+
+/* ---------- reveal ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); } }), { threshold:.12 });
+$$(".rv").forEach((el, i) => { el.style.transitionDelay = (i % 3) * 90 + "ms"; io.observe(el); });
+</script>
+</body>
+</html>
