@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FitMaker — Transform Your Body</title>
+<meta name="description" content="FitMaker — online fitness platform: personalized workout plans, expert coaching and nutrition guidance.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Rubik+Dirt&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="pre">
+
+<div class="loader" id="loader"><div class="lm"><i></i>Fit<b>Maker</b></div></div>
+<div class="progress" id="progress"></div>
+<div class="cursor-glow" id="cglow"></div>
+
+<!-- ===== HEADER ===== -->
+<header class="header" id="header">
+  <div class="wrap">
+    <div class="left">
+      <a href="#home" class="logo"><span class="mark"><i></i>Fit<b>Maker</b></span><small>Transform Your Body</small></a>
+      <button class="search" aria-label="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6"><circle cx="13" cy="11" r="7"/><path d="M8 16l-5 5"/></svg></button>
+    </div>
+    <nav class="nav" id="nav">
+      <a href="#home" class="active">Home</a>
+      <a href="#services">Programs <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#DC0D15" stroke-width="3"><path d="M5 9l7 7 7-7"/></svg></a>
+      <a href="#trainers">Coaching <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#DC0D15" stroke-width="3"><path d="M5 9l7 7 7-7"/></svg></a>
+      <a href="#plans">Membership</a>
+      <a href="#join">About Us</a>
+    </nav>
+    <div class="auth">
+      <a href="#join" class="btn sm line" data-tab="login">Login</a>
+      <a href="#join" class="btn sm red" data-tab="signup">Sign Up</a>
+    </div>
+    <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="glow o a"></div><div class="glow r b"></div>
+  <div class="wrap">
+    <div class="hero-text">
+      <h1>
+        <span class="line"><span>Achieve Your</span></span>
+        <span class="line big"><span class="dirt grad">FITNESS GOALS</span></span>
+        <span class="line"><span>With FitMaker</span></span>
+      </h1>
+      <p class="hero-fade">"Join The FitMaker Community And Transform Your Fitness Journey. Our Expert Coaches And Personalized Programs Are Designed To Help You Achieve Your Goals And Exceed Your Expectations. Ready To Make A Change?"</p>
+      <div class="hero-cta hero-fade">
+        <a href="#join" class="btn red">Start Your Journey</a>
+        <a href="#services" class="btn line">Explore Programs</a>
+      </div>
+    </div>
+    <div class="hero-visual" id="heroVisual">
+      <div class="orb o1" data-depth="40"></div>
+      <div class="ring" data-depth="8"></div>
+      <div class="circle" data-depth="14"></div>
+      <img class="man" src="img/hero-man.webp" alt="Fitness coach with a dumbbell" data-depth="24" width="1121" height="1266">
+      <div class="orb o2" data-depth="34"></div>
+      <div class="badge b1" data-depth="30"><b>+ <span data-count="80">0</span></b><small>Coaches</small></div>
+      <div class="badge b2" data-depth="36"><b>+ <span data-count="1300">0</span></b><small>Positive Reviews</small></div>
+      <div class="badge b3" data-depth="28"><b>+ <span data-count="1000">0</span></b><small>Workout Videos</small></div>
+      <div class="badge b4" data-depth="32"><b>+ <span data-count="1500">0</span></b><small>Trainers</small></div>
+    </div>
+  </div>
+  <a href="#stats" class="scroll-hint" aria-label="Scroll down"></a>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats" id="stats">
+  <div class="wrap">
+    <div class="stat rv"><div class="num"><b><span data-count="96">0</span>%</b>Client Satisfaction</div><p>Our Members Love Their Results And Experience</p></div>
+    <div class="stat rv" style="transition-delay:.1s"><div class="num"><b>+<span data-count="5">0</span></b>Years Of Experience</div><p>Trust In Our Proven Track Record Of Transforming</p></div>
+    <div class="stat rv" style="transition-delay:.2s"><div class="num"><b>+<span data-count="800">0</span></b>Active Members</div><p>Join Our Thriving Fitness Community</p></div>
+    <div class="stat rv" style="transition-delay:.3s"><div class="num"><b><span data-count="24">0</span>/7</b>Support Available</div><p>Expert Assistance Whenever You Need It</p></div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="sec services" id="services">
+  <div class="glow r a"></div>
+  <div class="wrap">
+    <h2 class="title c rv">Our <span class="red">Services</span></h2>
+    <p class="sub c rv">At This Part You Can Easily Access All Of Our Services. Take A Look At Them And Choose Whichever You Want.</p>
+    <div class="svc-grid">
+      <a href="#plans" class="svc rv" data-tilt><img src="img/svc-weight.webp" alt="Losing Weight program" loading="lazy" width="600" height="602"><span class="shine"></span></a>
+      <a href="#plans" class="svc rv" data-tilt style="transition-delay:.1s"><img src="img/svc-muscle.webp" alt="Building Muscle program" loading="lazy" width="600" height="602"><span class="shine"></span></a>
+      <a href="#plans" class="svc rv" data-tilt style="transition-delay:.2s"><img src="img/svc-home.webp" alt="Training In Home program" loading="lazy" width="600" height="602"><span class="shine"></span></a>
+      <a href="#plans" class="svc rv" data-tilt style="transition-delay:.3s"><img src="img/svc-gym.webp" alt="Gym Plan program" loading="lazy" width="600" height="602"><span class="shine"></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PLANS ===== -->
+<section class="sec plans" id="plans">
+  <div class="glow o a"></div>
+  <div class="wrap">
+    <h2 class="title c rv">Our <span class="red">Plans</span></h2>
+    <p class="sub c rv">Select The Plan That Suits Your Fitness Goals And Let Our Expert Coaches Guide You Every Step Of The Way.</p>
+    <div class="toggle rv" id="billing"><span class="pill"></span><button data-b="m">Monthly</button><button data-b="a">Annually</button></div>
+    <span class="save">2 months free with annual billing</span>
+    <div class="plan-grid">
+      <div class="plan rv">
+        <div class="pk">Package</div><h3 class="dirt">PRO PLAN</h3>
+        <div class="lbl">Description</div>
+        <p class="desc">Our Pro Plan Offers Advanced Workouts And Personalized Nutrition Coaching To Help You Reach Your Goals Faster. Sign Up Right Now!</p>
+        <div class="lbl" style="margin-top:16px">Features</div>
+        <ul><li>Access To All Of Our Exercise Videos</li><li>Progress Tracking</li><li>Supportive Online Community</li><li>Advanced, Personalized Workout Plans</li><li>Comprehensive Nutrition Coaching</li><li>Access To Advanced Workout Programs</li><li>Body Composition Analysis</li></ul>
+        <div class="price"><b data-m="99" data-a="990">99</b>$<small>/<span class="per">month</span></small></div>
+        <a href="#join" class="btn orange">Choose This Plan</a>
+      </div>
+      <div class="plan hot rv" style="transition-delay:.12s">
+        <div class="pk">Package</div><h3 class="dirt">CUSTOM PLAN</h3>
+        <div class="lbl">Description</div>
+        <p class="desc">Experience A Fully Tailored Fitness Experience With Our Custom Plan. Work One-On-One With A Dedicated Trainer To Achieve Your Goals.</p>
+        <div class="lbl" style="margin-top:16px">Features</div>
+        <ul><li>Access To All Of Our Exercise Videos</li><li>Progress Tracking</li><li>Supportive Online Community</li><li>Fully Customized Workout And Nutrition Plan</li><li>Weekly Check-Ins With Your Trainer</li><li>Access To All Platform Features</li><li>Exclusive Gear Discounts</li></ul>
+        <div class="price"><b data-m="149" data-a="1490">149</b>$<small>/<span class="per">month</span></small></div>
+        <a href="#join" class="btn red">Choose This Plan</a>
+      </div>
+      <div class="plan rv" style="transition-delay:.24s">
+        <div class="pk">Package</div><h3 class="dirt">BEGINNER PLAN</h3>
+        <div class="lbl">Description</div>
+        <p class="desc">Start Your Fitness Journey With Our Beginner Plan. Build A Strong Foundation With Basic Workouts And Essential Nutrition Guidance.</p>
+        <div class="lbl" style="margin-top:16px">Features</div>
+        <ul><li>Access To All Of Our Exercise Videos</li><li>Progress Tracking</li><li>Supportive Online Community</li><li>Personalized Workout Plans</li><li>Basic Nutrition Guidance</li><li>Access To Group Fitness Classes</li></ul>
+        <div class="price"><b data-m="49" data-a="490">49</b>$<small>/<span class="per">month</span></small></div>
+        <a href="#join" class="btn orange">Choose This Plan</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TOOLS ===== -->
+<section class="sec tools" id="tools">
+  <div class="wrap">
+    <div class="head-row">
+      <h2 class="title rv l">Our Fitness <span class="red">Tools</span></h2>
+      <div class="ctrls rv r">
+        <div class="arrows"><button class="arr" data-prev="tools" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button><button class="arr" data-next="tools" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+        <div class="dots" data-dots="tools"></div>
+      </div>
+    </div>
+    <p class="sub c rv">Access A Variety Of Tools To Help You Reach Your Fitness Goals More Effectively</p>
+    <div class="track-wrap rv"><div class="track" data-track="tools" data-per="5">
+      <a class="tool" href="#join"><img src="img/tool-calorie.webp" alt="Calorie calculator"></a>
+      <a class="tool" href="#join"><img src="img/tool-bmi.webp" alt="BMI calculator"></a>
+      <a class="tool" href="#join"><img src="img/tool-macro.webp" alt="Macronutrient calculator"></a>
+      <a class="tool" href="#join"><img src="img/tool-goal.webp" alt="Goal setting tool"></a>
+      <a class="tool" href="#join"><img src="img/tool-macro2.webp" alt="Macronutrient calculator"></a>
+      <a class="tool" href="#join"><img src="img/tool-calorie.webp" alt="Calorie calculator"></a>
+      <a class="tool" href="#join"><img src="img/tool-bmi.webp" alt="BMI calculator"></a>
+      <a class="tool" href="#join"><img src="img/tool-goal.webp" alt="Goal setting tool"></a>
+    </div></div>
+  </div>
+</section>
+
+<!-- ===== REVIEWS ===== -->
+<section class="sec reviews" id="reviews">
+  <div class="glow r a"></div>
+  <div class="wrap">
+    <h2 class="title c rv">What Our <span class="red">Customers Say</span></h2>
+    <p class="sub c rv">At This Part You Can See Few Of The Many Positive Reviews Of Our Customers.</p>
+    <div class="rev rv">
+      <div class="rev-photo"><img id="revImg" src="img/rev-steven.webp" alt="Steven Haward" loading="lazy"></div>
+      <div class="rev-card" id="revCard">
+        <h4 id="revName">Steven Haward</h4><div class="role" id="revRole">Our Trainer</div>
+        <svg class="q" viewBox="0 0 48 40" fill="#DC0D15"><path d="M0 40V22C0 9 7 2 20 0l2 5C14 7 11 12 11 18h9v22H0zm26 0V22C26 9 33 2 46 0l2 5c-8 2-11 7-11 13h9v22H26z"/></svg>
+        <p id="revText">I've Been Using FitMaker For The Past Three Months, And I'm Genuinely Impressed. The Website Is Easy To Navigate, And Everything Is Laid Out Clearly. I Purchased The Premium Plan, And The Personalized Coaching Has Been A Game-Changer For Me. My Coach Is Incredibly Supportive And Always Available To Answer My Questions. The Weekly Video Sessions Keep Me Motivated, And The Custom Meal Plans Have Helped Me Stay On Track With My Goals. Highly Recommended For Anyone Serious About Their Fitness Journey!</p>
+      </div>
+      <div class="rev-side">
+        <div class="rev-nav">
+          <button class="arr" id="revPrev" aria-label="Previous review"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+          <button class="arr" id="revNext" aria-label="Next review"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </div>
+        <div class="thumbs" id="revThumbs">
+          <button data-i="1"><img src="img/rev-josh.webp" alt="Josh Oliver" loading="lazy"></button>
+          <button data-i="2"><img src="img/rev-edward.webp" alt="Edward Hawley" loading="lazy"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRAINERS ===== -->
+<section class="sec trainers" id="trainers">
+  <div class="wrap">
+    <div class="head-row">
+      <h2 class="title rv l">Meet Our <span class="red">Trainers</span></h2>
+      <div class="ctrls rv r">
+        <div class="arrows"><button class="arr wide" data-prev="tr" aria-label="Previous"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button><button class="arr wide" data-next="tr" aria-label="Next"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+        <div class="dots small" data-dots="tr"></div>
+      </div>
+    </div>
+    <p class="sub c rv">Certified Coaches Who Will Guide You From Your First Workout To Your Best Shape.</p>
+    <div class="track-wrap rv"><div class="track" id="trTrack" data-track="tr" data-per="4"></div></div>
+    <div class="center"><a href="#trainers" class="btn view">View All <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg></a></div>
+  </div>
+</section>
+
+<!-- ===== BLOG ===== -->
+<section class="sec blog" id="blog">
+  <div class="wrap">
+    <div class="head-row">
+      <h2 class="title rv l">Fitmaker <span class="red">Blog Posts</span></h2>
+      <div class="ctrls rv r">
+        <div class="arrows"><button class="arr" aria-label="Previous"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button><button class="arr" aria-label="Next"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button></div>
+        <div class="dots small"><i></i><i class="on"></i><i></i></div>
+      </div>
+    </div>
+    <p class="sub c rv">Discover Essential Tips To Maximize Your Workout Results And Reach Your Fitness Goals Faster.</p>
+    <div class="blog-grid">
+      <a href="#blog" class="post main rv l"><img src="img/blog-main.webp" alt="5 Essential Exercises For Building Muscle" loading="lazy"></a>
+      <a href="#blog" class="post rv" style="transition-delay:.05s"><img src="img/blog-diet.webp" alt="The Ultimate Guide To A Balanced Diet" loading="lazy"></a>
+      <a href="#blog" class="post rv" style="transition-delay:.15s"><img src="img/blog-hiit.webp" alt="The Benefits Of HIIT Training" loading="lazy"></a>
+      <a href="#blog" class="post rv" style="transition-delay:.25s"><img src="img/blog-home.webp" alt="Home Workouts For Busy People" loading="lazy"></a>
+      <a href="#blog" class="post rv" style="transition-delay:.35s"><img src="img/blog-motivation.webp" alt="How To Always Stay Motivated" loading="lazy"></a>
+    </div>
+    <div class="center"><a href="#blog" class="btn view">View All <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 5l7 7-7 7"/></svg></a></div>
+  </div>
+</section>
+
+<!-- ===== JOIN ===== -->
+<section class="sec join" id="join">
+  <div class="glow r a"></div>
+  <div class="wrap">
+    <div class="rv l">
+      <h2 class="title">Join Our <span class="red">Fitness Community</span></h2>
+      <p class="lead">Sign Up Now To Unlock Exclusive Access To Personalized Workout Plans, Expert Coaching, And A Supportive Community That Will Help You Achieve Your Fitness Goals.</p>
+      <div class="feat">
+        <div><h4><span class="red">Personalized</span> Workout Plans</h4><p>Customized routines that match your fitness level and goals, ensuring you achieve the best results in the most efficient way.</p></div>
+        <div><h4>Expert <span class="red">Coaching</span></h4><p>Work with certified trainers who will guide you every step of the way to ensure you're on the right track.</p></div>
+        <div><h4>Community <span class="red">Support</span></h4><p>Join a vibrant community of fitness enthusiasts where you can share experiences, get motivated, and stay inspired.</p></div>
+        <div><h4>Exclusive <span class="red">Resources</span></h4><p>Access premium content, including video tutorials, nutrition guides, and member-only discounts on fitness gear.</p></div>
+      </div>
+    </div>
+    <div class="form rv r" id="authForm">
+      <div class="tabs" id="tabs"><button class="on" data-t="signup">Sign Up</button><button data-t="login">Login</button><span class="bar"></span></div>
+      <form class="pane on" data-p="signup" novalidate>
+        <label for="nm">Name</label>
+        <div class="field"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-4 4-6 8-6s7 2 8 6"/></svg><input id="nm" placeholder="Enter Your Name" required></div>
+        <label for="em">E-Mail</label>
+        <div class="field"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg><input id="em" type="email" placeholder="Enter Your E-Mail" required></div>
+        <button class="btn red full" type="submit">Sign Up</button>
+        <div class="or">Or</div>
+        <button class="gbtn" type="button"><svg width="22" height="22" viewBox="0 0 48 48"><path fill="#FFC107" d="M43.6 20.5H42V20H24v8h11.3C33.7 32.7 29.2 36 24 36c-6.6 0-12-5.4-12-12s5.4-12 12-12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 12.9 4 4 12.9 4 24s8.9 20 20 20 20-8.9 20-20c0-1.3-.1-2.4-.4-3.5z"/><path fill="#FF3D00" d="M6.3 14.7l6.6 4.8C14.7 15.1 19 12 24 12c3.1 0 5.8 1.2 7.9 3.1l5.7-5.7C34 6.1 29.3 4 24 4 16.3 4 9.7 8.3 6.3 14.7z"/><path fill="#4CAF50" d="M24 44c5.2 0 9.9-2 13.4-5.2l-6.2-5.2C29.2 35.1 26.7 36 24 36c-5.2 0-9.6-3.3-11.3-8l-6.5 5C9.5 39.6 16.2 44 24 44z"/><path fill="#1976D2" d="M43.6 20.5H42V20H24v8h11.3c-.8 2.2-2.2 4.2-4.1 5.6l6.2 5.2C37 39.2 44 34 44 24c0-1.3-.1-2.4-.4-3.5z"/></svg>Sign Up With Google</button>
+        <div class="ok"></div>
+      </form>
+      <form class="pane" data-p="login" novalidate>
+        <label for="lem">E-Mail</label>
+        <div class="field"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg><input id="lem" type="email" placeholder="Enter Your E-Mail" required></div>
+        <label for="lpw">Password</label>
+        <div class="field"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="5" y="10" width="14" height="10" rx="1"/><path d="M8 10V7a4 4 0 018 0v3"/></svg><input id="lpw" type="password" placeholder="Enter Your Password" required></div>
+        <button class="btn red full" type="submit">Login</button>
+        <div class="or">Or</div>
+        <button class="gbtn" type="button">Continue With Google</button>
+        <div class="ok"></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="sec faq" id="faq">
+  <div class="wrap">
+    <h2 class="title rv">FAQ</h2>
+    <div id="faqList"></div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="rv">
+      <a href="#home" class="logo"><span class="mark"><i></i>Fit<b>Maker</b></span><small>Transform Your Body</small></a>
+      <p class="about">Transform Your Body with FitMaker, Your Trusted Partner in Fitness. With Over <span class="red">5 Years</span> of Experience, We Offer Expert Coaching, Tailored Workout Plans, and Comprehensive Nutritional Guidance. <a href="#join" class="orange">Join Our Community</a> and Start Your Journey Towards a Healthier, Stronger You. Ready to Make a Change?</p>
+      <div class="soc">
+        <a href="#" aria-label="Facebook"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M15 8h-2a2 2 0 00-2 2v11M9 13h6"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="#fff"/></svg></a>
+        <a href="#" aria-label="X"><svg width="24" height="24" viewBox="0 0 24 24" fill="#fff"><path d="M17.8 3h3.3l-7.2 8.2L22.4 21h-6.6l-5.2-6.8L4.7 21H1.4l7.7-8.8L1 3h6.8l4.7 6.2L17.8 3zm-1.2 16h1.8L7.5 4.9H5.6L16.6 19z"/></svg></a>
+        <a href="#" aria-label="YouTube"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="M10 9l5 3-5 3z"/></svg></a>
+      </div>
+    </div>
+    <div class="fcols rv" style="transition-delay:.15s">
+      <div><h5>Company</h5><a href="#join">About Us</a><a href="#services">Our Services</a><a href="#">Careers</a><a href="#blog">Blog</a><a href="#reviews">Testimonial</a><a href="#join">Contact Us</a></div>
+      <div><h5>Resources</h5><a href="#tools">Fitness Tools</a><a href="#">Workout Videos</a><a href="#">Nutrition Guides</a><a href="#faq">FAQ</a><a href="#reviews">Success Stories</a><a href="#plans">Membership</a></div>
+      <div><h5>Programs</h5><a href="#services">Weight Loss</a><a href="#services">Building Muscles</a><a href="#services">Home Workout</a><a href="#services">Gym Plan</a><a href="#plans">Our Plans</a><a href="#">Fitness Group</a></div>
+      <div class="c4"><h5>Contact Us</h5>
+        <a><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M12 22s7-7 7-12a7 7 0 10-14 0c0 5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>USA – Washington DC</a>
+        <a><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 006 6L16 13l5 2v4a2 2 0 01-2 2A17 17 0 013 5a2 2 0 012-2"/></svg>1234-56789</a>
+        <a><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 6l9 7 9-7"/></svg>fitmaker@gmail.com</a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap copy"><span>© 2026 FitMaker. All rights reserved.</span><span>Privacy · Terms</span></div>
+</footer>
+
+<button class="totop" id="totop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 19V5M6 11l6-6 6 6"/></svg></button>
+
+<script src="main.js"></script>
+</body>
+</html>
